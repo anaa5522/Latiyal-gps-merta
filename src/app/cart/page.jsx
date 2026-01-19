@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from './component/comman/Home'
+import Cart from '../component/Cart'
 
 export default function page() {
   return (
-    <>
-      <Home/>
-    </>
+    <div>
+      <Cart/>
+    </div>
   )
 }

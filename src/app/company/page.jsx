@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from './component/comman/Home'
+import Company from '../component/Company'
 
 export default function page() {
   return (
     <>
-      <Home/>
+        <Company/>
     </>
   )
 }

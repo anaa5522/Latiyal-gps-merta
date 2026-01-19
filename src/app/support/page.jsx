@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from './component/comman/Home'
+import Support from '../component/Support'
 
 export default function page() {
   return (
     <>
-      <Home/>
+    <Support/>
     </>
   )
 }
