@@ -1,55 +1,94 @@
 "use client";
 import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F6F2EA] py-12">
-      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-[#F6F2EA] text-gray-300">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
-        {/* Company Info */}
+        {/* BRAND */}
         <div>
-          <img className=" font-bold mb-4 text-[#262F6C] w-23 h-9" src="Latiyal Logo Final.png" alt="logo"/>
-          <p className="text-sm text-[#383838]">
-            Advanced GPS solution for real-time vehicle tracking across industries.
+          <img
+            src="/Latiyal Logo Final.png"
+            alt="Latiyal GPS"
+            className="h-10 mb-4"
+          />
+  
+          
+          <p className="text-sm text-black leading-relaxed">
+            Advanced GPS solutions for real-time vehicle tracking, fleet
+            management, and enhanced security across industries.
           </p>
         </div>
 
-        {/* Quick Links */}
+        {/* LINKS */}
         <div>
-          <h3 className="font-semibold mb-4 text-[#262F6C]">Quick Links</h3>
-          <ul className="space-y-2 text-[#000000]">
-            <li><a href="#" className="hover:text-[#FCB13B]">Home</a></li>
-            <li><a href="#" className="hover:text-[#FCB13B]">Features</a></li>
-            <li><a href="#" className="hover:text-[#FCB13B]">Pricing</a></li>
-            <li><a href="#" className="hover:text-[#FCB13B]">Contact</a></li>
+          <h3 className="text-black font-semibold mb-4">Quick Links</h3>
+          <ul className="space-y-3 text-sm text-black">
+            {["Home", "Features", "Pricing", "Contact"].map((item, i) => (
+              <li key={i}>
+                <a
+                  href="#"
+                  className="hover:text-black transition"
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Contact Info */}
+        {/* CONTACT */}
         <div>
-          <h3 className="font-semibold mb-4 text-[#262F6C]">Contact</h3>
-          <p className="text-sm text-[#000000]">123 GPS Street, Tech City</p>
-          <p className="text-sm text-[#000000]">Email: info@latiyalgps.com</p>
-          <p className="text-sm text-[#000000]">Phone: +91 9876543210</p>
+          <h3 className="text-black font-semibold mb-4">Contact</h3>
+          <ul className="space-y-3 text-sm text-black">
+            <li className="flex gap-3 items-start">
+              <FaMapMarkerAlt className="text-black mt-1" />
+              <span>123 GPS Street, Tech City</span>
+            </li>
+            <li className="flex gap-3 items-center">
+              <FaEnvelope className="text-black text-black" />
+              <span>info@latiyalgps.com</span>
+            </li>
+            <li className="flex gap-3 items-center">
+              <FaPhoneAlt className="text-black" />
+              <span>+91 98765 43210</span>
+            </li>
+          </ul>
         </div>
 
-        {/* Social Media */}
+        {/* SOCIAL */}
         <div>
-          <h3 className="font-semibold mb-4 text-[#262F6C]">Follow Us</h3>
+          <h3 className="text-black font-semibold mb-4">Follow Us</h3>
           <div className="flex gap-4">
-            <a href="#" className="p-2 bg-[#FCB13B] rounded-full hover:bg-yellow-400"><FaFacebookF /></a>
-            <a href="#" className="p-2 bg-[#FCB13B] rounded-full hover:bg-yellow-400"><FaInstagram /></a>
-            <a href="#" className="p-2 bg-[#FCB13B] rounded-full hover:bg-yellow-400"><FaLinkedinIn /></a>
-            <a href="#" className="p-2 bg-[#FCB13B] rounded-full hover:bg-yellow-400"><FaTwitter /></a>
+            {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter].map(
+              (Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-[#1A1A1A] hover:bg-yellow-400 hover:text-black transition"
+                >
+                  <Icon size={14} />
+                </a>
+              )
+            )}
           </div>
         </div>
 
       </div>
 
-      {/* Copyright */}
-      <div className="mt-12 text-center text-[#000000] text-sm">
-        &copy; {new Date().getFullYear()} Latiyal GPS. All rights reserved.
+      {/* BOTTOM BAR */}
+      <div className="border-t border-black/10 py-6 text-center text-sm text-black bg-yellow-500">
+        © {new Date().getFullYear()} Latiyal GPS. All rights reserved.
       </div>
     </footer>
   );

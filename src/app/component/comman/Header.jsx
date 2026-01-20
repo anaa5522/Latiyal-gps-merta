@@ -15,7 +15,7 @@ export default function Header() {
         { name: "HOME", path: "/" },
         { name: "PRODUCT", path: "/product" },
         { name: "CONTACT US", path: "/contact" },
-        { name: "SUPPORT", path: "/support" },
+        { name: "ABOUT US", path: "/aboutus" },
         { name: "VISIT COMPANY", path: "/company" },
     ];
 
@@ -88,34 +88,70 @@ export default function Header() {
             </header>
 
             {/* Mobile Slide Menu */}
+            {/* OVERLAY */}
             <div
-  className={`fixed top-0 right-0 h-full w-[75%] bg-white shadow-lg transform
-  ${open ? "translate-x-0" : "translate-x-full"}
-  transition-transform duration-300 ease-in-out z-50`}
->
-  <div className="flex justify-end p-5">
-    <button onClick={() => setOpen(false)} className="text-3xl">
-      <HiX />
-    </button>
-  </div>
+                onClick={() => setOpen(false)}
+                className={`fixed inset-0 z-40 transition-opacity duration-300
+  ${open ? "opacity-100" : "opacity-0 pointer-events-none"}
+  bg-gradient-to-l from-black/60 via-black/40 to-black/20 backdrop-blur-sm`}
+            ></div>
 
-  <div className="flex flex-col items-start gap-5 px-4">
-    {menuItems.map((item) => (
-      <Link
-        key={item.name}
-        href={item.path}
-        onClick={() => setOpen(false)}   // 👈 menu close on click
-        className="relative personal-tinos font-bold text-md
-        after:content-[''] after:absolute after:left-0 after:-bottom-1
-        after:w-0 after:h-[3px] after:bg-[#262F6C]
-        after:transition-all after:duration-300
-        hover:after:w-full"
-      >
-        {item.name}   {/* ✅ yahan name */}
-      </Link>
-    ))}
-  </div>
-</div>
+            {/* DRAWER */}
+            <div
+                className={`fixed top-0 right-0 h-full w-[80%] max-w-sm z-50
+  transform transition-all duration-500
+  ease-[cubic-bezier(0.25,1,0.5,1)]
+  ${open ? "translate-x-0" : "translate-x-full"}
+  bg-gradient-to-b from-[#F9FAFB] via-[#FFFFFF] to-[#F3F4F6]
+  shadow-2xl rounded-l-3xl`}
+            >
+
+                {/* HEADER */}
+                <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200">
+                    <span className="text-lg font-semibold text-[#262F6C] tracking-wide">
+                        Menu
+                    </span>
+                    <button
+                        onClick={() => setOpen(false)}
+                        className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+                    >
+                        <HiX className="text-xl text-[#262F6C]" />
+                    </button>
+                </div>
+
+                {/* MENU ITEMS */}
+                <div className="flex flex-col px-7 pt-8 space-y-7">
+                    {menuItems.map((item, index) => (
+                        <Link
+                            key={item.name}
+                            href={item.path}
+                            onClick={() => setOpen(false)}
+                            className={`relative text-[17px] font-medium tracking-wide text-[#262F6C]
+        transition-all duration-500
+        ${open ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"}`}
+                            style={{ transitionDelay: `${index * 90}ms` }}
+                        >
+                            {item.name}
+
+                            {/* underline */}
+                            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#FCB13B]
+        transition-all duration-300 group-hover:w-full"></span>
+                        </Link>
+                    ))}
+                </div>
+
+                {/* FOOTER CTA */}
+                <div className="absolute bottom-8 left-7 right-7">
+                    <Link
+                        href="/contact"
+                        onClick={() => setOpen(false)}
+                        className="block text-center bg-[#262F6C] text-white py-3 rounded-full
+      font-semibold tracking-wide shadow-lg hover:bg-[#1f2557] transition"
+                    >
+                        Contact Us
+                    </Link>
+                </div>
+            </div>
 
 
             {/* Overlay */}

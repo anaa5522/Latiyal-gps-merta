@@ -12,18 +12,32 @@ import Testimonial from "../Testimonial";
 export default function Home() {
   return (
     <>
-      <Banner />
+    <div className=" bg-[#F6F2EA]
+"><Banner /></div>
+      
 
       {/* Slider section */}
-      <SoloSlider />
+      <div className="px-4 py-6 bg-[#F6F2EA]
+"><SoloSlider /></div>
+      
 
-      <App />
-      <How />
-      <Key/>
-      <div className="hidden md:block"><Choose/></div>      
-      <div className="block md:hidden"><Chooserespon/></div>
-      <Histroy/>
-      <Testimonial/>
+<div className="px-4 py-6 bg-[#F6F2EA]
+"><App /></div>
+      
+      <div className="px-4 py-6 bg-[#F6F2EA]
+"><How /></div>
+      
+      <div className="px-4 py-6 bg-[#F6F2EA]
+"><Key/></div>
+      
+      <div className="hidden md:block px-4 py-6 bg-[#F6F2EA]"><Choose/></div>      
+      <div className="block md:hidden px-4 py-6 bg-[#F6F2EA]"><Chooserespon/></div>
+      <div className="px-4 py-6 bg-[#F6F2EA]
+"> <Histroy/></div>
+     
+      <div className="px-4 py-6 bg-[#F6F2EA]
+"><Testimonial/></div>
+      
       
       
       
