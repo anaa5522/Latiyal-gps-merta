@@ -33,7 +33,7 @@ export default function How() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#F6F2EA] py-15 flex justify-center"
+      className="w-full bg-[#F6F2EA]  flex justify-center"
     >
       <div className="max-w-6xl w-full px-6">
         {/* Responsive flex: column mobile, row desktop */}

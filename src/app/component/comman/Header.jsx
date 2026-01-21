@@ -23,7 +23,7 @@ export default function Header() {
     return (
         <>
             {/* Header */}
-            <header className="w-full  bg-white relative z-50 min-h-[80px] my-2 ">
+            <header className="w-full  bg-white relative z-50 min-h-[80px]  ">
                 <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-2 2xl:px-24">
 
                     {/* Logo */}

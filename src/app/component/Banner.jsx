@@ -32,40 +32,115 @@ export default function Banner() {
           {/* Heading */}
           <h1 className="
             font-inter font-semibold text-black leading-tight
-            text-xl sm:text-xl md:text-4xl xl:text-5xl 2xl:text-6xl
+            text-3xl md:text-6xl
           ">
-            TRACK SMARTER.
+            <span className="text-[#FCB13B">T</span>RACK <br />
+            SMARTER.
             <span className="block mt-2 sm:mt-4">DRIVE SAFER.</span>
           </h1>
 
           {/* Sub heading */}
           <h2 className="
             font-montserrat text-gray-800 mt-4 mb-6 sm:mt-3 lg:mt-8 lg:mb-15
-            text-[8px] sm:text-sm md:text-base
+            text-[13px] sm:text-sm md:text-base
           ">
             Advanced GPS Solution for Real-Time Vehicle Tracking
           </h2>
 
           {/* Buttons */}
-          <div className="mt-4 sm:mt-6 flex gap-3 flex-wrap">
-            <button className="
-              px-4 sm:px-6 py-2 sm:py-2
-              text-xs sm:text-sm md:text-base
-              font-montserrat bg-yellow-500 text-black
-              rounded-lg
-            ">
-              Get Started
-            </button>
+          <div className="mt-4 sm:mt-6 flex gap-3 flex-nowrap overflow-x-auto sm:overflow-visible">
+  
+  {/* CONTACT US */}
+  <button className="
+    group relative overflow-hidden
+    px-4 sm:px-7 py-2.5 sm:py-3
+    rounded-xl
+    border border-[#FCB13B]
+    bg-[#FCB13B]
+    font-semibold tracking-wide
+    text-black whitespace-nowrap
 
-            <button className="
-              px-4 sm:px-8 py-2 sm:py-3
-              text-xs sm:text-sm md:text-base
-              font-montserrat text-black
-              border border-black rounded-lg
-            ">
-              Learn More
-            </button>
-          </div>
+    transition-all duration-300 ease-out
+
+    hover:text-black
+    hover:-translate-y-1
+    hover:scale-[1.03]
+    hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)]
+
+    active:bg-[#FCB13B]
+    active:text-black
+    active:shadow-[0_8px_18px_rgba(252,177,59,0.35)]
+    active:scale-[0.96]
+  ">
+
+    {/* SLIDING BRAND GRADIENT */}
+    <span className="
+      absolute inset-0
+      bg-gradient-to-r from-[#FCB13B] to-[#FF9F1C]
+      -translate-x-full
+      group-hover:translate-x-0
+      transition-transform duration-700 ease-out
+    " />
+
+    {/* CONTENT */}
+    <span className="relative z-10 flex items-center gap-2">
+      Contact Us
+      <span className="
+        transition-transform duration-300
+        group-hover:translate-x-1
+      ">
+        ➜
+      </span>
+    </span>
+  </button>
+
+  {/* LEARN MORE */}
+  <button className="
+    group relative overflow-hidden
+    px-4 sm:px-7 py-2.5 sm:py-3
+    rounded-xl
+    border border-[#FCB13B]
+    bg-[#FCB13B]
+    font-semibold tracking-wide
+    text-black whitespace-nowrap
+
+    transition-all duration-300 ease-out
+
+    hover:text-black
+    hover:-translate-y-1
+    hover:scale-[1.03]
+    hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)]
+
+    active:bg-[#FCB13B]
+    active:text-black
+    active:shadow-[0_8px_18px_rgba(252,177,59,0.35)]
+    active:scale-[0.96]
+  ">
+
+    {/* SLIDING BRAND GRADIENT */}
+    <span className="
+      absolute inset-0
+      bg-gradient-to-r from-[#FCB13B] to-[#FF9F1C]
+      -translate-x-full
+      group-hover:translate-x-0
+      transition-transform duration-700 ease-out
+    " />
+
+    {/* CONTENT */}
+    <span className="relative z-10 flex items-center gap-2">
+      Learn More
+      <span className="
+        transition-transform duration-300
+        group-hover:translate-x-1
+      ">
+        ➜
+      </span>
+    </span>
+  </button>
+
+</div>
+
+
         </div>
       </div>
     </div>

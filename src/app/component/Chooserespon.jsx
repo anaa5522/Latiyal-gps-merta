@@ -47,7 +47,7 @@ export default function Chooserepon() {
   };
 
   return (
-    <section className="bg-[#F6F2EA] py-20">
+    <section className="bg-[#F6F2EA] py-7">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADING */}

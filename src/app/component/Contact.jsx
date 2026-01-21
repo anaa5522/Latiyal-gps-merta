@@ -70,7 +70,7 @@ export default function Contact() {
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative max-w-2xl mx-auto text-white">
           <h2 className="text-4xl font-serif mb-4">
-           Power Your Vehicles with Intelligent GPS Tracking 
+            Power Your Vehicles with Intelligent GPS Tracking
           </h2>
           <p className="text-gray-200 mb-8">
             Monitor, manage, and protect your vehicles with real-time tracking and smart analytics — anytime, anywhere.

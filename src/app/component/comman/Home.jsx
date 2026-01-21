@@ -17,7 +17,7 @@ export default function Home() {
       
 
       {/* Slider section */}
-      <div className="px-4 py-6 bg-[#F6F2EA]
+      <div className="px-4  bg-[#F6F2EA]
 "><SoloSlider /></div>
       
 
