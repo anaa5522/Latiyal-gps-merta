@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-export default function AutoSlider() {
+export default function Slider() {
   const sliderRef = useRef(null);
 
   const isDragging = useRef(false);

@@ -49,7 +49,7 @@ const services = [
   },
 ];
 
-export default function ServicesPage() {
+export default function Company() {
   return (
     <div className="bg-[#F6F7FB]">
 

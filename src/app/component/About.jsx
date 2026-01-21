@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AboutSection() {
+export default function About() {
   return (
     <div className="w-full bg-white text-gray-800">
 

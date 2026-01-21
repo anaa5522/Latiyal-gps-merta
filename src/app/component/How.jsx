@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-export default function ProgressLineZoom() {
+export default function How() {
   const sectionRef = useRef(null);
   const [start, setStart] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
