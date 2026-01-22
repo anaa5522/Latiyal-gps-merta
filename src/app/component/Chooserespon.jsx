@@ -80,7 +80,7 @@ export default function Chooserepon() {
                 px-8
                 py-10
                 text-center
-                shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+               
                 hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]
                 transition-all
                 duration-300

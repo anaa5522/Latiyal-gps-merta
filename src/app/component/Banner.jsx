@@ -12,7 +12,7 @@ export default function Banner() {
     <div
       className="
         w-full relative
-        h-[70vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]
+        h-[50vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]
         bg-[url('/IMG_20260113_130526.jpg')]
         bg-cover bg-top sm:bg-center
       "

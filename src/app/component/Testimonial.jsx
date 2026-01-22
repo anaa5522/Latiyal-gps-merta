@@ -110,7 +110,7 @@ export default function Testimonial() {
               key={i}
               className="min-w-full md:min-w-[40%] lg:min-w-[30%] px-3 py-10"
             >
-              <div className="bg-white rounded-2xl px-8 pt-14 pb-8 text-center relative shadow-[0_15px_40px_rgba(0,0,0,0.12)]">
+              <div className="bg-white rounded-2xl px-8 pt-14 pb-8 text-center relative">
 
                 {/* IMAGE */}
                 <div className="absolute -top-10 left-1/2 -translate-x-1/2">
