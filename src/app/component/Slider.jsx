@@ -80,7 +80,7 @@ export default function Slider() {
   };
 
   return (
-    <section className="bg-[#F6F2EA] py-5">
+    <section className="bg-[#F6F2EA] py-5 ">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* SLIDER */}

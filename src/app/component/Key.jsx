@@ -28,10 +28,10 @@ export default function Key() {
           Advance GPS Solution for real time vehicle tracking
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
 
           {/* IMAGE */}
-          <div className="relative flex justify-center lg:justify-start">
+          <div className="relative flex justify-center lg:justify-start ">
             <img
               src="imgi_162_DSC03431-scaled.jpg"
               alt="GPS Device"
@@ -40,22 +40,22 @@ export default function Key() {
           </div>
 
           {/* FEATURES */}
-          <div className="relative">
+          <div className="relative ">
 
             {/* DESKTOP */}
-            <div className="hidden md:block space-y-5">
+            <div className="hidden md:block space-y-5 ">
               {items.map((text, index) => (
-                <div key={index} className="relative flex items-center">
+                <div key={index} className="relative flex items-center  hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] transition-all duration-500">
 
-                  <span className="hidden lg:block absolute -left-28 w-24 h-[2px] bg-[#383838]/40" />
+                  {/* <span className="hidden lg:block absolute -left-28 w-24 h-[2px] bg-[#383838]/40" /> */}
 
-                  <div className="w-full bg-white rounded-xl shadow-md px-6 py-5
+                  <div className="w-full bg-white rounded-xl  px-6 py-5
                     flex items-center gap-4
                     hover:shadow-xl hover:scale-[1.02]
                     transition-all duration-300">
 
                     <span className="w-10 h-10 flex items-center justify-center
-                      rounded-lg bg-[#FCB13B] text-black font-bold">
+                      rounded-lg bg-[#F0B100] text-black font-bold">
                       {index + 1}
                     </span>
 
@@ -68,13 +68,13 @@ export default function Key() {
             {/* MOBILE – UNIQUE TIMELINE DESIGN */}
             <div className="md:hidden relative space-y-5">
 
-              <span className="absolute left-4 top-0 h-full w-[2px] bg-[#FCB13B]/40" />
+          
 
               {items.map((text, index) => (
                 <div key={index} className="relative flex gap-4 pl-10">
 
                   <span className="
-                    absolute left-0 top-1
+                    absolute left-0 top-3
                     w-8 h-8
                     flex items-center justify-center
                     rounded-full
@@ -87,7 +87,7 @@ export default function Key() {
 
                   <div className="
                     w-full
-                    bg-gradient-to-r from-white to-[#FFF4D8]
+                    bg-white 
                     rounded-xl
                     px-4 py-4
                     shadow-md

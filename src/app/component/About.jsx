@@ -78,18 +78,19 @@ export default function About() {
       </section>
 
       {/* ===== CTA (Same as Contact Page) ===== */}
-      <section className="relative py-24 bg-[url('/cta-bg.jpg')] bg-cover bg-center text-center">
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative max-w-2xl mx-auto text-white">
+      <section className="relative py-24  bg-center text-center">
+        <div className="absolute inset-0 "></div>
+        <div className="relative max-w-2xl mx-auto text-black">
           <h2 className="text-4xl font-serif mb-4">
             Smart Tracking for Safer Journeys
           </h2>
-          <p className="text-gray-200 mb-8">
+          <p className="text-[#383838] mb-8">
             We are always ready to help you secure and manage your vehicles
             with advanced GPS technology.
           </p>
-          <button className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold">
-            Get Started
+          <button className="bg-white text-white px-8 py-3 rounded-full font-semibold
+           hover:shadow-xl hover:scale-[1.02] transition-all duration-500  hover:bg-yellow-600 bg-yellow-500">
+            GET START
           </button>
         </div>
       </section>

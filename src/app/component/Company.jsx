@@ -54,12 +54,10 @@ export default function Company() {
     <div className="bg-[#F6F7FB]">
 
       {/* HERO */}
-      <section className="relative h-[300px] bg-[url('/ee679e37341f536297e1fd7454c00e69.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white">
-          <h1 className="text-4xl font-bold">Our GPS Services</h1>
-          <p className="text-sm opacity-80 mt-2">
-            Smart tracking solutions for vehicles, fleets and assets
-          </p>
+      <section className="relative h-[300px] bg-[url('/943e39fcf59a29476e3b9034d540e205.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black/10 flex flex-col justify-center items-center text-white">
+          <h1 className="text-4xl pt-7 font-bold">Our GPS Services</h1>
+          
         </div>
       </section>
 
@@ -70,24 +68,24 @@ export default function Company() {
           Advanced GPS tracking services designed for safety, control and efficiency
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((item) => (
             <div
               key={item.id}
-              className={`relative rounded-2xl p-8 text-left transition-all duration-300
+              className={`relative rounded-2xl p-8 text-left hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] transition-all duration-300 ease-out 
               ${
                 item.active
                   ? "bg-gradient-to-br from-[#262F6C] to-[#1A1F4A] text-white shadow-xl scale-105"
                   : "bg-white hover:shadow-lg"
               }`}
             >
-              <span className="text-4xl font-bold opacity-20 absolute top-4 right-6">
+              <span className="text-4xl  font-bold opacity-20 absolute top-4 right-6">
                 {item.id}
               </span>
 
               <div
                 className={`text-4xl mb-6 ${
-                  item.active ? "text-[#FCB13B]" : "text-[#262F6C]"
+                  item.active ? "text-[#FCB13B]" : "text-[#FCB13B]"
                 }`}
               >
                 {item.icon}
@@ -102,11 +100,14 @@ export default function Company() {
               </p>
 
               <button
-                className={`mt-6 px-5 py-2 rounded-full text-sm font-medium
+                className={`mt-6 px-5 py-2 rounded-full text-sm font-medium bg-[#FCB13B]
                 ${
                   item.active
                     ? "bg-[#FCB13B] text-black"
-                    : "border border-gray-300 hover:bg-gray-100"
+                    : "border border-gray-300 hover:bg-[#FCB13B] hover:text-black hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] transition-all duration-300 ease-out"
+    
+    
+    
                 }`}
               >
                 VIEW DETAILS
@@ -117,7 +118,7 @@ export default function Company() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#262F6C] py-20 text-center text-white px-4">
+      {/* <section className="bg-[#262F6C] py-20 text-center text-white px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Smarter Tracking. Better Control.
         </h2>
@@ -127,7 +128,7 @@ export default function Company() {
         <button className="bg-[#FCB13B] text-black px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition">
           GET GPS DEMO
         </button>
-      </section>
+      </section> */}
 
     </div>
   );

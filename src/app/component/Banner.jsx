@@ -12,7 +12,7 @@ export default function Banner() {
     <div
       className="
         w-full relative
-        h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]
+        h-[70vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]
         bg-[url('/IMG_20260113_130526.jpg')]
         bg-cover bg-top sm:bg-center
       "
@@ -23,7 +23,7 @@ export default function Banner() {
       <div className="container mx-auto h-full flex items-center px-4 sm:px-6">
         <div
           className={`
-            max-w-xl lg:max-w-2xl
+            max-w-xl lg:max-w-2xl 
             text-left
             transform transition-all duration-700 ease-out
             ${animate ? "scale-100 opacity-100" : "scale-95 opacity-0"}
@@ -48,95 +48,25 @@ export default function Banner() {
           </h2>
 
           {/* Buttons */}
-          <div className="mt-4 sm:mt-6 flex gap-3 flex-nowrap overflow-x-auto sm:overflow-visible">
+          <div className="mt-4 sm:mt-6 flex gap-3 flex-nowrap overflow-x-auto sm:overflow-visible pb-5 ">
   
   {/* CONTACT US */}
-  <button className="
-    group relative overflow-hidden
-    px-4 sm:px-7 py-2.5 sm:py-3
-    rounded-xl
-    border border-[#FCB13B]
-    bg-[#FCB13B]
-    font-semibold tracking-wide
-    text-black whitespace-nowrap
-
-    transition-all duration-300 ease-out
-
-    hover:text-black
-    hover:-translate-y-1
-    hover:scale-[1.03]
-    hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)]
-
-    active:bg-[#FCB13B]
-    active:text-black
-    active:shadow-[0_8px_18px_rgba(252,177,59,0.35)]
-    active:scale-[0.96]
-  ">
-
-    {/* SLIDING BRAND GRADIENT */}
-    <span className="
-      absolute inset-0
-      bg-gradient-to-r from-[#FCB13B] to-[#FF9F1C]
-      -translate-x-full
-      group-hover:translate-x-0
-      transition-transform duration-700 ease-out
-    " />
-
-    {/* CONTENT */}
-    <span className="relative z-10 flex items-center gap-2">
-      Contact Us
-      <span className="
-        transition-transform duration-300
-        group-hover:translate-x-1
-      ">
-        ➜
-      </span>
-    </span>
-  </button>
+  <button className="bg-yellow-500  text-white px-6 py-3 rounded-full font-semibold transition  hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] transition-all duration-500 bg-[#FCB13B] text-black font-semibold
+  
+  transition-all duration-150 ease-out
+  active:scale-80
+  active:translate-y-[1px]
+   active:shadow-[0_18px_40px_rgba(252,177,59,0.45)] ">
+            Contact Us
+          </button>
 
   {/* LEARN MORE */}
-  <button className="
-    group relative overflow-hidden
-    px-4 sm:px-7 py-2.5 sm:py-3
-    rounded-xl
-    border border-[#FCB13B]
-    bg-[#FCB13B]
-    font-semibold tracking-wide
-    text-black whitespace-nowrap
-
-    transition-all duration-300 ease-out
-
-    hover:text-black
-    hover:-translate-y-1
-    hover:scale-[1.03]
-    hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)]
-
-    active:bg-[#FCB13B]
-    active:text-black
-    active:shadow-[0_8px_18px_rgba(252,177,59,0.35)]
-    active:scale-[0.96]
-  ">
-
-    {/* SLIDING BRAND GRADIENT */}
-    <span className="
-      absolute inset-0
-      bg-gradient-to-r from-[#FCB13B] to-[#FF9F1C]
-      -translate-x-full
-      group-hover:translate-x-0
-      transition-transform duration-700 ease-out
-    " />
-
-    {/* CONTENT */}
-    <span className="relative z-10 flex items-center gap-2">
-      Learn More
-      <span className="
-        transition-transform duration-300
-        group-hover:translate-x-1
-      ">
-        ➜
-      </span>
-    </span>
-  </button>
+   <button className="bg-yellow-500  text-white px-6 py-3 rounded-full font-semibold transition  hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] transition-all duration-500 transition-all duration-150 ease-out
+  active:scale-80
+  active:translate-y-[1px]
+   active:shadow-[0_18px_40px_rgba(252,177,59,0.45)]">
+            Learn More
+          </button>
 
 </div>
 

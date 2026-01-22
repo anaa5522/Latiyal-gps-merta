@@ -52,7 +52,7 @@ export default function Header() {
                                     className="relative inline-block font-montserrat
         text-xl md:text-[13px] lg:text-[17px]
         after:content-[''] after:absolute after:left-0 after:-bottom-1
-        after:w-0 after:h-[3px] after:bg-[#262F6C]
+        after:w-0 after:h-[3px] after:bg-[#FCB13B]
         after:transition-all after:duration-300
         hover:after:w-full cursor-pointer"
                                 >

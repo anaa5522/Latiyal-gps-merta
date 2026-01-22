@@ -44,7 +44,7 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="w-full bg-yellow-500 hover:bg-yellow-600 transition text-white py-3 rounded-full font-semibold hover:shadow-xl hover:scale-[1.02] transition-all duration-500"
+            className="w-full bg-yellow-500 transition text-white py-3 rounded-full font-semibold hover:text-black hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] transition-all duration-500"
           >
             BOOK NOW
           </button>
@@ -75,7 +75,7 @@ export default function Contact() {
           <p className="text-gray-200 mb-8">
             Monitor, manage, and protect your vehicles with real-time tracking and smart analytics — anytime, anywhere.
           </p>
-          <button className="bg-white text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl hover:scale-[1.02] transition-all duration-500  hover:bg-yellow-600 bg-yellow-500">
+          <button className="bg-white text-white px-8 py-3 rounded-full font-semibold hover:text-black hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] bg-yellow-500 duration-300">
             CONTACT US
           </button>
         </div>

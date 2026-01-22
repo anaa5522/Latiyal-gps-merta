@@ -44,21 +44,17 @@ export default function Choose() {
                     </h2>
 
         {/* CARDS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
           {cards.map((item, i) => (
             <div
               key={i}
-              className="
+              className=" hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] transition-all duration-500
                 bg-white
                 rounded-2xl
                 px-8
                 py-10
                 text-center
-                shadow-[0_10px_30px_rgba(0,0,0,0.12)]
-                hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]
-                transition-all
-                duration-300
-                hover:-translate-y-2
+                
               "
             >
               {/* ICON */}

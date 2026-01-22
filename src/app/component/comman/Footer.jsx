@@ -87,7 +87,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="border-t border-black/10 py-6 text-center text-sm text-black bg-yellow-500">
+      <div className="border-t border-black/10 py-6 text-center text-sm text-white bg-[#1A1A1A]">
         © {new Date().getFullYear()} Latiyal GPS. All rights reserved.
       </div>
     </footer>
