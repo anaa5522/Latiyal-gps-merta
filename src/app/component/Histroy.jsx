@@ -29,7 +29,7 @@ export default function Histroy() {
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="mt-4 text-[#383838] max-w-xs mx-auto leading-relaxed">
+              <p className="mt-4 text-[#383838] max-w-xs mx-auto text-lg leading-relaxed">
                 {item.desc}
               </p>
             </div>

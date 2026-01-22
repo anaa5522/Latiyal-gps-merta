@@ -49,7 +49,7 @@ export default function Key() {
 
                   {/* <span className="hidden lg:block absolute -left-28 w-24 h-[2px] bg-[#383838]/40" /> */}
 
-                  <div className="w-full bg-white rounded-xl  px-6 py-5
+                  <div className="w-full bg-white rounded-xl   px-6 py-5
                     flex items-center gap-4
                     hover:shadow-xl hover:scale-[1.02]
                     transition-all duration-300">
@@ -59,7 +59,7 @@ export default function Key() {
                       {index + 1}
                     </span>
 
-                    <p className="text-black font-semibold">{text}</p>
+                    <p className="text-black text-xl font-semibold">{text}</p>
                   </div>
                 </div>
               ))}
@@ -95,7 +95,7 @@ export default function Key() {
                     transition-all duration-300
                     active:scale-[0.97]
                   ">
-                    <p className="text-black text-sm font-semibold leading-snug">
+                    <p className="text-black text-md font-semibold leading-snug">
                       {text}
                     </p>
                   </div>

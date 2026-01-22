@@ -121,16 +121,16 @@ export default function Testimonial() {
                   />
                 </div>
 
-                <h3 className="mt-6 font-bold text-lg text-[#262F6C]">
+                <h3 className="mt-6 font-bold text-2xl text-[#262F6C]">
                   {item.name}
                 </h3>
-                <p className="text-sm text-[#383838]">{item.city}</p>
+                <p className="text-xl text-[#383838]">{item.city}</p>
 
                 <div className="flex justify-center gap-1 text-[#FCB13B] mt-3">
                   ★★★★★
                 </div>
 
-                <p className="text-[#383838] text-sm mt-4 leading-relaxed">
+                <p className="text-[#383838] text-lg mt-4 leading-relaxed">
                   “{item.review}”
                 </p>
               </div>
