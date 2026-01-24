@@ -18,7 +18,7 @@ export default function History() {
 
   return (
     <div className="w-full">
-      <section className="bg-[url('/b5f199aa7a24dda0c0fe888747c7efac.jpg')] bg-cover bg-center text-white py-16 md:py-24">
+      <section className="bg-[url('/b5f199aa7a24dda0c0fe888747c7efac.jpg')] bg-cover bg-center text-white py-16  md:py-24">
 
         {/* HEADING */}
         <div className="max-w-7xl mx-auto px-4 text-center">

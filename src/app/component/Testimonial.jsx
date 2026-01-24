@@ -41,7 +41,7 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <section className="h-auto  flex items-center justify-center  px-4 py-20">
+    <section className="h-auto  flex items-center justify-center   px-4 py-20">
       <div className="max-w-3xl w-full">
 
         <Slider {...settings}>

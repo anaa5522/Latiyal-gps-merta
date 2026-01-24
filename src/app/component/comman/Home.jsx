@@ -28,7 +28,7 @@ export default function Home() {
             Our<span className="text-[#FCB13B]"> Happy</span> Coustmer
           </h2>
           <p className="font-montserrat font-light text-[13.3px] leading-[21.3px] mt-3 text-white max-w-2xl mx-auto">
-            Everything you need to monitor, manage, and protect your vehicles efficiently.
+            Everything you need to monitor, manage, and <br/>protect your vehicles efficiently.
           </p>
           <Testimonial/>
         </div>

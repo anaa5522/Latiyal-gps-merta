@@ -83,7 +83,7 @@ export default function Chooserespon() {
               Every feature is designed to give you real-time insights and reliable data.
             </p>
           </div>
-          <div className="md:w-1/2 ">
+          <div className="md:w-1/2 pb-7 ">
             <img
               src="895ce474aba672cc0b0ab5d5756be321.jpg"
               alt="Technology Illustration"
