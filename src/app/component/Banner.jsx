@@ -10,7 +10,7 @@ export default function Banner() {
 
   return (
     <section
-      className="mt-17
+      className="mt-10 
         relative w-full
         h-[50vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]
         bg-[url('/IMG_20260113_130526.jpg')]

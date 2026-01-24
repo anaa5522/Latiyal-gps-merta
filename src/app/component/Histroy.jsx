@@ -55,7 +55,7 @@ export default function History() {
                 {item.label === "System Uptime" && "%"}
               </h3>
 
-              <p className="font-montserrat font-light text-[10px] sm:text-[12px] md:text-[13.3px] leading-[16px] md:leading-[21.3px] whitespace-nowrap mt-1">
+              <p className="font-montserrat font-light text-[10px] sm:text-[12px] md:text-[13.3px] leading-[16px] md:leading-[21.3px]  mt-1">
                 {item.label}
               </p>
 

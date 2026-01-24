@@ -46,7 +46,7 @@ export default function Chooserespon() {
 
       {/* 🔹 HERO SECTION */}
       <section className="  py-15 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-inter font-semibold text-[28px] mb-6">
+        <h1 className="text-4xl md:text-5xl font-[var(--font-inter)] font-semibold text-[28px] mb-6">
           About <span className="text-[#FCB13B]">Technology</span>
         </h1>
         <p className="font-montserrat font-light text-[13.3px] leading-[21.3px] max-w-2xl mx-auto text-lg opacity-90">

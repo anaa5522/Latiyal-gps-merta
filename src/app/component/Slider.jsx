@@ -84,7 +84,7 @@ export default function SoloSlider() {
 
   return (
     <section className="bg-[#F6F2EA] ">
-      <div className="  bg-white  py-2 ">
+      <div className="  bg-  py-2 ">
         <Slider {...settings}>
           {items.map((item) => (
             <div key={item.id}className="">

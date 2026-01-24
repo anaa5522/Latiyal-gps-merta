@@ -68,7 +68,7 @@ export default function Footer() {
 
         {/* SOCIAL */}
         <div>
-          <h3 className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-black font-semibold mb-4">Follow Us</h3>
+          <h3 className="font-[var(--font-montserrat)] font-light text-[13.3px] leading-[21.3px] text-black font-semibold mb-4">Follow Us</h3>
           <div className="font-montserrat font-light text-[13.3px] leading-[21.3px] flex gap-4">
             {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter].map(
               (Icon, i) => (

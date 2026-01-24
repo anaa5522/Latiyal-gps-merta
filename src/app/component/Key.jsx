@@ -63,7 +63,7 @@ export default function Key() {
   ];
 
   return (
-    <section className="bg-[#F6F2EA] py-16">
+    <section className=" py-16">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Heading */}
@@ -90,7 +90,7 @@ export default function Key() {
               transition={{
                 duration: 0.8,
                 ease: [0.22, 1, 0.36, 1],               // premium cubic-bezier
-                delay: index * 0.15,                    // clean stagger
+                delay: index * 0.10,                    // clean stagger
               }}
               className="
     bg-white rounded-2xl p-8 shadow-sm shadow-xl

@@ -1,142 +1,101 @@
 "use client";
-import { useRef } from "react";
 
-export default function Testimonial() {
-  const sliderRef = useRef(null);
+import Slider from "react-slick";
+import Image from "next/image";
+import { FaStar } from "react-icons/fa";
 
-  const isDragging = useRef(false);
-  const startX = useRef(0);
-  const startScrollLeft = useRef(0);
+const testimonials = [
+  {
+    name: "Donna Stroupe",
+    role: "Customers",
+    message:
+      "I had a last-minute Airbnb guest arriving and needed an urgent clean. They fit me in the same day and did an incredible job. The place looked hotel-ready.",
+   image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
+  },
+  {
+    name: "Rahul Sharma",
+    role: "Fleet Manager",
+    message:
+      "This GPS tracking system helped us reduce fuel cost and improve tracking accuracy. Support team is amazing!",
+    image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
+  },
+  {
+    name: "Anita Verma",
+    role: "Business Owner",
+    message:
+      "Clean UI, real-time data and detailed reports. One of the best tracking solutions we’ve used.",
+    image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
+  },
+];
 
-  const testimonials = [
-    {
-      name: "Rajesh Patel",
-      city: "Mumbai",
-      image: "121950523b28efbce9568e1f568d871e.jpg",
-      review:
-        "Latiyal GPS se hamare fleet ki efficiency 30% badh gayi hai. Accurate tracking aur alerts bahut hi help karte hain.",
-    },
-    {
-      name: "Anjali Sharma",
-      city: "Delhi",
-      image: "121950523b28efbce9568e1f568d871e.jpg",
-      review:
-        "Latiyal GPS ne meri gadi mein real-time tracking aur geofencing set up bahut asaan bana diya. Highly recommend!",
-    },
-    {
-      name: "Vikram Singh",
-      city: "Jaipur",
-      image: "121950523b28efbce9568e1f568d871e.jpg",
-      review:
-        "Hamare fleet management ke liye Latiyal GPS best hai. Inki quality aur 24/7 support ne sab asaan bana diya.",
-    },
-    {
-      name: "Rajesh Patel",
-      city: "Mumbai",
-      image: "f661ea61616909838a9fbfeda0d2ea14.jpg",
-      review:
-        "Latiyal GPS se hamare fleet ki efficiency 30% badh gayi hai. Accurate tracking aur alerts bahut hi help karte hain.",
-    },
-    {
-      name: "Anjali Sharma",
-      city: "Delhi",
-      image: "121950523b28efbce9568e1f568d871e.jpg",
-      review:
-        "Latiyal GPS ne meri gadi mein real-time tracking aur geofencing set up bahut asaan bana diya. Highly recommend!",
-    },
-    {
-      name: "Vikram Singh",
-      city: "Jaipur",
-      image: "f661ea61616909838a9fbfeda0d2ea14.jpg",
-      review:
-        "Hamare fleet management ke liye Latiyal GPS best hai. Inki quality aur 24/7 support ne sab asaan bana diya.",
-    },
-  ];
-
-  /* 🖱️ MOUSE DRAG */
-  const onMouseDown = (e) => {
-    isDragging.current = true;
-    startX.current = e.pageX;
-    startScrollLeft.current = sliderRef.current.scrollLeft;
-  };
-
-  const onMouseMove = (e) => {
-    if (!isDragging.current) return;
-    const walk = (e.pageX - startX.current) * 1.2;
-    sliderRef.current.scrollLeft = startScrollLeft.current - walk;
-  };
-
-  const stopDrag = () => {
-    isDragging.current = false;
-  };
-
-  /* 📱 TOUCH SWIPE */
-  const onTouchStart = (e) => {
-    startX.current = e.touches[0].pageX;
-    startScrollLeft.current = sliderRef.current.scrollLeft;
-  };
-
-  const onTouchMove = (e) => {
-    const walk = (e.touches[0].pageX - startX.current) * 1.2;
-    sliderRef.current.scrollLeft = startScrollLeft.current - walk;
+export default function TestimonialSlider() {
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
 
   return (
-    <section className="bg-white py-7">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="h-auto  flex items-center justify-center  px-4 py-20">
+      <div className="max-w-3xl w-full">
 
-        {/* HEADING */}
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-[#000]">
-          What Our Customers Say
-        </h2>
+        <Slider {...settings}>
+          {testimonials.map((item, index) => (
+            <div key={index} className="px-3">
 
-        <p className="text-center text-[#383838] mt-3 mb-14">
-          Trusted by vehicle owners, fleet managers & businesses across India.
-        </p>
+                  
 
-        {/* SLIDER */}
-        <div
-          ref={sliderRef}
-          className="flex gap-6 overflow-hidden cursor-grab active:cursor-grabbing select-none"
-          onMouseDown={onMouseDown}
-          onMouseMove={onMouseMove}
-          onMouseUp={stopDrag}
-          onMouseLeave={stopDrag}
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-        >
-          {testimonials.map((item, i) => (
-            <div
-              key={i}
-              className="min-w-full md:min-w-[40%] lg:min-w-[30%] px-3 py-10"
-            >
-              <div className="bg-white rounded-2xl px-8 pt-14 pb-8 text-center relative">
+              <div className="relative bg-white rounded-3xl p-15 my-10 ">
 
-                {/* IMAGE */}
-                <div className="absolute -top-10 left-1/2 -translate-x-1/2">
+                {/* Top Quote */}
+                <span className="absolute -top-6 left-6 text-orange-400 text-6xl">
+                  “
+                </span>
+
+                {/* Profile Pill */}
+                <div className="absolute -top-10 right-6 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full px-5 py-2 flex items-center gap-3 shadow-lg">
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-20 h-20 rounded-full border-4 border-white shadow-md object-cover"
+                    width={36}
+                    height={36}
+                    className="rounded-full border-2 border-white"
                   />
+                  <div className="text-white leading-tight">
+                    <p className="font-semibold text-sm">{item.name}</p>
+                    <p className="text-xs opacity-90">{item.role}</p>
+                  </div>
                 </div>
 
-                <h3 className="mt-6 font-bold text-2xl text-[#262F6C]">
-                  {item.name}
-                </h3>
-                <p className="text-xl text-[#383838]">{item.city}</p>
-
-                <div className="flex justify-center gap-1 text-[#FCB13B] mt-3">
-                  ★★★★★
-                </div>
-
-                <p className="text-[#383838] text-lg mt-4 leading-relaxed">
-                  “{item.review}”
+                {/* Content */}
+                <p className="font-montserrat font-light text-[13.3px] leading-[21.3px]  text-gray-600 text-sm leading-relaxed mt-6">
+                  {item.message}
                 </p>
+
+                {/* Divider */}
+                <div className="w-20 h-[1px] bg-gray-300 my-5" />
+
+                {/* Stars */}
+                <div className="flex gap-1 text-orange-400">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} />
+                  ))}
+                </div>
+
+                {/* Bottom Quote */}
+                <span className="absolute -bottom-6 right-8 text-orange-400 text-6xl rotate-180">
+                  “
+                </span>
               </div>
+
             </div>
           ))}
-        </div>
+        </Slider>
 
       </div>
     </section>
