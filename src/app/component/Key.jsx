@@ -1,113 +1,119 @@
 "use client";
 import Image from "next/image";
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
+import { SiSoundcharts } from "react-icons/si";
+import { FaBell } from "react-icons/fa";
+import { BsFillFuelPumpFill } from "react-icons/bs";
+import { FaRoute } from "react-icons/fa";
+import { FaShieldAlt } from "react-icons/fa";
+import { FaMobileRetro } from "react-icons/fa6";
+import { IoMdClock } from "react-icons/io";
+import { motion } from "framer-motion";
+
 
 export default function Key() {
-  const items = [
-    "ROBUST DEVICES",
-    "STABLE & ACCURATE DATA",
-    "EDGE PROCESSING & DIAGNOSTICS",
-    "REMOTE ECU PROVISIONING",
-    "DEAD RECKONING",
-    "CLOUD MOBILITY PLATFORM",
+  const features = [
+    {
+      title: "Google Maps Integration",
+      desc: "Real-time vehicle tracking on Google Maps with accurate location data and street view support.",
+      icon: <FaMapMarkedAlt />,
+    },
+    {
+      title: "Car Sensors",
+      desc: "Monitor vehicle health with advanced sensors for fuel, temperature, door status, and ignition.",
+      icon: <FaCar />,
+    },
+    {
+      title: "Organized Information",
+      desc: "Comprehensive dashboard with organized reports, analytics, and insights at your fingertips.",
+      icon: <SiSoundcharts />
+      ,
+    },
+    {
+      title: "Smart Alerts",
+      desc: "Instant notifications for speed violations, geofence breaches, and unusual vehicle behavior.",
+      icon: <FaBell />,
+    },
+    {
+      title: "Fuel Monitoring",
+      desc: "Track fuel consumption, detect fuel theft, and optimize fuel efficiency across your fleet.",
+      icon: <BsFillFuelPumpFill />,
+    },
+    {
+      title: "Route History",
+      desc: "Complete trip history with playback, distance traveled, stops, and time analysis.",
+      icon: <FaRoute />,
+    },
+    {
+      title: "Anti-Theft Protection",
+      desc: "Real-time alerts for unauthorized movement with remote immobilization capability.",
+      icon: <FaShieldAlt />,
+    },
+    {
+      title: "Mobile App",
+      desc: "Track your vehicles on the go with our powerful Android and iOS mobile applications.",
+      icon: <FaMobileRetro />,
+    },
+    {
+      title: "24/7 Monitoring",
+      desc: "Round-the-clock tracking and monitoring with dedicated customer support team.",
+      icon: <IoMdClock />,
+    },
   ];
 
   return (
-    <section className="w-full bg-[#F6F2EA] py-10 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section className="bg-[#F6F2EA] py-16">
+      <div className="max-w-7xl mx-auto px-4">
 
-        {/* HEADING */}
-        <div className="flex items-center justify-center gap-4 mb-4">
-          <div className="hidden md:block flex-1 border-t border-[#383838]/40" />
-          <h2 className="text-4xl sm:text-3xl md:text-4xl font-bold text-black text-center">
-            <span className="text-[#FCB13B]">K</span>ey Feature
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <p className="text-[#FCB13B] font-bold font-montserrat tracking-widest uppercase mb-2">
+            Feature
+          </p>
+          <h2 className="font-inter font-semibold text-[28px]  md:text-4xl py-4   text-gray-900">
+            Powerful <span className="text-[#FCB13B]">GPS</span> Tracking Features
           </h2>
-          <div className="hidden md:block flex-1 border-t border-[#383838]/40" />
+          <p className="font-montserrat font-light text-[13.3px] leading-[21.3px] mt-3 text-gray-600 max-w-2xl mx-auto">
+            Everything you need to monitor, manage, and protect your vehicles efficiently.
+          </p>
         </div>
 
-        <p className="text-center text-[#383838] text-md sm:text-sm md:text-lg mb-10">
-          Advance GPS Solution for real time vehicle tracking
-        </p>
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+          {features.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 60 }}          // niche se start
+              whileInView={{ opacity: 1, y: 0 }}       // exact jagah pe smooth stop
+              viewport={{ once: true, amount: 0.3 }}   // scroll pe natural trigger
+              transition={{
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],               // premium cubic-bezier
+                delay: index * 0.15,                    // clean stagger
+              }}
+              className="
+    bg-white rounded-2xl p-8 shadow-sm shadow-xl
+  "
+            >
+              {/* Icon */}
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl  text-[#FCB13B] text-3xl mb-6  shadow-[0_10px_20px_rgba(252,177,59,0.45)] ">
+                {item.icon}
+              </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
-
-          {/* IMAGE */}
-          <div className="relative flex justify-center lg:justify-start ">
-            <img
-              src="imgi_162_DSC03431-scaled.jpg"
-              alt="GPS Device"
-              className="w-[260px] sm:w-[320px] md:w-[420px] rounded-xl shadow-lg"
-            />
-          </div>
-
-          {/* FEATURES */}
-          <div className="relative ">
-
-            {/* DESKTOP */}
-            <div className="hidden md:block space-y-5 ">
-              {items.map((text, index) => (
-                <div key={index} className="relative flex items-center  hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] transition-all duration-500">
-
-                  {/* <span className="hidden lg:block absolute -left-28 w-24 h-[2px] bg-[#383838]/40" /> */}
-
-                  <div className="w-full bg-white rounded-xl   px-6 py-5
-                    flex items-center gap-4
-                    hover:shadow-xl hover:scale-[1.02]
-                    transition-all duration-300">
-
-                    <span className="w-10 h-10 flex items-center justify-center
-                      rounded-lg bg-[#F0B100] text-black font-bold">
-                      {index + 1}
-                    </span>
-
-                    <p className="text-black text-xl font-semibold">{text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* MOBILE – UNIQUE TIMELINE DESIGN */}
-            <div className="md:hidden relative space-y-5">
-
-          
-
-              {items.map((text, index) => (
-                <div key={index} className="relative flex gap-4 pl-10">
-
-                  <span className="
-                    absolute left-0 top-3
-                    w-8 h-8
-                    flex items-center justify-center
-                    rounded-full
-                    bg-[#FCB13B]
-                    text-black text-sm font-bold
-                    shadow-md
-                  ">
-                    {index + 1}
-                  </span>
-
-                  <div className="
-                    w-full
-                    bg-white 
-                    rounded-xl
-                    px-4 py-4
-                    shadow-md
-                    border border-[#FCB13B]/20
-                    transition-all duration-300
-                    active:scale-[0.97]
-                  ">
-                    <p className="text-black text-md font-semibold leading-snug">
-                      {text}
-                    </p>
-                  </div>
-
-                </div>
-              ))}
-            </div>
-
-          </div>
-
+              {/* Content */}
+              <h3 className="font-inter font-semibold text-[28px] text-xl font-semibold text-gray-900 mb-3  ">
+                {item.title}
+              </h3>
+              <p className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-[#383838] leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
         </div>
+
       </div>
     </section>
   );
 }
+

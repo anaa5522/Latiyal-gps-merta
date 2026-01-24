@@ -23,7 +23,7 @@ export default function Header() {
     return (
         <>
             {/* Header */}
-            <header className="w-full  bg-white relative z-50 min-h-[80px]  ">
+            <header className="w-full  bg-white fixed top-0 left-0 w-full h-[70px] md:h-[90px]  z-50  ">
                 <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-2 2xl:px-24">
 
                     {/* Logo */}
@@ -93,7 +93,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 className={`fixed inset-0 z-40 transition-opacity duration-300
   ${open ? "opacity-100" : "opacity-0 pointer-events-none"}
-  bg-gradient-to-l from-black/60 via-black/40 to-black/20 backdrop-blur-sm`}
+  bg-gradient-to-l from-black/60 via-black/40 to-black/20 `}
             ></div>
 
             {/* DRAWER */}

@@ -1,42 +1,68 @@
 "use client";
 
-export default function Histroy() {
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+
+export default function History() {
   const stats = [
-    {
-      title: "27+ YEARS",
-      desc: "Effectively meeting customer needs with innovative IoT solutions",
-    },
-    {
-      title: "35+ MILLION",
-      desc: "IoT devices deployed to make people lives easier and safer",
-    },
-    {
-      title: "26 COUNTRIES",
-      desc: "With local offices around the globe, we are close to our clients",
-    },
+    { value: 50000, label: "Vehicles Tracked" },
+    { value: 20000, label: "Happy Customers" },
+    { value: 15, label: "Countries Served" },
+    { value: 99.9, label: "System Uptime" },
   ];
 
-  return (
-    <section className="bg-[#F6F2EA] py-7">
-      <div className="max-w-7xl mx-auto px-6">
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-          {stats.map((item, i) => (
-            <div key={i}>
-              {/* NUMBER */}
-              <h3 className="text-3xl md:text-4xl font-extrabold text-[#262F6C]">
-                {item.title}
+  return (
+    <div className="w-full">
+      <section className="bg-[url('/b5f199aa7a24dda0c0fe888747c7efac.jpg')] bg-cover bg-center text-white py-16 md:py-24">
+
+        {/* HEADING */}
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h1 className="font-inter font-semibold text-[24px] sm:text-[28px] md:text-5xl mb-4">
+            <span className="text-[#FCB13B]">O</span>ur Impact
+          </h1>
+
+          <p className="font-montserrat font-light text-[13px] leading-[20px] max-w-2xl mx-auto opacity-90">
+            Driving innovation, improving safety, and transforming fleet
+            management through smart GPS solutions.
+          </p>
+        </div>
+
+        {/* STATS – NO WRAP, NO SCROLL */}
+        <div
+          ref={ref}
+          className="max-w-7xl mx-auto px-4 py-10 flex flex-nowrap justify-between items-center gap-3"
+        >
+          {stats.map((item, index) => (
+            <div key={index} className="text-center flex-1">
+
+              <h3 className="font-inter font-semibold text-[18px] sm:text-[22px] md:text-[28px] whitespace-nowrap">
+                {inView ? (
+                  <CountUp
+                    start={0}
+                    end={item.value}
+                    duration={2.5}
+                    separator=","
+                    decimals={item.value % 1 !== 0 ? 1 : 0}
+                  />
+                ) : (
+                  0
+                )}
+                {item.label === "System Uptime" && "%"}
               </h3>
 
-              {/* DESCRIPTION */}
-              <p className="mt-4 text-[#383838] max-w-xs mx-auto text-lg leading-relaxed">
-                {item.desc}
+              <p className="font-montserrat font-light text-[10px] sm:text-[12px] md:text-[13.3px] leading-[16px] md:leading-[21.3px] whitespace-nowrap mt-1">
+                {item.label}
               </p>
+
             </div>
           ))}
         </div>
-
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

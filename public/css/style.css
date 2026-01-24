@@ -6,17 +6,11 @@
 
 
 .font-inter {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
 }
 
 .font-montserrat {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
 }
 
-.font-noto {
-  font-family: "Noto Serif", serif;
-}
 
-.font-tinos {
-  font-family: "Tinos", serif;
-}

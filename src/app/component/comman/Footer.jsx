@@ -24,7 +24,7 @@ export default function Footer() {
           />
   
           
-          <p className="text-sm text-black leading-relaxed">
+          <p className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-black leading-relaxed">
             Advanced GPS solutions for real-time vehicle tracking, fleet
             management, and enhanced security across industries.
           </p>
@@ -32,13 +32,13 @@ export default function Footer() {
 
         {/* LINKS */}
         <div>
-          <h3 className="text-black font-semibold mb-4">Quick Links</h3>
+          <h3 className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-black font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-3 text-sm text-black">
             {["Home", "Features", "Pricing", "Contact"].map((item, i) => (
               <li key={i}>
                 <a
                   href="#"
-                  className="hover:text-black transition"
+                  className=" font-montserrat font-light text-[13.3px] leading-[21.3px] hover:text-black transition"
                 >
                   {item}
                 </a>
@@ -49,9 +49,9 @@ export default function Footer() {
 
         {/* CONTACT */}
         <div>
-          <h3 className="text-black font-semibold mb-4">Contact</h3>
+          <h3 className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-black font-semibold mb-4">Contact</h3>
           <ul className="space-y-3 text-sm text-black">
-            <li className="flex gap-3 items-start">
+            <li className="font-montserrat font-light text-[13.3px] leading-[21.3px] flex gap-3 items-start">
               <FaMapMarkerAlt className="text-black mt-1" />
               <span>123 GPS Street, Tech City</span>
             </li>
@@ -68,8 +68,8 @@ export default function Footer() {
 
         {/* SOCIAL */}
         <div>
-          <h3 className="text-black font-semibold mb-4">Follow Us</h3>
-          <div className="flex gap-4">
+          <h3 className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-black font-semibold mb-4">Follow Us</h3>
+          <div className="font-montserrat font-light text-[13.3px] leading-[21.3px] flex gap-4">
             {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter].map(
               (Icon, i) => (
                 <a
