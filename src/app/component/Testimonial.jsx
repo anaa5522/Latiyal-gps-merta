@@ -1,102 +1,156 @@
 "use client";
 
-import Slider from "react-slick";
-import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 
-const testimonials = [
-  {
-    name: "Donna Stroupe",
-    role: "Customers",
-    message:
-      "I had a last-minute Airbnb guest arriving and needed an urgent clean. They fit me in the same day and did an incredible job. The place looked hotel-ready.",
-   image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
-  },
-  {
-    name: "Rahul Sharma",
-    role: "Fleet Manager",
-    message:
-      "This GPS tracking system helped us reduce fuel cost and improve tracking accuracy. Support team is amazing!",
-    image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
-  },
-  {
-    name: "Anita Verma",
-    role: "Business Owner",
-    message:
-      "Clean UI, real-time data and detailed reports. One of the best tracking solutions we’ve used.",
-    image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
-  },
-];
+import "swiper/css";
+import "swiper/css/pagination";
 
-export default function TestimonialSlider() {
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-  };
+export default function Testimonial() {
+  const testimonials = [
+    {
+      name: "Rahul Sharma",
+      role: "Fleet Manager",
+      image: "/121950523b28efbce9568e1f568d871e.jpg",
+      review:
+        "This GPS system completely transformed how we track our vehicles. Super accurate and easy to use!",
+    },
+    {
+      name: "Amit Verma",
+      role: "Business Owner",
+      image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
+      review:
+        "Real-time tracking this are also good  alerts are amazing. I feel much more secure about my fleet now.",
+    },
+    {
+      name: "Neha Gupta",
+      role: "Logistics Head",
+      image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
+      review:
+        "Clean dashboard, fast updates, and excellent support. Highly recommended for any business.",
+    },
+    {
+      name: "Rahul Sharma",
+      role: "Fleet Manager",
+      image: "/121950523b28efbce9568e1f568d871e.jpg",
+      review:
+        "This GPS system completely transformed how we track our vehicles. Super accurate and easy to use!",
+    },
+    {
+      name: "Amit Verma",
+      role: "Business Owner",
+      image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
+      review:
+        "Real-time tracking this are also good and alerts are amazing. I feel much more secure about my fleet now.",
+    },
+    {
+      name: "Neha Gupta",
+      role: "Logistics Head",
+      image: "/f661ea61616909838a9fbfeda0d2ea14.jpg",
+      review:
+        "Clean dashboard, fast updates, and excellent support. Highly recommended for any business.",
+    },
+  ];
 
   return (
-    <section className="h-auto  flex items-center justify-center   px-4 py-20">
-      <div className="max-w-3xl w-full">
+    <section className="py-16 md:py-24 bg-[#F6F2EA] overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4">
 
-        <Slider {...settings}>
+        {/* Heading */}
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-[#FCB13B] text-xs md:text-sm font-semibold tracking-widest uppercase mb-2">
+            Testimonials
+          </p>
+
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-gray-900">
+            What Our Clients Say
+          </h2>
+
+          <p className="text-gray-600 mt-3 md:mt-4 max-w-xl mx-auto text-xs md:text-sm">
+            Trusted by businesses across industries for reliable GPS tracking solutions.
+          </p>
+        </div>
+
+        {/* Slider */}
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={20}
+          loop={true}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          slidesPerView={1} // ✅ mobile fix
+          breakpoints={{
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="pb-10 md:pb-12"
+        >
           {testimonials.map((item, index) => (
-            <div key={index} className="px-3">
+            <SwiperSlide key={index}>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="group h-full"
+              >
+                {/* Card */}
+                <div className="relative bg-white mb-6 md:mb-10 rounded-3xl p-5 md:p-8 h-full border border-[#F1ECE4] shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
 
-                  
+                  {/* Review */}
+                  <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-8 md:mb-10">
+                    {item.review}
+                  </p>
 
-              <div className="relative bg-white rounded-3xl p-15 my-10 ">
+                  {/* Bottom Strip */}
+                  <div className="flex items-center justify-between bg-[#F9F7F3] px-3 md:px-4 py-2 md:py-3 rounded-xl">
 
-                {/* Top Quote */}
-                <span className="absolute -top-6 left-6 text-orange-400 text-6xl">
-                  “
-                </span>
+                    {/* User */}
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <div className="relative">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover"
+                        />
+                        <span className="absolute bottom-0 right-0 w-2.5 h-2.5 md:w-3 md:h-3 bg-green-500 border-2 border-white rounded-full"></span>
+                      </div>
 
-                {/* Profile Pill */}
-                <div className="absolute -top-10 right-6 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full px-5 py-2 flex items-center gap-3 shadow-lg">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    width={36}
-                    height={36}
-                    className="rounded-full border-2 border-white"
-                  />
-                  <div className="text-white leading-tight">
-                    <p className="font-semibold text-sm">{item.name}</p>
-                    <p className="text-xs opacity-90">{item.role}</p>
+                      <div>
+                        <p className="text-xs md:text-sm font-semibold text-gray-900">
+                          {item.name}
+                        </p>
+                        <p className="text-[10px] md:text-[11px] text-gray-500">
+                          {item.role}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Rating */}
+                    <div className="flex gap-[2px] text-[#FCB13B] text-[10px] md:text-xs">
+                      {[...Array(5)].map((_, i) => (
+                        <FaStar key={i} />
+                      ))}
+                    </div>
+
                   </div>
+
+                  {/* Hover Accent */}
+                  <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#FCB13B]/10 to-transparent rounded-3xl"></div>
+                  </div>
+
                 </div>
-
-                {/* Content */}
-                <p className="font-montserrat font-light text-[13.3px] leading-[21.3px]  text-gray-600 text-sm leading-relaxed mt-6">
-                  {item.message}
-                </p>
-
-                {/* Divider */}
-                <div className="w-20 h-[1px] bg-gray-300 my-5" />
-
-                {/* Stars */}
-                <div className="flex gap-1 text-orange-400">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} />
-                  ))}
-                </div>
-
-                {/* Bottom Quote */}
-                <span className="absolute -bottom-6 right-8 text-orange-400 text-6xl rotate-180">
-                  “
-                </span>
-              </div>
-
-            </div>
+              </motion.div>
+            </SwiperSlide>
           ))}
-        </Slider>
-
+        </Swiper>
       </div>
     </section>
   );

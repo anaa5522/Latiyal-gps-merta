@@ -8,3 +8,51 @@ body {
   font-family: var(--font-inter);
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill bar animation */
+.skill-bar {
+  width: 0;
+  animation: grow 1.2s ease forwards;
+}
+
+.reveal.show .skill-bar {
+  width: var(--w);
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--w);
+  }
+}
+.perspective {
+  perspective: 1000px;
+}

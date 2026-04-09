@@ -1,90 +1,80 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
+import React, { useRef } from "react";
+import { motion, useMotionValue } from "framer-motion";
 
 export default function Banner() {
-  const [animate, setAnimate] = useState(false);
+  const ref = useRef(null);
 
-  useEffect(() => {
-    setAnimate(true);
-  }, []);
+  const rotateX = useMotionValue(0);
+  const rotateY = useMotionValue(0);
+  
+
+  const handleMouseMove = (e) => {
+    const rect = ref.current.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const midX = rect.width / 2;
+    const midY = rect.height / 2;
+
+    rotateY.set(((x - midX) / midX) * 10);
+    rotateX.set(-((y - midY) / midY) * 10);
+  };
+
+  const handleMouseLeave = () => {
+    rotateX.set(0);
+    rotateY.set(0);
+  };
 
   return (
-    <section
-      className="mt-10 
-        relative w-full
-        h-[50vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]
-        bg-[url('/IMG_20260113_130526.jpg')]
-        bg-cover bg-top sm:bg-center
-      "
-    >
-      {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 w-full h-28 sm:h-40 bg-gradient-to-t from-[#F6F2EA] to-transparent pointer-events-none" />
+    <div className="min-h-screen bg-white text-black flex items-center justify-center px-6">
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-5 h-full flex items-center">
-        <div
-          className={`
-            max-w-xl
-            transition-all duration-700 ease-out
-            ${animate ? "opacity-100 scale-100" : "opacity-0 scale-90"}
-          `}
-        >
-          {/* Heading */}
-          <h1 className="font-inter font-semibold text-black leading-tight
-            text-[28px] sm:text-4xl md:text-6xl
-          ">
-            <span className="text-[#FCB13B]">T</span>RACK <br />
-            SMARTER.
-            <span className="block mt-2 sm:mt-4">DRIVE SAFER.</span>
+      <div className="flex items-center justify-between gap-10  max-w-7xl w-full">
+
+        {/* LEFT SIDE */}
+        <div className="w-2/3 ">
+          <h1 className="text-3xl md:text-6xl font-bold mb-10">
+            Smart GPS Tracker
           </h1>
 
-          {/* Sub Heading */}
-          <p className="
-            font-montserrat font-light
-            text-[13.3px] sm:text-sm md:text-base
-            leading-[21.3px]
-            text-gray-800
-            mt-4 mb-6 sm:mb-8
-          ">
-            Advanced GPS Solution for Real-Time Vehicle Tracking
+          <p className="text-gray-400 mb-6">
+            Track your vehicle in real-time with advanced GPS technology.
+            Get alerts, monitor routes, and ensure complete safety.
           </p>
 
-          {/* Buttons */}
-          <div className="flex gap-4 flex-nowrap">
-            {/* Contact */}
-            <button
-              className="
-                font-montserrat font-semibold
-                text-[13.3px] leading-[21.3px]
-                px-6 py-3 rounded-full
-                bg-[#FCB13B] text-black
-                transition-all duration-300 ease-out
-                hover:-translate-y-1 hover:scale-[1.03]
-                hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)]
-                active:scale-95
-              "
-            >
-              Contact Us
-            </button>
+          <button className="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-xl transition">
+            Buy Now
+          </button>
+        </div>
 
-            {/* Learn More */}
-            <button
-              className="
-                font-montserrat font-semibold
-                text-[13.3px] leading-[21.3px]
-                px-6 py-3 rounded-full
-                border border-black text-black
-                transition-all duration-300 ease-out
-                hover:-translate-y-1 hover:scale-[1.03]
-                hover:shadow-[0_12px_30px_rgba(0,0,0,0.2)]
-                active:scale-95
-              "
+        {/* RIGHT SIDE */}
+        <div className="w-1/3 flex justify-center">
+          <div
+            ref={ref}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className="perspective"
+          >
+            <motion.div
+              style={{
+                rotateX,
+                rotateY,
+                transformStyle: "preserve-3d",
+              }}
+              className="w-64 h-64 md:w-150 md:h-170 flex items-center justify-center"
             >
-              Learn More
-            </button>
+              <img
+                src="/imgi_676_white-smartphone-mockup-blank-screen-isolated-on-transparent-background-smartphone-mockup-frame-free-png.png"
+                alt="product"
+                className="w-48 md:w-60 object-contain pointer-events-none"
+              />
+            </motion.div>
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
   );
 }

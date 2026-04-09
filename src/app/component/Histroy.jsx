@@ -1,68 +1,86 @@
 "use client";
 
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
-
-export default function History() {
-  const stats = [
-    { value: 50000, label: "Vehicles Tracked" },
-    { value: 20000, label: "Happy Customers" },
-    { value: 15, label: "Countries Served" },
-    { value: 99.9, label: "System Uptime" },
-  ];
-
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
-
+export default function ImpactSection() {
   return (
-    <div className="w-full">
-      <section className="bg-[url('/b5f199aa7a24dda0c0fe888747c7efac.jpg')] bg-cover bg-center text-white py-16  md:py-24">
+    <section className="w-full bg-[#F6F2EA] to-white py-20">
+      <div className="max-w-7xl mx-auto px-6">
 
-        {/* HEADING */}
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="font-inter font-semibold text-[24px] sm:text-[28px] md:text-5xl mb-4">
-            <span className="text-[#FCB13B]">O</span>ur Impact
-          </h1>
+        {/* Top Content */}
+        <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
+          
+          {/* Left */}
+          <div>
+            <p className="text-sm text-[#FCB13B] mb-3 tracking-widest uppercase font-semibold">
+              Our Impact
+            </p>
 
-          <p className="font-montserrat font-light text-[13px] leading-[20px] max-w-2xl mx-auto opacity-90">
-            Driving innovation, improving safety, and transforming fleet
-            management through smart GPS solutions.
-          </p>
-        </div>
+            <h2 className="text-4xl md:text-6xl font-bold leading-tight text-black">
+              Growing GPS Services Rapidly in the Market
+            </h2>
+          </div>
 
-        {/* STATS – NO WRAP, NO SCROLL */}
-        <div
-          ref={ref}
-          className="max-w-7xl mx-auto px-4 py-10 flex flex-nowrap justify-between items-center gap-3"
-        >
-          {stats.map((item, index) => (
-            <div key={index} className="text-center flex-1">
+          {/* Right */}
+          <div>
+            <p className="text-gray-600 text-lg">
+              We are expanding our strong presence and delivering reliable GPS
+              tracking solutions to customers with trust and performance.
+            </p>
 
-              <h3 className="font-inter font-semibold text-[18px] sm:text-[22px] md:text-[28px] whitespace-nowrap">
-                {inView ? (
-                  <CountUp
-                    start={0}
-                    end={item.value}
-                    duration={2.5}
-                    separator=","
-                    decimals={item.value % 1 !== 0 ? 1 : 0}
-                  />
-                ) : (
-                  0
-                )}
-                {item.label === "System Uptime" && "%"}
-              </h3>
+            <div className="mt-6 flex gap-4 flex-wrap">
+              <button className="px-6 py-3 bg-[#FCB13B] text-black rounded-full font-semibold hover:scale-105 transition">
+                View Services
+              </button>
 
-              <p className="font-montserrat font-light text-[10px] sm:text-[12px] md:text-[13.3px] leading-[16px] md:leading-[21.3px]  mt-1">
-                {item.label}
-              </p>
-
+              <button className="px-6 py-3 border border-black rounded-full font-semibold hover:bg-black hover:text-white transition">
+                Contact Now
+              </button>
             </div>
-          ))}
+          </div>
+
         </div>
-      </section>
-    </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 border-t border-black/10 pt-12">
+
+          {/* Item 1 */}
+          <div className="border-r border-black/10 pr-6">
+            <h3 className="text-4xl font-bold text-black">50+</h3>
+            <p className="mt-4 font-semibold text-black">Happy Clients</p>
+            <p className="text-gray-600 text-sm mt-2">
+              Trusted customers using our GPS solutions.
+            </p>
+          </div>
+
+          {/* Item 2 */}
+          <div className="border-r border-black/10 pr-6">
+            <h3 className="text-4xl font-bold text-black">100%</h3>
+            <p className="mt-4 font-semibold text-black">Accuracy Rate</p>
+            <p className="text-gray-600 text-sm mt-2">
+              Ensuring precise tracking and data reliability.
+            </p>
+          </div>
+
+          {/* Item 3 */}
+          <div className="border-r border-black/10 pr-6">
+            <h3 className="text-4xl font-bold text-black">24/7</h3>
+            <p className="mt-4 font-semibold text-black">Support</p>
+            <p className="text-gray-600 text-sm mt-2">
+              Always available for your tracking needs.
+            </p>
+          </div>
+
+          {/* Item 4 */}
+          <div>
+            <h3 className="text-4xl font-bold text-black">2+</h3>
+            <p className="mt-4 font-semibold text-black">Years Experience</p>
+            <p className="text-gray-600 text-sm mt-2">
+              Delivering GPS services with proven expertise.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
   );
 }
