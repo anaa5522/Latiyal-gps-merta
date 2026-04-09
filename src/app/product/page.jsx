@@ -1,10 +1,10 @@
 import React from 'react'
-import Product from '../component/Product'
+import Productpage from '../component/Productpage'
 
 export default function page() {
   return (
     <>
-        <Product/>
+        <Productpage/>
     </>
   )
 }
