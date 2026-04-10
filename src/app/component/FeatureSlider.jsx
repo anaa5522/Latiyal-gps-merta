@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 import { FaMapMarkerAlt, FaShieldAlt, FaCloud, FaBolt } from "react-icons/fa";
 
-export default function ResponsiveSlider() {
+export default function FeatureSlider() {
   const features = [
     { icon: <FaMapMarkerAlt />, title: "Live Location" },
     { icon: <FaShieldAlt />, title: "Secure Data" },

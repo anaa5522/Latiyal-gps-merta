@@ -29,7 +29,7 @@ const stagger = {
   },
 };
 
-export default function AboutPage() {
+export default function About() {
   return (
     <div className="bg-[#F6F2EA] text-white overflow-hidden">
 
