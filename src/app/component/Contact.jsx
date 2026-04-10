@@ -1,88 +1,158 @@
-"use client"
+"use client";
 
-
-import React from "react";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { IoLocationSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <div className="w-full bg-white text-gray-800">
-      {/* Hero Section */}
-      <section className="relative h-[40vh] flex items-center justify-center bg-[url('/4c9bc507bd6c4bda4cd5b60222c092c7.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <h1 className="relative text-4xl md:text-6xl font-serif text-white">Contact Us</h1>
-      </section>
+    <div className="bg-[#F6F2EA] text-black min-h-screen">
 
-      {/* Contact Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
-        {/* Left Content */}
-        <div>
-          <h2 className="text-4xl font-serif mb-6"><spam className='text-[#FCB13B]'>G</spam>et in Touch with Our Team</h2>
-          <p className="text-gray-600 mb-10 text-md">
-            We’re here to help you with reliable and smart GPS tracking solutions.
-            Whether you need real-time vehicle monitoring, fleet management, or technical support — our team is ready to assist you.
-          </p>
+      {/* ================= HERO HEADING ================= */}
+      <div
+        className="text-center my-0 relative bg-cover bg-center bg-no-repeat py-20 md:py-40 px-4"
+        style={{
+          backgroundImage:
+            "url('/df95db051ac7c4228bcbaecdc24deb9b.jpg')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
-          <ul className="space-y-4 text-md">
-            <li className="flex items-center gap-3">
-              <span className="text-yellow-500">📍</span>
-              Jaipur, Rajasthan, India
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-yellow-500">📞</span>
-              995074321
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-yellow-500">✉️</span>
-              latiyal@gmail.com
-            </li>
-          </ul>
-        </div>
-
-        {/* Form */}
-        <form className="bg-white shadow-lg rounded-2xl p-8 space-y-4">
-          <input type="text" placeholder="Your Name" className="w-full border rounded-lg px-4 py-3" />
-          <input type="email" placeholder="Your Email" className="w-full border rounded-lg px-4 py-3" />
-          <input type="text" placeholder="Subject" className="w-full border rounded-lg px-4 py-3" />
-          <textarea placeholder="Message" className="w-full border rounded-lg px-4 py-3 h-32"></textarea>
-
-          <button
-            type="submit"
-            className="w-full bg-yellow-500 transition text-white py-3 rounded-full font-semibold hover:text-black hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] transition-all duration-500"
+        {/* Content */}
+        <div className="relative z-10">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl font-bold text-[#FCB13B]"
           >
-            BOOK NOW
-          </button>
-        </form>
-      </section>
+            Contact Us
+          </motion.h2>
 
-      {/* Map Section */}
-
-      <section className="w-full h-[400px]">
-        <iframe
-          title="Jodhpur Map"
-          className="w-full h-full border-0"
-          loading="lazy"
-          allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228975.0356777817!2d72.86538324028224!3d26.270264922033075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c4eaa06ccb9%3A0x8114ea5b0ae1abb8!2sJodhpur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1768923308931!5m2!1sen!2sin"
-        ></iframe>
-      </section>
-
-
-      {/* CTA Section */}
-      <section className="relative py-24  px-4 bg-[url('/ee679e37341f536297e1fd7454c00e69.jpg')] bg-cover bg-center text-center">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative max-w-2xl mx-auto text-white">
-          <h2 className="text-4xl font-serif mb-4">
-            Power Your Vehicles with Intelligent GPS Tracking
-          </h2>
-          <p className="text-gray-200 mb-8">
-            Monitor, manage, and protect your vehicles with real-time tracking and smart analytics — anytime, anywhere.
-          </p>
-          <button className="bg-white text-white px-8 py-3 rounded-full font-semibold hover:text-black hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_18px_40px_rgba(252,177,59,0.45)] bg-yellow-500 duration-300">
-            CONTACT US
-          </button>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-4 text-white/80 text-base md:text-xl max-w-2xl mx-auto"
+          >
+            We are always ready to help you with GPS tracking solutions, support
+            and business inquiries.
+          </motion.p>
         </div>
-      </section>
+      </div>
+
+      {/* ================= CONTACT SECTION ================= */}
+      <div className="p-6 md:p-16">
+        <div className="grid md:grid-cols-2 gap-10">
+
+          {/* Left Form */}
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg w-full max-w-md border border-[#FCB13B]/30">
+            <h2 className="text-2xl font-semibold mb-6 text-[#FCB13B]">
+              Get In Touch
+            </h2>
+
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full p-3 bg-transparent border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
+              />
+              <input
+                type="email"
+                placeholder="example@gmail.com"
+                className="w-full p-3 bg-transparent border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
+              />
+              <input
+                type="text"
+                placeholder="Topic"
+                className="w-full p-3 bg-transparent border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
+              />
+              <textarea
+                placeholder="Type here..."
+                rows={4}
+                className="w-full p-3 bg-transparent border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
+              />
+
+              <button className="w-full bg-[#FCB13B] text-black font-semibold py-3 rounded-full hover:scale-105 transition">
+                Send Now
+              </button>
+            </form>
+          </div>
+
+          {/* Right Info */}
+          <div className="flex flex-col justify-center space-y-8">
+            <p className="text-black/70 max-w-md">
+              We are here to help you with GPS tracking solutions. Contact us anytime
+              for support, queries, or business inquiries.
+            </p>
+
+            <div className="grid grid-cols-2 gap-6">
+
+              <div className="flex items-center gap-3">
+                <FaPhoneAlt className="text-[#FCB13B]" />
+                <div>
+                  <p className="text-sm text-white/60">Phone</p>
+                  <p>+92 020 852</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MdEmail className="text-[#FCB13B]" />
+                <div>
+                  <p className="text-sm text-black/60">Email</p>
+                  <p>example@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <FaWhatsapp className="text-[#FCB13B]" />
+                <div>
+                  <p className="text-sm text-black/60">WhatsApp</p>
+                  <p>0321 234 5678</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <IoLocationSharp className="text-[#FCB13B]" />
+                <div>
+                  <p className="text-sm text-black/60">Office</p>
+                  <p>Oak Ridge, India</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Map */}
+            <div className="rounded-xl overflow-hidden border border-[#FCB13B]/30">
+              <iframe
+                src="https://maps.google.com/maps?q=Jodhpur,Rajasthan,India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-40"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        {/* ================= BOTTOM BANNER ================= */}
+        <div className="mt-16 relative rounded-2xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+            alt="banner"
+            className="w-full h-64 object-cover opacity-60"
+          />
+
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold max-w-xl">
+              Let’s Build Something Amazing Together
+            </h2>
+
+            <button className="mt-4 px-6 py-2 bg-[#FCB13B] text-black rounded-full font-semibold hover:scale-105 transition">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-export default function ImpactSection() {
+export default function History() {
   return (
     <section className="w-full bg-[#F6F2EA] to-white py-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -31,7 +31,7 @@ export default function ImpactSection() {
                 View Services
               </button>
 
-              <button className="px-6 py-3 border border-black rounded-full font-semibold hover:bg-black hover:text-white transition">
+              <button className="px-6 py-3 border border-black rounded-full font-semibold hover:bg-black text-black hover:text-white transition">
                 Contact Now
               </button>
             </div>

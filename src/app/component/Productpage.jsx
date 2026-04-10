@@ -7,49 +7,58 @@ import Product from "./Product";
 export default function Productpage() {
   const products = [
     { name: "Chair", price: "$80", img: "/DSC03450-600x600.jpg" },
-    { name: "Stool", price: "$50", img: "/DSC03450-600x600.jpg" },
-    { name: "Sofa", price: "$200", img: "/DSC03450-600x600.jpg" },
-    { name: "Shelf", price: "$150", img: "/DSC03450-600x600.jpg" },
-    { name: "Arm Chair", price: "$110", img: "/DSC03450-600x600.jpg" },
-    { name: "Side Table", price: "$70", img: "/DSC03450-600x600.jpg" },
-    { name: "Storage Rack", price: "$180", img: "/DSC03450-600x600.jpg" },
+    { name: "Stool", price: "$50", img: "/imgi_87_DSC03470-2048x2048.jpg" },
+    { name: "Sofa", price: "$200", img: "/imgi_107_DSC03495-1536x1536.jpg" },
+    { name: "Shelf", price: "$150", img: "/imgi_59_1-2048x2048.jpg" },
+    { name: "Arm Chair", price: "$110", img: "/imgi_73_DSC03389-2048x2048.jpg" },
+    { name: "Side Table", price: "$70", img: "/imgi_45_DSC03550-2048x2048.jpg" },
+    { name: "Storage Rack", price: "$180", img: "/imgi_80_DSC06313-copy-2048x2048.jpg" },
     { name: "Side Table", price: "$70", img: "/DSC03450-600x600.jpg" },
   ];
 
   return (
-    <div className="bg-[#f5f5f5] p-6 space-y-16">
+    <div className="bg-[#f5f5f5]  space-y-16">
 
       {/* HERO */}
-      <div className="grid gap-6 items-center">
-        
+      <div
+        className="text-center my-0 relative bg-cover bg-center bg-no-repeat py-20 md:py-40 px-4"
+        style={{
+          backgroundImage:
+            "url('/df95db051ac7c4228bcbaecdc24deb9b.jpg')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Content */}
+        <div className="relative z-10">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl font-bold text-[#FCB13B]"
+          >
+            Products
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-4 text-white/80 text-base md:text-xl max-w-2xl mx-auto"
+          >
+            We are always ready to help you with GPS tracking solutions, support
+            and business inquiries.
+          </motion.p>
+        </div>
       </div>
 
       {/* PRODUCTS */}
       <div>
-        {/* Heading */}
-        <div className="text-center mx-4 sm:mx-6 md:mx-0 my-20">
-  <motion.h2
-    initial={{ opacity: 0, y: -20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent 
-               bg-gradient-to-r from-[#FBB247] via-[#FD9A2B] to-[#FFC371]"
-  >
-    Our Products
-  </motion.h2>
-
-  <motion.p
-    initial={{ opacity: 0, y: 10 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.3 }}
-    className="mt-3 text-gray-600 text-base sm:text-lg md:text-xl max-w-md sm:max-w-xl md:max-w-2xl mx-auto"
-  >
-    Monitor your vehicles and assets in real-time, receive notifications if they move outside safe zones, and stay in complete control
-  </motion.p>
-</div>
+        
 
         {/* Products Grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((item, i) => (
             <motion.div
               key={i}
@@ -104,12 +113,11 @@ export default function Productpage() {
           ))}
         </div>
       </div>
-
-      {/* DISCOUNT SECTION */}
-      <div className="">
-        <Product/>
+      <div>
+        <Product />
       </div>
-
     </div>
+
+
   );
 }

@@ -2,9 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-  FaBinoculars,
-  FaLightbulb,
-  FaBullseye,
   FaSatelliteDish,
   FaMapMarkedAlt,
   FaMobileAlt,
@@ -12,8 +9,9 @@ import {
   FaUsers,
   FaClock,
 } from "react-icons/fa";
+import History from "./Histroy";
+import Chooserespon from "./Chooserespon";
 
-/* ------------------ ANIMATIONS ------------------ */
 const ease = [0.22, 1, 0.36, 1];
 
 const fadeUp = {
@@ -31,194 +29,120 @@ const stagger = {
   },
 };
 
-/* ------------------ PAGE ------------------ */
 export default function AboutPage() {
   return (
-    <div className="bg-white text-gray-800 overflow-hidden">
+    <div className="bg-[#F6F2EA] text-white overflow-hidden">
 
-      {/* HERO */}
-      <section className="relative h-[45vh] flex items-center justify-center bg-[url('/4c9bc507bd6c4bda4cd5b60222c092c7.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/40" />
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={stagger}
-          className="relative text-center px-4"
-        >
-          <motion.h1
-            variants={fadeUp}
-            className="text-4xl md:text-6xl font-inter font-semibold text-white"
+      {/* ================= HERO ================= */}
+       <div
+        className="text-center my-0 relative bg-cover bg-center bg-no-repeat py-20 md:py-40 px-4"
+        style={{
+          backgroundImage:
+            "url('/df95db051ac7c4228bcbaecdc24deb9b.jpg')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Content */}
+        <div className="relative z-10">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl font-bold text-[#FCB13B]"
           >
             About Us
-          </motion.h1>
-          <motion.p
-            variants={fadeUp}
-            className="mt-4 text-gray-200 max-w-2xl mx-auto"
-          >
-            Smart GPS Tracking Solutions for Safer & Smarter Mobility
-          </motion.p>
-        </motion.div>
-      </section>
+          </motion.h2>
 
-      {/* WHO WE ARE */}
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-4 text-white/80 text-base md:text-xl max-w-2xl mx-auto"
+          >
+            We are always ready to help you with GPS tracking solutions, support
+            and business inquiries.
+          </motion.p>
+        </div>
+      </div>
+
+      {/* ================= WHO WE ARE ================= */}
       <motion.section
         variants={stagger}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
         className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center"
       >
         <motion.img
           src="/fcd3c92c1005803424a3b0b650097cf5.jpg"
-          alt="About GPS"
           variants={fadeUp}
           className="rounded-3xl shadow-xl"
         />
 
         <motion.div variants={fadeUp}>
-          <p className="text-[#FCB13B] font-semibold tracking-widest uppercase mb-2">
+          <p className="text-[#FCB13B] font-semibold uppercase mb-2">
             Who We Are
           </p>
-          <h2 className="font-inter font-semibold text-3xl md:text-4xl mb-5">
+
+          <h2 className="text-3xl md:text-4xl text-black font-semibold mb-5">
             We Deliver Smart GPS Solutions
           </h2>
-          <p className="text-gray-600 mb-4">
-            We provide advanced GPS tracking systems designed for individuals,
-            fleet owners, logistics companies, and enterprises.
-          </p>
-          <p className="text-gray-600 mb-6">
-            Our solutions improve vehicle security, reduce operational costs,
-            and deliver complete real-time visibility.
+
+          <p className="text-black mb-4">
+            We provide advanced GPS tracking systems for individuals, fleets,
+            and enterprises.
           </p>
 
-          <motion.button
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-[#FCB13B] text-black px-8 py-3 rounded-full font-semibold shadow-lg"
-          >
+          <p className="text-black mb-6">
+            Our technology ensures real-time tracking, better security, and
+            improved efficiency.
+          </p>
+
+          <button className="bg-[#FCB13B] text-black px-8 py-3 rounded-full font-semibold hover:shadow-[0_0_20px_#FCB13B] transition">
             Request a Demo
-          </motion.button>
+          </button>
         </motion.div>
       </motion.section>
 
-      {/* OUR MISSION SECTION (DESIGN FROM IMAGE) */}
-      <motion.section
-        variants={stagger}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="py-28 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-
-          {/* LEFT */}
-          <motion.div variants={fadeUp}>
-            <h2 className="font-inter font-semibold text-3xl md:text-5xl mb-12">
-              Our Mission
-            </h2>
-
-            <div className="space-y-10">
-              <div className="flex gap-6">
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl border border-[#20c997] text-[#20c997] text-xl">
-                  <FaBinoculars />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-xl mb-1">Vision</h4>
-                  <p className="text-gray-600 max-w-md">
-                    To create a connected and intelligent mobility ecosystem
-                    powered by accurate GPS technology.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-6">
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl border border-[#20c997] text-[#20c997] text-xl">
-                  <FaLightbulb />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-xl mb-1">Mission</h4>
-                  <p className="text-gray-600 max-w-md">
-                    Deliver real-time GPS tracking solutions that improve
-                    vehicle safety, efficiency, and control.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-6">
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl border border-[#20c997] text-[#20c997] text-xl">
-                  <FaBullseye />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-xl mb-1">Goals</h4>
-                  <p className="text-gray-600 max-w-md">
-                    Innovate continuously and provide reliable support to
-                    become a trusted GPS partner.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* RIGHT IMAGES */}
-          <motion.div variants={fadeUp} className="flex justify-center">
-            <div className="grid grid-cols-2 gap-6 rotate-45">
-              {["/mission1.jpg", "/mission2.jpg", "/mission3.jpg", "/mission4.jpg"].map(
-                (img, i) => (
-                  <div
-                    key={i}
-                    className={`overflow-hidden rounded-3xl ${i === 3 ? "col-span-2 h-72" : "h-44 w-44"
-                      }`}
-                  >
-                    <img
-                      src={img}
-                      alt="mission"
-                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
-                    />
-                  </div>
-                )
-              )}
-            </div>
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* WHY CHOOSE US */}
-      <motion.section
-        variants={stagger}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-6 py-24"
-      >
-        <motion.div variants={fadeUp} className="text-center mb-16">
-          <h2 className="font-inter font-semibold text-3xl md:text-4xl">
-            Why Choose Us
+      {/* ================= HOW GPS WORKS ================= */}
+      <section className="bg-[#F6F2EA]  py-24 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold text-black mb-12">
+            How GPS Tracking Works
           </h2>
-        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {[
-            ["Real-Time Tracking", <FaMapMarkedAlt />],
-            ["High Accuracy GPS", <FaSatelliteDish />],
-            ["Mobile App Access", <FaMobileAlt />],
-            ["Vehicle Security", <FaShieldAlt />],
-            ["24/7 Monitoring", <FaClock />],
-            ["Trusted by Thousands", <FaUsers />],
-          ].map(([title, icon], i) => (
-            <motion.div
-              key={i}
-              variants={fadeUp}
-              whileHover={{ y: -10 }}
-              className="bg-white p-10 rounded-3xl shadow-xl text-center"
-            >
-              <div className="text-[#FCB13B] text-4xl mb-4 flex justify-center">
-                {icon}
-              </div>
-              <h4 className="font-semibold text-xl">{title}</h4>
-            </motion.div>
-          ))}
+          <div className="grid md:grid-cols-3 gap-10">
+            
+            <div className="group hover:scale-105 transition duration-300">
+              <FaSatelliteDish className="text-4xl text-[#FCB13B] mx-auto mb-4" />
+              <h3 className="font-semibold mb-2 text-black">Satellite Connection</h3>
+              <p className="text-black">
+                GPS devices connect with satellites to determine location.
+              </p>
+            </div>
+
+            <div className="group hover:scale-105 transition duration-300">
+              <FaMapMarkedAlt className="text-4xl text-[#FCB13B] mx-auto mb-4" />
+              <h3 className="font-semibold mb-2 text-black">Location Tracking</h3>
+              <p className="text-black">
+                Real-time data is sent to the system and displayed on maps.
+              </p>
+            </div>
+
+            <div className="group hover:scale-105 transition duration-300">
+              <FaMobileAlt className="text-4xl text-[#FCB13B] mx-auto mb-4" />
+              <h3 className="font-semibold mb-2 text-black">Mobile Access</h3>
+              <p className="text-black">
+                Monitor everything from your phone anytime, anywhere.
+              </p>
+            </div>
+
+          </div>
         </div>
-      </motion.section>
+      </section> 
+      <History />
+      <Chooserespon />
 
     </div>
   );

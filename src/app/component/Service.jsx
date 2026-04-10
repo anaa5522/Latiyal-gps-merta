@@ -52,7 +52,7 @@ const item = {
   },
 };
 
-export default function Services() {
+export default function Service() {
   return (
     <section className="py-24 bg-[#F6F2EA] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">

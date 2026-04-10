@@ -24,7 +24,6 @@ export default function Header() {
         { name: "PRODUCT", path: "/product" },
         { name: "CONTACT US", path: "/contact" },
         { name: "ABOUT US", path: "/aboutus" },
-        { name: "VISIT COMPANY", path: "/company" },
     ];
 
     return (
@@ -92,9 +91,9 @@ export default function Header() {
                 shadow-2xl rounded-l-3xl`}>
 
                 <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200">
-                    <span className="text-lg font-semibold text-[#262F6C]">Menu</span>
+                    <span className="text-lg font-semibold text-[#FBB247]">Menu</span>
                     <button onClick={() => setOpen(false)} className="p-2 rounded-full bg-gray-100">
-                        <HiX className="text-xl text-[#262F6C]" />
+                        <HiX className="text-xl text-[#FBB247]" />
                     </button>
                 </div>
 
@@ -104,7 +103,7 @@ export default function Header() {
                             key={item.name}
                             href={item.path}
                             onClick={() => setOpen(false)}
-                            className={`text-[17px] font-medium text-[#262F6C]
+                            className={`text-[17px] font-medium text-black
                             transition-all duration-500
                             ${open ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"}`}
                             style={{ transitionDelay: `${index * 90}ms` }}
@@ -118,7 +117,7 @@ export default function Header() {
                     <Link
                         href="/contact"
                         onClick={() => setOpen(false)}
-                        className="block text-center bg-[#262F6C] text-white py-3 rounded-full font-semibold shadow-lg">
+                        className="block text-center bg-[#FBB247] text-white py-3 rounded-full font-semibold shadow-lg">
                         Contact Us
                     </Link>
                 </div>

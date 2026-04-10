@@ -2,8 +2,7 @@ import { Inter, Montserrat } from "next/font/google";
 import'../../public/css/style.css'
 import Header from "./component/comman/Header";
 import Footer from "./component/comman/Footer";
-import"../app/component/Cart";
-import Cart from "../app/component/Cart";
+
 
 
 const inter = Inter({ subsets: ["latin"], weight: ["300","400","500","600","700"] });
@@ -24,7 +23,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-inter">
         <Header />
-        <Cart />
         {children}
         <Footer />
       </body>

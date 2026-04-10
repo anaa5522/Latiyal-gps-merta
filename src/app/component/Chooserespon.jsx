@@ -5,7 +5,7 @@ import { MdGpsFixed } from "react-icons/md";
 import { FaSatelliteDish, FaMobileAlt } from "react-icons/fa";
 import { FiCloud, FiBell, FiShield } from "react-icons/fi";
 
-export default function AboutTech() {
+export default function Chooserespon() {
   return (
     <section className="bg-[#F6F2EA] py-24">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
