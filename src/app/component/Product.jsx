@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Product() {
 
@@ -57,9 +58,23 @@ export default function Product() {
           </ul>
 
           <div className="flex justify-center md:justify-start">
-            <button className="border border-[#FCB13B] text-[#FCB13B] px-5 md:px-6 py-2 text-xs sm:text-sm tracking-wide hover:bg-[#FCB13B] hover:text-black transition duration-300">
-              Explore Now →
-            </button>
+            <Link href="/product">
+              <motion.button
+                whileHover={{ scale: 1.08, boxShadow: "0px 10px 30px rgba(0,0,0,0.2)" }}
+                whileTap={{ scale: 0.95 }}
+                className="relative px-5 md:px-6 py-2 text-xs sm:text-sm tracking-wide rounded-full overflow-hidden group border border-[#FCB13B] text-[#FCB13B] font-semibold"
+              >
+                <span className="absolute inset-0 bg-transparent group-hover:bg-[#FCB13B] transition duration-300"></span>
+
+                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
+                  <span className="absolute top-0 left-[-100%] w-full h-full bg-white/20 skew-x-12 group-hover:left-[200%] transition-all duration-700"></span>
+                </span>
+
+                <span className="relative z-10 group-hover:text-black transition">
+                  Explore Now →
+                </span>
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
 

@@ -40,7 +40,7 @@ export default function Header() {
                     {/* Logo */}
                     <Link href='/' className="flex-shrink-0 pl-2 sm:pl-4 md:pl-4 lg:p-0">
                         <img
-                            src="Latiyal Logo Final.png"
+                            src="/Latiyal Logo Final.png"
                             alt="company logo"
                             className="w-[110px] sm:w-[135px] md:w-[135px] lg:w-[165px] xl:w-[165px] h-auto object-contain py-4"
                         />

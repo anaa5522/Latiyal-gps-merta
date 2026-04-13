@@ -101,7 +101,7 @@ export default function Testimonial() {
                 className="group h-full"
               >
                 {/* Card */}
-                <div className="relative bg-white mb-6 md:mb-10 rounded-3xl p-5 md:p-8 h-full border border-[#F1ECE4] shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div className="relative bg-white mb-10 md:mb-10 rounded-3xl p-5 md:p-8 h-full border border-[#F1ECE4] shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
 
                   {/* Review */}
                   <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed mb-8 md:mb-10">

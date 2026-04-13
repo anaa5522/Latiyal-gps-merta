@@ -22,25 +22,32 @@ export default function Footer() {
             alt="Latiyal GPS"
             className="h-10 mb-4"
           />
-  
-          
+
+
           <p className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-black leading-relaxed">
             Advanced GPS solutions for real-time vehicle tracking, fleet
             management, and enhanced security across industries.
           </p>
         </div>
 
-        {/* LINKS */}
         <div>
-          <h3 className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-black font-semibold mb-4">Quick Links</h3>
+          <h3 className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-black font-semibold mb-4">
+            Quick Links
+          </h3>
+
           <ul className="space-y-3 text-sm text-black">
-            {["Home", "Features", "Pricing", "Contact"].map((item, i) => (
+            {[
+              { name: "Home", link: "/" },
+              { name: "About Us", link: "/aboutus" },
+              { name: "Product", link: "/product" },
+              { name: "Contact", link: "/contact" },
+            ].map((item, i) => (
               <li key={i}>
                 <a
-                  href="#"
-                  className=" font-montserrat font-light text-[13.3px] leading-[21.3px] hover:text-black transition"
+                  href={item.link}
+                  className="font-montserrat font-light text-[13.3px] leading-[21.3px] hover:text-[#FCB13B] transition"
                 >
-                  {item}
+                  {item.name}
                 </a>
               </li>
             ))}

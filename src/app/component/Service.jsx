@@ -14,13 +14,13 @@ const services = [
     id: "02",
     title: "Institute Vehicle Monitoring",
     desc: "Our institutional GPS tracking system with integrated video surveillance ensures maximum safety. Track buses in real-time and access live or recorded footage for enhanced monitoring and security.",
-    img: "/c2db95d895dcdcef924d7422c7315bc7.jpg",
+    img: "/image 4.png",
   },
   {
     id: "03",
     title: "Fuel Monitoring System",
     desc: "Smart fuel sensor technology delivers real-time fuel level insights. Prevent fuel theft, monitor consumption, and reduce operational costs with accurate and efficient fuel management.",
-    img: "/351288ec2957262ca40969c04c1a83d5.jpg",
+    img: "/Gemini_Generated_Image_c3y8tac3y8tac3y8.png",
   },
 ];
 
@@ -54,7 +54,7 @@ const item = {
 
 export default function Service() {
   return (
-    <section className="py-24 bg-[#F6F2EA] overflow-hidden">
+    <section className="py-14 md:py-20 bg-[#F6F2EA] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Heading */}

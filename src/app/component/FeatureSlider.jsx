@@ -21,7 +21,7 @@ export default function FeatureSlider() {
   ];
 
   return (
-    <div className="w-full px-4 py-8 md:py-10 bg-[#F6F2EA]">
+    <div className="w-full px-4  bg-[#F6F2EA]">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={20}

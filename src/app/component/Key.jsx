@@ -100,7 +100,7 @@ export default function Key() {
             className="order-1 md:order-2 w-full h-[300px] bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden"
           >
             <img
-              src="/ca9ac4f03440f59c0cee63b773230325.jpg"
+              src="/image 4.png"
               alt=""
               className="w-full h-full object-cover"
             />

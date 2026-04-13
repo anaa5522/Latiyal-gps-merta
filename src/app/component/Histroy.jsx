@@ -1,5 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
+import Link from "next/link";
+
 export default function History() {
   return (
     <section className="w-full bg-[#F6F2EA] to-white py-20">
@@ -7,7 +10,7 @@ export default function History() {
 
         {/* Top Content */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
-          
+
           {/* Left */}
           <div>
             <p className="text-sm text-[#FCB13B] mb-3 tracking-widest uppercase font-semibold">
@@ -27,13 +30,48 @@ export default function History() {
             </p>
 
             <div className="mt-6 flex gap-4 flex-wrap">
-              <button className="px-6 py-3 bg-[#FCB13B] text-black rounded-full font-semibold hover:scale-105 transition">
-                View Services
-              </button>
+              <Link href={'/aboutus'}>
+              <motion.button
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: "0px 10px 30px rgba(0,0,0,0.2)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="relative px-6 py-3 rounded-full text-black font-semibold overflow-hidden group"
+              >
+                {/* Gradient Background */}
+                <span className="absolute inset-0 bg-[#FCB13B]"></span>
 
-              <button className="px-6 py-3 border border-black rounded-full font-semibold hover:bg-black text-black hover:text-white transition">
-                Contact Now
-              </button>
+                {/* Shine Effect */}
+                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
+                  <span className="absolute top-0 left-[-100%] w-full h-full bg-white/20 skew-x-12 group-hover:left-[200%] transition-all duration-700"></span>
+                </span>
+
+                <span className="relative z-10">View Services</span>
+              </motion.button>
+                </Link>
+                <Link href={'/contact'}>
+              <motion.button
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: "0px 10px 30px rgba(0,0,0,0.2)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="relative px-6 py-3 rounded-full font-semibold overflow-hidden group border border-black/30 text-black"
+              >
+                {/* Hover Background */}
+                <span className="absolute inset-0 bg-transparent group-hover:bg-black transition duration-300"></span>
+
+                {/* Shine Effect */}
+                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
+                  <span className="absolute top-0 left-[-100%] w-full h-full bg-white/20 skew-x-12 group-hover:left-[200%] transition-all duration-700"></span>
+                </span>
+
+                <span className="relative z-10 group-hover:text-white transition">
+                  Contact Now
+                </span>
+              </motion.button>
+                </Link>
             </div>
           </div>
 

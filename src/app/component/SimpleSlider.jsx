@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function SimpleSlider() {
   return (
@@ -12,7 +14,7 @@ export default function SimpleSlider() {
     >
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30 md:bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/30 md:bg-black/0"></div>
 
       {/* Animated Background Blobs */}
       <div className="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#FCB13B]/20 rounded-full blur-3xl top-[-80px] md:top-[-100px] left-[-80px] md:left-[-100px] animate-pulse"></div>
@@ -20,7 +22,7 @@ export default function SimpleSlider() {
       <div className="absolute w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-pink-300/20 rounded-full blur-3xl bottom-[-80px] md:bottom-[-100px] right-[-80px] md:right-[-100px] animate-pulse"></div>
 
       {/* Content */}
-      <div className="relative text-center max-w-3xl">
+      <div className="relative text-center max-w-3xl py-25">
 
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight">
           Smart GPS Tracking <br />
@@ -31,16 +33,43 @@ export default function SimpleSlider() {
           Real-time tracking, security & insights to keep your vehicles safe and connected.
         </p>
 
-        <div className="mt-6 md:mt-8 flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
-          
-          <button className="px-5 md:px-6 py-2.5 md:py-3 bg-[#FCB13B] text-black rounded-full text-sm md:text-lg font-semibold transition transform hover:scale-105 shadow-lg">
-            Get Started
-          </button>
+        <div className="mt-6 md:mt-8 flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4 w-full">
+        <Link href={'/product'}>
+          <motion.button
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0px 10px 30px rgba(0,0,0,0.2)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="relative w-full sm:w-auto px-6 sm:px-8 py-3 rounded-full text-black font-semibold overflow-hidden group text-sm sm:text-base"
+          >
+            <span className="absolute inset-0 bg-[#FBB247]"></span>
 
-          <button className="px-5 md:px-6 py-2.5 md:py-3 border border-white text-white rounded-full text-sm md:text-lg font-semibold transition hover:bg-black hover:text-white">
-            Learn More
-          </button>
+            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-white/20 skew-x-12 group-hover:left-[200%] transition-all duration-700"></span>
+            </span>
 
+            <span className="relative z-10">Buy Now</span>
+          </motion.button>
+            </Link>
+            <Link href={'/contact'}>
+          <motion.button
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0px 10px 30px rgba(0,0,0,0.2)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="relative w-full sm:w-auto px-6 sm:px-8 py-3 rounded-full text-black font-semibold overflow-hidden group text-sm sm:text-base border border-white/30"
+          >
+            <span className="absolute inset-0 bg-transparent group-hover:bg-[#FBB247]"></span>
+
+            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-white/20 skew-x-12 group-hover:left-[200%] transition-all duration-700"></span>
+            </span>
+
+            <span className="relative z-10">Free Demo</span>
+          </motion.button>
+            </Link>
         </div>
 
       </div>
