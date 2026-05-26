@@ -32,7 +32,7 @@ export default function Key() {
             className="w-full h-[300px] bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden"
           >
             <img
-              src="/Image 2jpg.jpeg"
+              src="/e61b133b-0d74-4410-a82c-efe245f5753a.png"
               alt=""
               className="w-full h-full object-cover"
             />
@@ -47,13 +47,13 @@ export default function Key() {
           >
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#C19A6B]/10 blur-2xl rounded-full"></div>
 
-            <span className="inline-block px-4 py-1 text-xs tracking-widest uppercase bg-[#C19A6B]/10 text-[#C19A6B] rounded-full font-semibold">
+            <span className="inline-block px-4 py-1 text-xs tracking-widest uppercase bg-[#C19A6B]/10 text-[#F6A02A] rounded-full font-semibold">
               Security Feature
             </span>
 
             <h2 className="text-3xl md:text-5xl font-bold text-black leading-tight">
               Smart Geo-Fencing <br />
-              <span className="text-[#C19A6B]">That Thinks Ahead</span>
+              <span className="text-[#FCB13B]">That Thinks Ahead</span>
             </h2>
 
             <div className="w-24 h-[2px] bg-gradient-to-r from-[#C19A6B] to-transparent"></div>
@@ -76,12 +76,12 @@ export default function Key() {
             transition={{ duration: 0.7 }}
             className="order-2 md:order-1 space-y-4"
           >
-            <span className="text-sm uppercase tracking-widest text-[#C19A6B] font-semibold">
+            <span className="text-sm uppercase tracking-widest text-[#FCB13B] font-semibold">
               Connectivity
             </span>
 
             <h2 className="text-3xl md:text-4xl font-bold text-black leading-tight">
-              Seamless <span className="text-[#C19A6B]">Mobile Access</span>
+              Seamless <span className="text-[#FCB13B]">Mobile Access</span>
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
@@ -90,7 +90,7 @@ export default function Key() {
               and managing your devices is always just a tap away.
             </p>
 
-            <div className="w-16 h-1 bg-[#C19A6B] rounded-full"></div>
+            <div className="w-16 h-1 bg-[#FCB13B] rounded-full"></div>
           </motion.div>
 
           <motion.div
@@ -100,7 +100,7 @@ export default function Key() {
             className="order-1 md:order-2 w-full h-[300px] bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden"
           >
             <img
-              src="/image 4.png"
+              src="/a8a89fee-6021-40e1-aa6f-520f055aece9.jpg"
               alt=""
               className="w-full h-full object-cover"
             />
@@ -118,7 +118,7 @@ export default function Key() {
             className="w-full h-[300px] bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden"
           >
             <img
-              src="/9afb30ced68ed715c8c3b7c08e0aec23.jpg"
+              src="/18a3c0d5-1738-413c-8d4a-40b957d3e899.png"
               alt=""
               className="w-full h-full object-cover"
             />
@@ -130,12 +130,12 @@ export default function Key() {
             transition={{ duration: 0.7 }}
             className="space-y-5"
           >
-            <span className="text-sm uppercase tracking-widest text-[#C19A6B] font-semibold">
+            <span className="text-sm uppercase tracking-widest text-[#FCB13B] font-semibold">
               Live Monitoring
             </span>
 
             <h2 className="text-3xl md:text-4xl font-bold text-black leading-tight">
-              Real-Time <span className="text-[#C19A6B]">GPS Tracking</span>
+              Real-Time <span className="text-[#FCB13B]">GPS Tracking</span>
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
@@ -156,7 +156,7 @@ export default function Key() {
               </span>
             </div>
 
-            <div className="w-20 h-1 bg-[#C19A6B] rounded-full"></div>
+            <div className="w-20 h-1 bg-[#FCB13B] rounded-full"></div>
           </motion.div>
 
         </div>

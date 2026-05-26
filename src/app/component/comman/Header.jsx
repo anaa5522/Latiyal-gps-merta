@@ -31,7 +31,7 @@ export default function Header() {
             {/* Header */}
             <header className={`w-full fixed top-0 left-0 h-[70px] md:h-[88px] z-50 transition-all duration-300
             ${scrolled
-                ? "bg-gradient-to-b from-[#F6F2EA]/90 via-white/90 to-[#FFFEFE]/90 backdrop-blur-md shadow-md"
+                ? "bg-gradient-to-b from-[#F6F2EA]/90 via-white/90 to-[#F6F2EA]/90 backdrop-blur-md "
                 : "bg-transparent"}
             `}>
 

@@ -7,14 +7,14 @@ const services = [
     id: "01",
     title: "Fleet Management System",
     desc: "Our advanced vehicle tracking technology gives fleet managers complete visibility of their assets. Monitor driver behavior, optimize maintenance schedules, and boost overall fleet productivity with precision.",
-    img: "/97529fc7789fb20dc5644029d55f72fb.jpg",
+    img: "/img.jpg",
     dark: true,
   },
   {
     id: "02",
     title: "Institute Vehicle Monitoring",
     desc: "Our institutional GPS tracking system with integrated video surveillance ensures maximum safety. Track buses in real-time and access live or recorded footage for enhanced monitoring and security.",
-    img: "/image 4.png",
+    img: "/59d241ca-f401-4559-b0b9-a3248056a72c.png",
   },
   {
     id: "03",

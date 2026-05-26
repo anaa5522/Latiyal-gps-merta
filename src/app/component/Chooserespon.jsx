@@ -7,12 +7,12 @@ import { FiCloud, FiBell, FiShield } from "react-icons/fi";
 
 export default function Chooserespon() {
   return (
-    <section className="bg-[#F6F2EA] md:py-20 py-15 ">
+    <section className="bg-[#F6F2EA] md:py-20 py-15">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, y: 80 }}   // 👈 changed
+          initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
@@ -39,15 +39,15 @@ export default function Chooserespon() {
 
         {/* RIGHT IMAGE */}
         <motion.div
-          initial={{ opacity: 0, y: 80 }}   // 👈 changed
+          initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="w-full h-[350px] bg-white rounded-3xl shadow-md flex items-center justify-center overflow-hidden"
+          className="w-full h-[250px] sm:h-[300px] md:h-[350px] bg-white rounded-3xl shadow-md flex items-center justify-center overflow-hidden"
         >
           <img
-            src="/9323fc916cc4ee7b2e8c1f87f41f10e9.jpg"
+            src="/c180b7cf-0b4b-45a0-979f-9c77c09bf343.png"
             alt="GPS Tracking"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain md:object-cover"
           />
         </motion.div>
 
