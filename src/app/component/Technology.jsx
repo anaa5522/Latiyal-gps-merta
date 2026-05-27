@@ -5,12 +5,12 @@ import { MdGpsFixed } from "react-icons/md";
 import { FaSatelliteDish, FaMobileAlt } from "react-icons/fa";
 import { FiCloud, FiBell, FiShield } from "react-icons/fi";
 
-export default function Chooserespon() {
+export default function Technology() {
   return (
     <section className="bg-[#F6F2EA] md:py-20 py-15">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
 
-        {/* LEFT CONTENT */}
+        {/*LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}

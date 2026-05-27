@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Key() {
+export default function Feature() {
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
 

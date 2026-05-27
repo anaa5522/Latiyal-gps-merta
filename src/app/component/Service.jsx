@@ -24,7 +24,7 @@ const services = [
   },
 ];
 
-/* 🔥 SMOOTH STAGGER */
+
 const container = {
   hidden: {},
   show: {
@@ -34,7 +34,7 @@ const container = {
   },
 };
 
-/* 🔥 SMOOTH + PREMIUM (NOT TOO FAST) */
+
 const item = {
   hidden: {
     opacity: 0,
@@ -46,8 +46,8 @@ const item = {
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.45, // 👈 smooth feel
-      ease: [0.22, 1, 0.36, 1], // 🔥 premium easing
+      duration: 0.45,
+      ease: [0.22, 1, 0.36, 1], 
     },
   },
 };
@@ -66,7 +66,7 @@ export default function Service() {
             viewport={{ once: true }}
             className="text-[#FCB13B] font-semibold tracking-widest uppercase mb-2"
           >
-            Our Solutions
+            Our Service
           </motion.p>
 
           <motion.h2

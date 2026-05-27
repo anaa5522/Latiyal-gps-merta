@@ -64,8 +64,7 @@ export default function Header() {
 
                     {/* Icons */}
                     <div className="flex items-center gap-2 md:gap-6 lg:gap-8 xl:gap-10">
-                        <Link href='search'><BsSearch className="text-black text-xl md:hidden" /></Link>
-                        <Link href='search'><BsSearch className="text-black text-lg hidden md:block" /></Link>
+                        
                         <Link href='cart'><FaShoppingCart className="text-black text-lg hidden sm:block" /></Link>
 
                         <button className="md:hidden text-3xl" onClick={() => setOpen(true)}>

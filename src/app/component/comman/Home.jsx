@@ -1,14 +1,17 @@
 
 import How from "../How";
-import Key from "../Key";
+import Key from "../Feature";
 import Choose from "../Choose";
-import Chooserespon from "../Chooserespon";
+import Chooserespon from "../Technology";
 import Histroy from "../Histroy";
 import Testimonial from "../Testimonial";
 import FeatureSlider from "../FeatureSlider";
-import SimpleSlider from "../SimpleSlider";
+
 import Product from "../Product";
 import Service from "../Service";
+import BannerSection from "../BannerSection";
+import Technology from "../Technology";
+import Feature from "../Feature";
 
 
 
@@ -16,21 +19,16 @@ import Service from "../Service";
 export default function Home() {
   return (
     <>
-    <div className=""><SimpleSlider/></div>
-    <div><FeatureSlider/></div>
-    <div ><Key/></div>
-    <div ><How /></div> 
+    <div><BannerSection/></div>
     <div><Service/></div>
-    <div><Chooserespon/></div>
+    <div ><How /></div>
+    <div><Technology/></div>
+    <div><FeatureSlider/></div>
+    <div ><Feature/></div>
     <div><Choose/></div>
-     <div > <Histroy/></div>
-     <div><Product/></div>
-    <Testimonial/>
-
-  
-    
-
-      
+    <div > <Histroy/></div>
+    <div><Product/></div>
+    <div><Testimonial/></div>
     </>
   );
 }

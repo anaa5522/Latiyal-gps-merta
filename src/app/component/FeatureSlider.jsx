@@ -1,12 +1,16 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/pagination";
 
-import { FaMapMarkerAlt, FaShieldAlt, FaCloud, FaBolt } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaShieldAlt,
+  FaCloud,
+  FaBolt,
+} from "react-icons/fa";
 
 export default function FeatureSlider() {
   const features = [
@@ -21,12 +25,11 @@ export default function FeatureSlider() {
   ];
 
   return (
-    <div className="w-full px-4  bg-[#F6F2EA]">
+    <div className="w-full px-4 bg-[#F6F2EA]">
       <Swiper
-        modules={[Pagination, Autoplay]}
+        modules={[Autoplay]}
         spaceBetween={20}
         loop={true}
-        pagination={{ clickable: true }}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,

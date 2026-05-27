@@ -19,11 +19,11 @@ export default function Choose() {
     <section
       className="relative py-24 bg-white bg-fixed bg-cover bg-center"
       style={{
-        backgroundImage: "url('/4bb655fe323dd0e657b40b10ad74b47e.jpg')",
+        backgroundImage: "url('/wp2351082.jpg')",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/80"></div>
 
       <div className="relative max-w-7xl mx-auto px-4">
 

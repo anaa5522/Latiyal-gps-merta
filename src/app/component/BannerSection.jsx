@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function SimpleSlider() {
+export default function BannerSection() {
   return (
     <div
       className="relative min-h-[80vh] md:h-screen flex items-center justify-start overflow-hidden bg-fixed bg-center bg-cover px-4 md:px-16"

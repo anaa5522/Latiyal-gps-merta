@@ -29,15 +29,15 @@ export default function How() {
     <section
       className="relative py-24 bg-fixed bg-cover bg-center"
       style={{
-        backgroundImage: "url('/IMG_20260404_164436.png')", // 👈 same image use kar
+        backgroundImage: "url('/IMG_20260404_164436.png')",
       }}
     >
-      {/* Overlay (important for readability) */}
+      {/*Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="relative max-w-7xl mx-auto px-4">
 
-        {/* Heading */}
+        {/* Heading*/}
         <div className="text-center mb-16">
           <p className="text-[#FCB13B] font-semibold tracking-widest uppercase mb-2">
             How It Works

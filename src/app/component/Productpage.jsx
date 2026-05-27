@@ -28,7 +28,7 @@ export default function Productpage() {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Content */}
         <div className="relative z-10">
@@ -45,7 +45,7 @@ export default function Productpage() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="mt-4 text-white/80 text-base md:text-xl max-w-2xl mx-auto"
+            className="mt-4 text-white text-base md:text-xl max-w-2xl mx-auto"
           >
             We are always ready to help you with GPS tracking solutions, support
             and business inquiries.

@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <div className="bg-[#F6F2EA] text-black min-h-screen">
 
-      {/* ================= HERO HEADING ================= */}
+      {/* ================= HERO SECTION ================= */}
       <div
         className="text-center my-0 relative bg-cover bg-center bg-no-repeat py-20 md:py-40 px-4"
         style={{
@@ -18,7 +18,7 @@ export default function Contact() {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Content */}
         <div className="relative z-10">
@@ -35,7 +35,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="mt-4 text-white/80 text-base md:text-xl max-w-2xl mx-auto"
+            className="mt-4 text-white text-base md:text-xl max-w-2xl mx-auto"
           >
             We are always ready to help you with GPS tracking solutions, support
             and business inquiries.
@@ -82,52 +82,62 @@ export default function Contact() {
           </div>
 
           {/* Right Info */}
-          <div className="flex flex-col justify-center space-y-8">
-            <p className="text-black/70 max-w-md">
+          <div className="flex flex-col justify-center space-y-6 md:space-y-8 w-full">
+
+            <p className="text-black/70 max-w-md text-sm sm:text-base leading-relaxed">
               We are here to help you with GPS tracking solutions. Contact us anytime
               for support, queries, or business inquiries.
             </p>
 
-            <div className="grid grid-cols-2 gap-6">
+            {/* Contact Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 px-1 sm:px-2">
 
-              <div className="flex items-center gap-3">
-                <FaPhoneAlt className="text-[#FCB13B]" />
+              <div className="flex items-start gap-3">
+                <FaPhoneAlt className="text-[#FCB13B] text-lg mt-1" />
                 <div>
-                  <p className="text-sm text-white/60">Phone</p>
-                  <p>+92 020 852</p>
+                  <p className="text-sm text-black/60">Phone</p>
+                  <p className="text-sm sm:text-base break-all">
+                    +91 9950745321
+                  </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <MdEmail className="text-[#FCB13B]" />
+              <div className="flex items-start gap-3">
+                <MdEmail className="text-[#FCB13B] text-xl mt-1" />
                 <div>
                   <p className="text-sm text-black/60">Email</p>
-                  <p>example@gmail.com</p>
+                  <p className="text-sm sm:text-base break-all">
+                    arvind77@gmail.com
+                  </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <FaWhatsapp className="text-[#FCB13B]" />
+              <div className="flex items-start gap-3">
+                <FaWhatsapp className="text-[#FCB13B] text-xl mt-1" />
                 <div>
                   <p className="text-sm text-black/60">WhatsApp</p>
-                  <p>0321 234 5678</p>
+                  <p className="text-sm sm:text-base break-all">
+                    +91 9950745321
+                  </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <IoLocationSharp className="text-[#FCB13B]" />
+              <div className="flex items-start gap-3">
+                <IoLocationSharp className="text-[#FCB13B] text-xl mt-1" />
                 <div>
                   <p className="text-sm text-black/60">Office</p>
-                  <p>Oak Ridge, India</p>
+                  <p className="text-sm sm:text-base">
+                    Jodhpur, Rajasthan, India
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Map */}
-            <div className="rounded-xl overflow-hidden border border-[#FCB13B]/30">
+            <div className="rounded-xl overflow-hidden border border-[#FCB13B]/30 w-full">
               <iframe
                 src="https://maps.google.com/maps?q=Jodhpur,Rajasthan,India&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                className="w-full h-40"
+                className="w-full h-52 sm:h-60 md:h-40 lg:h-52"
                 loading="lazy"
               ></iframe>
             </div>
@@ -137,13 +147,13 @@ export default function Contact() {
         {/* ================= BOTTOM BANNER ================= */}
         <div className="mt-16 relative rounded-2xl overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+            src="/f367ba2d6e6058ea09cfe5f4ac04b063.jpg"
             alt="banner"
             className="w-full h-64 object-cover opacity-60"
           />
-
+          <div className="absolute inset-0 bg-black/60"></div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold max-w-xl">
+            <h2 className="text-2xl md:text-3xl font-semibold max-w-xl text-white">
               Let’s Build Something Amazing Together
             </h2>
 
