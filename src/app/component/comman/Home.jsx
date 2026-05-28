@@ -20,13 +20,16 @@ export default function Home() {
   return (
     <>
     <div><BannerSection/></div>
-    <div><Service/></div>
-    <div ><How /></div>
     <div><Technology/></div>
     <div><FeatureSlider/></div>
+    <div ><How /></div>
+    {/* <div><Service/></div> */}
+    
+    
+    
     <div ><Feature/></div>
     <div><Choose/></div>
-    <div > <Histroy/></div>
+    {/* <div > <Histroy/></div> */}
     <div><Product/></div>
     <div><Testimonial/></div>
     </>
