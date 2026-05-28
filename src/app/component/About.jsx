@@ -55,78 +55,6 @@ export default function About() {
         </div>
       </section>
 
-        {/* ================= HOW GPS WORKS ================= */}
-      <section className="bg-[#F6F2EA] py-20 md:py-24 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto text-center">
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-black mb-14"
-          >
-            How GPS Tracking Works
-          </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            {/* CARD 1 */}
-            <motion.div
-              whileHover={{ y: -8 }}
-              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 border border-[#FCB13B]/10"
-            >
-              <FaSatelliteDish className="text-5xl text-[#FCB13B] mx-auto mb-5" />
-
-              <h3 className="text-xl font-semibold text-black mb-3">
-                Satellite Connection
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                GPS devices connect with satellites to identify
-                accurate vehicle location.
-              </p>
-            </motion.div>
-
-            {/* CARD 2 */}
-            <motion.div
-              whileHover={{ y: -8 }}
-              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 border border-[#FCB13B]/10"
-            >
-              <FaMapMarkedAlt className="text-5xl text-[#FCB13B] mx-auto mb-5" />
-
-              <h3 className="text-xl font-semibold text-black mb-3">
-                Live Tracking
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                Real-time vehicle data is displayed instantly
-                on maps and dashboards.
-              </p>
-            </motion.div>
-
-            {/* CARD 3 */}
-            <motion.div
-              whileHover={{ y: -8 }}
-              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 border border-[#FCB13B]/10"
-            >
-              <FaMobileAlt className="text-5xl text-[#FCB13B] mx-auto mb-5" />
-
-              <h3 className="text-xl font-semibold text-black mb-3">
-                Mobile Monitoring
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                Track and manage your vehicles anytime from
-                your mobile phone.
-              </p>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-
       {/* ================= WHO WE ARE ================= */}
       <section className="w-full bg-[#F6F2EA] py-16 md:py-24 px-4 sm:px-6 lg:px-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -252,8 +180,81 @@ export default function About() {
 
         </div>
       </section>
+      {/* ================= HOW GPS WORKS ================= */}
+      <section className="bg-[#F6F2EA] py-20 md:py-24 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto text-center">
 
-      
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-black mb-14"
+          >
+            How GPS Tracking Works
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            {/* CARD 1 */}
+            <motion.div
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 border border-[#FCB13B]/10"
+            >
+              <FaSatelliteDish className="text-5xl text-[#FCB13B] mx-auto mb-5" />
+
+              <h3 className="text-xl font-semibold text-black mb-3">
+                Satellite Connection
+              </h3>
+
+              <p className="text-gray-600 leading-7">
+                GPS devices connect with satellites to identify
+                accurate vehicle location.
+              </p>
+            </motion.div>
+
+            {/* CARD 2 */}
+            <motion.div
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 border border-[#FCB13B]/10"
+            >
+              <FaMapMarkedAlt className="text-5xl text-[#FCB13B] mx-auto mb-5" />
+
+              <h3 className="text-xl font-semibold text-black mb-3">
+                Live Tracking
+              </h3>
+
+              <p className="text-gray-600 leading-7">
+                Real-time vehicle data is displayed instantly
+                on maps and dashboards.
+              </p>
+            </motion.div>
+
+            {/* CARD 3 */}
+            <motion.div
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 border border-[#FCB13B]/10"
+            >
+              <FaMobileAlt className="text-5xl text-[#FCB13B] mx-auto mb-5" />
+
+              <h3 className="text-xl font-semibold text-black mb-3">
+                Mobile Monitoring
+              </h3>
+
+              <p className="text-gray-600 leading-7">
+                Track and manage your vehicles anytime from
+                your mobile phone.
+              </p>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
 
       {/* EXTRA COMPONENTS */}
       <History />

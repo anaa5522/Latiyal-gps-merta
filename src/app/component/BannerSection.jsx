@@ -6,25 +6,34 @@ import Link from "next/link";
 
 export default function BannerSection() {
   return (
-    <div
-      className="relative min-h-[80vh] md:h-screen flex items-center justify-start overflow-hidden bg-fixed bg-center bg-cover px-4 md:px-16"
-      style={{
-        backgroundImage: "url('/car.png')",
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30 md:bg-black/20"></div>
+    <div className="relative min-h-[80vh] md:h-screen flex items-center justify-start overflow-hidden px-4 md:px-16">
 
-      {/* Animated Background Blob */}
-      <div className="absolute w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-pink-300/20 rounded-full blur-3xl bottom-[-80px] md:bottom-[-100px] right-[-80px] md:right-[-100px] animate-pulse"></div>
+      {/* BACKGROUND VIDEO */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover object-contain"
+      >
+        <source src="/vecteezy_car-and-truck-traffic-on-the-highway-in-europe-poland_7957364.mp4" />
+      </video>
 
-      {/* Content */}
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black/60"></div>
+
+   
+
+      {/* CONTENT */}
       <div className="relative text-left max-w-3xl w-full py-24 z-10">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-[#000000] leading-tight">
+
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight">
           Smart GPS Tracking <br />
+
           <span className="text-[#FCB13B]">
             For a Smarter World
           </span>
+
         </h1>
 
         <p className="mt-4 md:mt-6 text-sm sm:text-base md:text-xl text-white/90 max-w-2xl">
@@ -32,11 +41,12 @@ export default function BannerSection() {
           vehicles safe and connected.
         </p>
 
-        {/* Buttons */}
+        {/* BUTTONS */}
         <div className="mt-6 md:mt-8 flex flex-col sm:flex-row justify-start items-start gap-3 md:gap-4 w-full">
-          
-          {/* Buy Now */}
+
+          {/* BUY NOW */}
           <Link href={"/product"}>
+
             <motion.button
               whileHover={{
                 scale: 1.08,
@@ -45,6 +55,7 @@ export default function BannerSection() {
               whileTap={{ scale: 0.95 }}
               className="relative w-full sm:w-auto px-6 sm:px-8 py-3 rounded-full text-black font-semibold overflow-hidden group text-sm sm:text-base"
             >
+
               <span className="absolute inset-0 bg-[#FBB247]"></span>
 
               <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
@@ -54,11 +65,14 @@ export default function BannerSection() {
               <span className="relative z-10">
                 Buy Now
               </span>
+
             </motion.button>
+
           </Link>
 
-          {/* Free Demo */}
+          {/* FREE DEMO */}
           <Link href={"/contact"}>
+
             <motion.button
               whileHover={{
                 scale: 1.08,
@@ -67,6 +81,7 @@ export default function BannerSection() {
               whileTap={{ scale: 0.95 }}
               className="relative w-full sm:w-auto px-6 sm:px-8 py-3 rounded-full text-white font-semibold overflow-hidden group text-sm sm:text-base border border-white/30"
             >
+
               <span className="absolute inset-0 bg-transparent group-hover:bg-[#FBB247] transition-all duration-500"></span>
 
               <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
@@ -76,8 +91,11 @@ export default function BannerSection() {
               <span className="relative z-10 group-hover:text-black transition-colors duration-300">
                 Free Demo
               </span>
+
             </motion.button>
+
           </Link>
+
         </div>
       </div>
     </div>
