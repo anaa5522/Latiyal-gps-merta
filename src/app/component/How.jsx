@@ -39,16 +39,16 @@ export default function How() {
 
         {/* Heading*/}
         <div className="text-center mb-16">
-          <p className="text-[#FCB13B] font-semibold tracking-widest uppercase mb-2">
+          <p className=" text-[#FCB13B] text-[13.33px] uppercase Montserrat tracking-widest mb-2">
             How It Works
           </p>
 
-          <h2 className="font-bold text-4xl md:text-5xl text-white">
+          <h2 className="font-semibold Inter  text-[42.67px] text-white">
             Get Started in{" "}
             <span className="text-[#FCB13B]">3 Simple Steps</span>
           </h2>
 
-          <p className="text-white mt-4 max-w-2xl mx-auto">
+          <p className="text-white mt-4 max-w-2xl mx-auto text-[13.33px] leading-[21.33px] font-Light">
             From installation to tracking, we make it incredibly easy to monitor your vehicles.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function How() {
                 {item.title}
               </h3>
 
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-[13.33px] leading-[21.33px] font-Light">
                 {item.desc}
               </p>
 

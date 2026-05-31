@@ -16,15 +16,15 @@ export default function Technology() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-[#FCB13B] uppercase tracking-widest font-semibold mb-2">
+          <p className="text-[#FCB13B] text-[13.33px] uppercase Montserrat tracking-widest font-bold mb-2">
             About Technology
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
+          <h2 className=" font-semibold Inter text-gray-900 text-[42.67px] ">
             Advanced GPS Technology That Powers Your Fleet
           </h2>
 
-          <p className="text-gray-600 mt-5 text-sm leading-relaxed">
+          <p className="text-gray-600 mt-5 text-[13.33px] leading-[21.33px] font-Light">
             Our GPS tracking system uses a network of satellites to pinpoint
             the exact location of your vehicles in real time. Data is instantly
             transmitted to secure cloud servers, allowing you to monitor,

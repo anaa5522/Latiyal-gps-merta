@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Product() {
-
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
+  const isMobile =
+    typeof window !== "undefined" && window.innerWidth < 1024;
 
   const contentAnim = {
-    initial: isMobile ? { opacity: 0, y: 80 } : { opacity: 0, x: 60 },
+    initial: isMobile
+      ? { opacity: 0, y: 80 }
+      : { opacity: 0, x: 60 },
     whileInView: { opacity: 1, x: 0, y: 0 },
   };
 
@@ -16,17 +18,12 @@ export default function Product() {
     <section className="w-full bg-[#E6CEA1] py-14 md:py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-8 md:gap-10 items-center">
 
-        {/* LEFT IMAGES */}
-        <div className="grid grid-cols-2 gap-3 md:gap-4">
+        {/* LEFT IMAGE */}
+        <div className="w-full">
           <img
-            src="/DSC03415-600x600.jpg"
+            src="/warehouse_dashboard.png"
             alt="gps device"
-            className="w-full h-[180px] sm:h-[220px] md:h-[300px] object-cover rounded-lg"
-          />
-          <img
-            src="/DSC03450-600x600.jpg"
-            alt="gps tracking"
-            className="w-full h-[180px] sm:h-[220px] md:h-[300px] object-cover rounded-lg"
+            className="w-full h-[220px] sm:h-[320px] md:h-[418px] object-cover rounded-xl"
           />
         </div>
 
@@ -60,24 +57,26 @@ export default function Product() {
           <div className="flex justify-center md:justify-start">
             <Link href="/product">
               <motion.button
-                whileHover={{ scale: 1.08, boxShadow: "0px 10px 30px rgba(0,0,0,0.2)" }}
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: "0px 10px 30px rgba(0,0,0,0.2)",
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="relative px-5 md:px-6 py-2 text-xs sm:text-sm tracking-wide rounded-full overflow-hidden group border border-[#FCB13B] text-[#FCB13B] font-semibold"
               >
-                <span className="absolute inset-0 bg-transparent group-hover:bg-[#FCB13B] transition duration-300"></span>
+                <span className="absolute inset-0 bg-[#FCB13B] transition duration-300"></span>
 
                 <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
                   <span className="absolute top-0 left-[-100%] w-full h-full bg-white/20 skew-x-12 group-hover:left-[200%] transition-all duration-700"></span>
                 </span>
 
-                <span className="relative z-10 group-hover:text-black transition">
+                <span className="relative z-10 text-black transition">
                   Explore Now →
                 </span>
               </motion.button>
             </Link>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

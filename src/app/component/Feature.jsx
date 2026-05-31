@@ -32,7 +32,7 @@ export default function Feature() {
             className="w-full h-[300px] bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden"
           >
             <img
-              src="/e61b133b-0d74-4410-a82c-efe245f5753a.png"
+              src="/highway_live_tracking.png"
               alt=""
               className="w-full h-full object-cover"
             />

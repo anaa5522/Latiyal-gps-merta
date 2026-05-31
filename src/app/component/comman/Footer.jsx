@@ -1,19 +1,39 @@
 "use client";
+
 import React from "react";
 import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneAlt,
 } from "react-icons/fa";
 
 export default function Footer() {
+  const socialLinks = [
+    {
+      name: "Facebook",
+      img: "/facebook.png",
+      link: "https://facebook.com",
+    },
+    {
+      name: "Instagram",
+      img: "/instagram (1).png",
+      link: "https://instagram.com",
+    },
+    {
+      name: "LinkedIn",
+      img: "/whatsapp.png",
+      link: "https://linkedin.com",
+    },
+    {
+      name: "Twitter",
+      img: "/twitter.png",
+      link: "https://twitter.com",
+    },
+  ];
+
   return (
     <footer className="bg-[#000000] text-gray-300">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-6 py-15 pt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
         {/* BRAND */}
         <div>
@@ -23,19 +43,19 @@ export default function Footer() {
             className="h-10 mb-4"
           />
 
-
-          <p className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-white leading-relaxed">
+          <p className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-white">
             Advanced GPS solutions for real-time vehicle tracking, fleet
             management, and enhanced security across industries.
           </p>
         </div>
 
+        {/* QUICK LINKS */}
         <div>
-          <h3 className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-white font-semibold mb-4">
+          <h3 className="font-montserrat  lg:text-center font-semibold text-[17px] leading-[21.3px] text-white mb-4">
             Quick Links
           </h3>
 
-          <ul className="space-y-3 text-sm text-white">
+          <ul className="space-y-3 text-sm lg:text-center text-white">
             {[
               { name: "Home", link: "/" },
               { name: "About Us", link: "/aboutus" },
@@ -56,47 +76,61 @@ export default function Footer() {
 
         {/* CONTACT */}
         <div>
-          <h3 className="font-montserrat font-light text-[13.3px] leading-[21.3px] text-white font-semibold mb-4">Contact</h3>
+          <h3 className="font-montserrat font-semibold text-[17px] leading-[21.3px] text-white mb-4">
+            Contact
+          </h3>
+
           <ul className="space-y-3 text-sm text-white">
-            <li className="font-montserrat font-light text-[13.3px] leading-[21.3px] flex gap-3 items-start">
-              <FaMapMarkerAlt className="text-white mt-1" />
-              <span>123 GPS Street, Tech City</span>
-            </li>
+            
+
             <li className="flex gap-3 items-center">
-              <FaEnvelope className=" text-white" />
-              <span>info@latiyalgps.com</span>
+              <FaEnvelope className="text-white" />
+              <span>support@latiyalgps.com</span>
             </li>
+
             <li className="flex gap-3 items-center">
               <FaPhoneAlt className="text-white" />
-              <span>+91 9950745321</span>
+              <span>+91 7041296455</span>
+            </li>
+            <li className="font-montserrat font-light text-[13.3px] leading-[21.3px] flex  gap-3 items-start">
+              <FaMapMarkerAlt className="text-white  mx-1"size={40} />
+              <span >  PLOT No. SA-04, NARAYAN SAGAR-ABC, NEAR SAATHI TEXTILES, NARAYAN VIHAR, JAIPUR, Jaipur, Rajasthan, 302020</span>
             </li>
           </ul>
         </div>
 
         {/* SOCIAL */}
         <div>
-          <h3 className="font-[var(--font-montserrat)] font-light text-[13.3px] leading-[21.3px] text-white font-semibold mb-4">Follow Us</h3>
-          <div className="font-montserrat font-light text-[13.3px] leading-[21.3px] flex gap-4">
-            {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter].map(
-              (Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-[#FBB247] text-black hover:bg-black hover:text-white transition"
-                >
-                  <Icon size={14} />
-                </a>
-              )
-            )}
+          <h3 className="font-montserrat font-semibold text-[17px] leading-[21.3px] text-white mb-4">
+            Follow Us
+          </h3>
+
+          <div className="flex gap-4">
+            {socialLinks.map((item, i) => (
+              <a
+                key={i}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:scale-110 transition duration-300"
+              >
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="w-10 h-10 object-contain"
+                />
+                
+              </a>
+              
+            ))}
+             
           </div>
+          <div className="mt-10">© {new Date().getFullYear()} Latiyal GPS. All rights reserved.</div>
         </div>
 
       </div>
 
-      {/* BOTTOM BAR */}
-      <div className="border-t border-black/10 py-6 text-center text-sm text-white bg-[#000000]">
-        © {new Date().getFullYear()} Latiyal GPS. All rights reserved.
-      </div>
+      
     </footer>
   );
 }

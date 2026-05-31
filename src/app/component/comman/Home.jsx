@@ -21,7 +21,7 @@ export default function Home() {
     <>
     <div><BannerSection/></div>
     <div><Technology/></div>
-    <div><FeatureSlider/></div>
+    <div ><FeatureSlider/></div>
     <div ><How /></div>
     {/* <div><Service/></div> */}
     
