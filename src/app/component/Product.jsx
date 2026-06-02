@@ -15,7 +15,7 @@ export default function Product() {
   };
 
   return (
-    <section className="w-full bg-[#E6CEA1] py-14 md:py-20">
+    <section className="w-full bg-[#F6F2EA] py-14 md:py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-8 md:gap-10 items-center">
 
         {/* LEFT IMAGE */}
@@ -32,22 +32,22 @@ export default function Product() {
           initial={contentAnim.initial}
           whileInView={contentAnim.whileInView}
           transition={{ duration: 0.5 }}
-          className="text-white text-center md:text-left"
+          className="text-black text-center md:text-left"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-3 md:mb-4">
+          <h2 className=" inter text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-3 md:mb-4">
             Smart GPS Tracking <br /> You Can Rely On
           </h2>
 
           <div className="w-10 md:w-12 h-[2px] bg-[#FCB13B] mb-4 md:mb-6 mx-auto md:mx-0"></div>
 
-          <p className="text-white/80 text-xs sm:text-sm leading-relaxed mb-5 md:mb-6 max-w-md mx-auto md:mx-0">
+          <p className="text-black text-xs sm:text-sm leading-relaxed mb-5 md:mb-6 max-w-md mx-auto md:mx-0">
             Our advanced GPS tracking system provides real-time location updates,
             geo-fencing alerts, and complete vehicle monitoring. Designed for
             businesses and individuals, it ensures safety, efficiency, and total
             control over your assets anytime, anywhere.
           </p>
 
-          <ul className="text-white/80 text-xs sm:text-sm space-y-1.5 md:space-y-2 mb-5 md:mb-6">
+          <ul className="text-black text-xs sm:text-sm space-y-1.5 md:space-y-2 mb-5 md:mb-6">
             <li>✔ Real-time tracking</li>
             <li>✔ Geo-fencing alerts</li>
             <li>✔ Driver behavior monitoring</li>

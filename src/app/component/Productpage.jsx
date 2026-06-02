@@ -36,7 +36,7 @@ export default function Productpage() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-[#FCB13B]"
+            className=" inter text-4xl md:text-6xl font-bold text-[#FCB13B]"
           >
             Products
           </motion.h2>

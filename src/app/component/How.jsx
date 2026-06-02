@@ -43,7 +43,7 @@ export default function How() {
             How It Works
           </p>
 
-          <h2 className="font-semibold Inter  text-[42.67px] text-white">
+          <h2 className=" inter font-semibold Inter  text-[42.67px] text-white">
             Get Started in{" "}
             <span className="text-[#FCB13B]">3 Simple Steps</span>
           </h2>
@@ -62,7 +62,7 @@ export default function How() {
             >
               
               {/* Step Badge */}
-              <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#FCB13B] text-black px-5 py-1.5 rounded-full text-sm font-semibold shadow">
+              <div className=" absolute -top-5 left-1/2 -translate-x-1/2 bg-[#FCB13B] text-black px-5 py-1.5 rounded-full text-sm font-semibold shadow">
                 {item.step}
               </div>
 
@@ -72,7 +72,7 @@ export default function How() {
               </div>
 
               {/* Content */}
-              <h3 className="font-semibold text-2xl mb-4 text-black">
+              <h3 className=" inter font-semibold text-2xl mb-4 text-black">
                 {item.title}
               </h3>
 

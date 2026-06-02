@@ -17,7 +17,7 @@ export default function History() {
               Our Impact
             </p>
 
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight text-black">
+            <h2 className=" inter text-4xl md:text-6xl font-bold leading-tight text-black">
               Growing GPS Services Rapidly in the Market
             </h2>
           </div>

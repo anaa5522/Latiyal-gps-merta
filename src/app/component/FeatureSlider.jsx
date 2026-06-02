@@ -25,51 +25,48 @@ export default function FeatureSlider() {
   ];
 
   return (
-    <div className="w-full px-4 bg-[#F6F2EA]">
+    <div className="w-full py-6 px-4 bg-[#F6F2EA]">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={20}
+        spaceBetween={16}
         loop={true}
+        centeredSlides={true}
         autoplay={{
-          delay: 2000,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         breakpoints={{
-          0: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          768: { slidesPerView: 5 },
-          1024: { slidesPerView: 5 },
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
         }}
       >
         {features.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="py-3">
-              <div className="group relative overflow-hidden rounded-[24px] bg-white px-5 py-5 border border-white/50 backdrop-blur-sm shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(252,177,59,0.18)] transition-all duration-500 hover:-translate-y-2">
-
-                {/* Top Accent */}
-                <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#FCB13B] via-[#FFD58A] to-[#FCB13B]"></div>
-
-                {/* Background Glow */}
-                <div className="absolute -right-8 -top-8 w-24 h-24 bg-[#FCB13B]/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <div className="px-2">
+              <div className="max-w-[320px] mx-auto group flex items-center gap-4 bg-white border border-[#FCB13B]/20 rounded-2xl px-4 py-4 shadow-sm hover:shadow-lg transition-all duration-300">
 
                 {/* Icon */}
-                <div className="relative z-10 flex justify-center">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FCB13B] to-[#FFD58A] flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-500">
-                    <div className="text-white text-2xl">
-                      {item.icon}
-                    </div>
-                  </div>
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#FCB13B] flex items-center justify-center text-white text-xl">
+                  {item.icon}
                 </div>
+
+                {/* Divider */}
+                <div className="w-px h-10 bg-[#FCB13B]/30"></div>
 
                 {/* Text */}
-                <h3 className="relative z-10 text-center mt-4 text-[15px] font-semibold text-gray-900">
+                <h3 className="text-sm font-semibold text-gray-800 leading-tight">
                   {item.title}
                 </h3>
-
-                {/* Bottom Indicator */}
-                <div className="relative z-10 flex justify-center mt-3">
-                  <div className="h-[3px] w-0 bg-[#FCB13B] rounded-full group-hover:w-10 transition-all duration-500"></div>
-                </div>
 
               </div>
             </div>

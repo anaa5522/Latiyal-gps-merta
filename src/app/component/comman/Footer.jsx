@@ -51,11 +51,11 @@ export default function Footer() {
 
         {/* QUICK LINKS */}
         <div>
-          <h3 className="font-montserrat  lg:text-center font-semibold text-[17px] leading-[21.3px] text-white mb-4">
+          <h3 className=" inter font-montserrat  lg:text-center font-semibold text-[17px] leading-[21.3px] text-white mb-4">
             Quick Links
           </h3>
 
-          <ul className="space-y-3 text-sm lg:text-center text-white">
+          <ul className=" inter space-y-3 text-sm lg:text-center text-white">
             {[
               { name: "Home", link: "/" },
               { name: "About Us", link: "/aboutus" },
@@ -76,7 +76,7 @@ export default function Footer() {
 
         {/* CONTACT */}
         <div>
-          <h3 className="font-montserrat font-semibold text-[17px] leading-[21.3px] text-white mb-4">
+          <h3 className=" inter font-montserrat font-semibold text-[17px] leading-[21.3px] text-white mb-4">
             Contact
           </h3>
 

@@ -6,17 +6,19 @@ import Govservice from '../component/Govservice'
 import Automotion from '../component/Automotion'
 import Smartcity from '../component/Smartcity'
 import Whycta from '../component/Whycta'
+import Service from '../component/Service'
 
 export default function page() {
   return (
     <div>
-      <Servicespage/>
+      <Service/>
+      {/* <Servicespage/>
       <Schoolsection/>
       <Fuel/>
       <Govservice/>
       <Automotion/>
       <Smartcity/>
-      <Whycta/>
+      <Whycta/> */}
     </div>
   )
 }

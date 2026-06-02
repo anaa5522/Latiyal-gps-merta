@@ -12,7 +12,7 @@ export default function notfound() {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="text-7xl md:text-8xl font-bold text-[#FCB13B]"
+        className=" inter text-7xl md:text-8xl font-bold text-[#FCB13B]"
       >
         404
       </motion.h1>
@@ -22,7 +22,7 @@ export default function notfound() {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="mt-4 text-2xl md:text-4xl font-semibold text-black"
+        className=" inter mt-4 text-2xl md:text-4xl font-semibold text-black"
       >
         Page Not Found
       </motion.h2>

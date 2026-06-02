@@ -16,11 +16,11 @@ export default function Technology() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-[#FCB13B] text-[13.33px] uppercase Montserrat tracking-widest font-bold mb-2">
+          <p className=" inter text-[#FCB13B] text-[13.33px] uppercase Montserrat tracking-widest font-bold mb-2">
             About Technology
           </p>
 
-          <h2 className=" font-semibold Inter text-gray-900 text-[42.67px] ">
+          <h2 className="inter  font-semibold Inter text-gray-900 text-[42.67px] ">
             Advanced GPS Technology That Powers Your Fleet
           </h2>
 

@@ -51,7 +51,7 @@ export default function Feature() {
               Security Feature
             </span>
 
-            <h2 className="text-3xl md:text-5xl font-bold text-black leading-tight">
+            <h2 className=" inter text-3xl md:text-5xl font-bold text-black leading-tight">
               Smart Geo-Fencing <br />
               <span className="text-[#FCB13B]">That Thinks Ahead</span>
             </h2>
@@ -80,7 +80,7 @@ export default function Feature() {
               Connectivity
             </span>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-black leading-tight">
+            <h2 className=" inter text-3xl md:text-4xl font-bold text-black leading-tight">
               Seamless <span className="text-[#FCB13B]">Mobile Access</span>
             </h2>
 
@@ -134,7 +134,7 @@ export default function Feature() {
               Live Monitoring
             </span>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-black leading-tight">
+            <h2 className=" inter text-3xl md:text-4xl font-bold text-black leading-tight">
               Real-Time <span className="text-[#FCB13B]">GPS Tracking</span>
             </h2>
 

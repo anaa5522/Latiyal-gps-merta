@@ -37,7 +37,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#FCB13B]"
+            className=" inter text-4xl sm:text-5xl md:text-6xl font-bold text-[#FCB13B]"
           >
             About Us
           </motion.h2>
@@ -68,7 +68,7 @@ export default function About() {
             className="text-[#1e1e1e]"
           >
 
-            <h2 className="text-3xl md:text-5xl font-bold text-black mb-8">
+            <h2 className=" inter text-3xl md:text-5xl font-bold text-black mb-8">
               Who We Are
             </h2>
 
@@ -118,7 +118,7 @@ export default function About() {
 
             </ul>
 
-            <h3 className="mt-8 text-2xl font-bold text-black">
+            <h3 className=" inter mt-8 text-2xl font-bold text-black">
               Why Choose Us?
             </h3>
 
@@ -189,7 +189,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-black mb-14"
+            className=" inter text-3xl md:text-4xl font-bold text-black mb-14"
           >
             How GPS Tracking Works
           </motion.h2>
@@ -261,5 +261,8 @@ export default function About() {
       <Chooserespon />
 
     </div>
+
+
+
   );
 }

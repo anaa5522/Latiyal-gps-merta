@@ -33,7 +33,7 @@ export default function Choose() {
             Why Choose Us
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-white">
+          <h2 className=" inter text-4xl md:text-5xl font-semibold text-white">
             Trusted GPS Solutions
           </h2>
 

@@ -49,23 +49,21 @@ export default function Header() {
                     px-4 sm:px-6 lg:px-8"
                 >
 
-                    {/* LOGO */}
-                    <Link href="/" className="flex-shrink-0">
-                        <img
-                            src="/Latiyal GPS logo 02.png"
-                            alt="company logo"
-                            className="w-[90px] sm:w-[115px] md:w-[135px] lg:w-[155px]
-                            h-auto object-contain"
-                        />
-                    </Link>
+                    <a href="/" className="select-none flex-shrink-0">
+  <img
+    src="/Latiyal GPS logo 02.png"
+    alt="company logo"
+    className="w-[90px] sm:w-[115px] md:w-[135px] lg:w-[155px] h-auto object-contain"
+  />
+</a>
 
                     {/* DESKTOP MENU CENTER */}
-                    <div className="hidden md:flex flex-1 justify-center items-center gap-5 lg:gap-8 xl:gap-10">
+                    <div className=" select-none hidden md:flex flex-1 justify-center items-center gap-5 lg:gap-8 xl:gap-10">
 
                         {menuItems.map((item) => (
                             <Link key={item.name} href={item.path}>
                                 <span
-                                    className="relative inline-block
+                                    className=" inter relative inline-block
                                     text-white text-[13px] lg:text-[16px]
                                     font-medium tracking-wide
                                     cursor-pointer

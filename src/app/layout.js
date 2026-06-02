@@ -3,10 +3,16 @@ import'../../public/css/style.css'
 import Header from "./component/comman/Header";
 import Footer from "./component/comman/Footer";
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
 
-const inter = Inter({ subsets: ["latin"], weight: ["300","400","500","600","700"] });
-const montserrat = Montserrat({ subsets: ["latin"], weight: ["300","400","500","600","700"] });
 
 export const metadata = {
   title: "Latiyal GPS",
@@ -21,7 +27,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="font-inter">
+      <body className={`${inter.variable} ${montserrat.variable}`}>
         <Header />
         {children}
         <Footer />

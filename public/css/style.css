@@ -3,10 +3,14 @@
   --font-inter: 'Inter', sans-serif;
   --font-montserrat: 'Montserrat', sans-serif;
 }
+.inter {
+  font-family: var(--font-inter), sans-serif;
+}
 
 body {
-  font-family: var(--font-inter);
+  font-family: var(--font-montserrat), sans-serif;
 }
+
 
 @keyframes fadeUp {
   from {

@@ -11,7 +11,7 @@ export default function Contact() {
 
       {/* ================= HERO SECTION ================= */}
       <div
-        className="text-center my-0 relative bg-cover bg-center bg-no-repeat py-20 md:py-40 px-4"
+        className="text-center select-none my-0 relative bg-cover bg-center bg-no-repeat py-20 md:py-40 px-4"
         style={{
           backgroundImage:
             "url('/df95db051ac7c4228bcbaecdc24deb9b.jpg')",
@@ -26,7 +26,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-[#FCB13B]"
+            className=" inter text-4xl md:text-6xl font-bold text-[#FCB13B]"
           >
             Contact Us
           </motion.h2>
@@ -35,7 +35,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="mt-4 text-white text-base md:text-xl max-w-2xl mx-auto"
+            className=" montserrat mt-4 text-white text-base md:text-xl max-w-2xl mx-auto"
           >
             We are always ready to help you with GPS tracking solutions, support
             and business inquiries.
@@ -48,34 +48,34 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-10">
 
           {/* Left Form */}
-          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg w-full max-w-md border border-[#FCB13B]/30">
-            <h2 className="text-2xl font-semibold mb-6 text-[#FCB13B]">
-              Get In Touch
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg w-full max-w-md border border-[#FCB13B]/30 select-none">
+            <h2 className=" inter text-2xl font-semibold mb-6 select-none text-[#FCB13B]">
+              Make an Enquiry
             </h2>
 
-            <form className="space-y-4">
+            <form className="space-y-4 ">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full p-3 bg-transparent border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
+                className="w-full p-3 bg-white border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
               />
               <input
                 type="email"
                 placeholder="example@gmail.com"
-                className="w-full p-3 bg-transparent border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
+                className="w-full p-3 bg-white border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
               />
               <input
                 type="text"
                 placeholder="Topic"
-                className="w-full p-3 bg-transparent border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
+                className="w-full p-3 bg-white border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
               />
               <textarea
                 placeholder="Type here..."
                 rows={4}
-                className="w-full p-3 bg-transparent border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
+                className="w-full p-3 bg-white border border-gray-500 rounded-lg focus:border-[#FCB13B] outline-none"
               />
 
-              <button className="w-full bg-[#FCB13B] text-black font-semibold py-3 rounded-full hover:scale-105 transition">
+              <button className="w-full bg-[#FCB13B] text-black font-semibold py-3 rounded-xl hover:scale-105 hover:text-white transition">
                 Send Now
               </button>
             </form>
@@ -84,7 +84,7 @@ export default function Contact() {
           {/* Right Info */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-8 w-full">
 
-            <p className="text-black/70 max-w-md text-sm sm:text-base leading-relaxed">
+            <p className=" montserrat text-black/70 max-w-md text-sm select-none sm:text-base leading-relaxed">
               We are here to help you with GPS tracking solutions. Contact us anytime
               for support, queries, or business inquiries.
             </p>
@@ -95,9 +95,9 @@ export default function Contact() {
               <div className="flex items-start gap-3">
                 <FaPhoneAlt className="text-[#FCB13B] text-lg mt-1" />
                 <div>
-                  <p className="text-sm text-black/60">Phone</p>
+                  <p className="text-sm text-black/60 select-none">Phone</p>
                   <p className="text-sm sm:text-base break-all">
-                    +91 9950745321
+                    +91 7041296455
                   </p>
                 </div>
               </div>
@@ -105,9 +105,9 @@ export default function Contact() {
               <div className="flex items-start gap-3">
                 <MdEmail className="text-[#FCB13B] text-xl mt-1" />
                 <div>
-                  <p className="text-sm text-black/60">Email</p>
+                  <p className="text-sm text-black/60 select-none">Email</p>
                   <p className="text-sm sm:text-base break-all">
-                    arvind77@gmail.com
+                   support@latiyalgps.com
                   </p>
                 </div>
               </div>
@@ -115,19 +115,19 @@ export default function Contact() {
               <div className="flex items-start gap-3">
                 <FaWhatsapp className="text-[#FCB13B] text-xl mt-1" />
                 <div>
-                  <p className="text-sm text-black/60">WhatsApp</p>
+                  <p className="text-sm text-black/60 select-none">WhatsApp</p>
                   <p className="text-sm sm:text-base break-all">
-                    +91 9950745321
+                    +91 7041296455
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <IoLocationSharp className="text-[#FCB13B] text-xl mt-1" />
-                <div>
-                  <p className="text-sm text-black/60">Office</p>
+                <IoLocationSharp className="text-[#FCB13B] text-xl pb-10 " size={70}/>
+                <div className="gap-7">
+                  <p className="text-sm text-black/60 select-none">Office</p>
                   <p className="text-sm sm:text-base">
-                    Jodhpur, Rajasthan, India
+                    PLOT No. SA-04, NARAYAN SAGAR-ABC, NEAR SAATHI TEXTILES, NARAYAN VIHAR, JAIPUR, Jaipur, Rajasthan, 302020
                   </p>
                 </div>
               </div>
@@ -145,15 +145,15 @@ export default function Contact() {
         </div>
 
         {/* ================= BOTTOM BANNER ================= */}
-        <div className="mt-16 relative rounded-2xl overflow-hidden">
+        <div className="mt-16 relative rounded-2xl overflow-hidden select-none">
           <img
             src="/f367ba2d6e6058ea09cfe5f4ac04b063.jpg"
             alt="banner"
             className="w-full h-64 object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/80"></div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold max-w-xl text-white">
+            <h2 className=" inter text-2xl md:text-3xl font-semibold max-w-xl text-white">
               Let’s Build Something Amazing Together
             </h2>
 

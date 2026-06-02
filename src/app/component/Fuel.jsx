@@ -62,9 +62,9 @@ export default function Fuel() {
                 Fuel Management
               </span>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F172A] leading-tight">
+              <h1 className=" inter text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F172A] leading-tight">
                 Not a Single Litre
-                <span className="text-orange-500"> Unaccounted For.</span>
+                <span className=""> Unaccounted For.</span>
               </h1>
 
               <p className="mt-6 text-xl text-gray-700">
@@ -81,7 +81,7 @@ export default function Fuel() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition">
+                <button className=" bg-black text-white px-8 py-4 rounded-xl font-semibold transition">
                   Request Demo
                 </button>
 
@@ -98,9 +98,9 @@ export default function Fuel() {
               transition={{ duration: 0.7 }}
             >
               <img
-                src="/images/fuel-management-system.png"
+                src="/warehouse_dashboard.png"
                 alt="Fuel Management System"
-                className="w-full rounded-3xl shadow-2xl"
+                className="w-full h-[200px] h-[500px] rounded-3xl shadow-2xl"
               />
             </motion.div>
 
@@ -108,74 +108,19 @@ export default function Fuel() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-[#0F172A] mb-6">
-            Complete Fuel Intelligence Platform
-          </h2>
-
-          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">
-            Whether you manage a transport company, construction equipment,
-            logistics fleet, mining vehicles, or government transport,
-            our Fuel Management System gives you complete visibility into
-            every litre consumed and every rupee spent.
-          </p>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0F172A]">
-              Key Features
-            </h2>
-
-            <p className="text-gray-600 mt-4">
-              Powerful tools to eliminate fuel loss and improve fleet profitability.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-500 text-3xl mb-6">
-                  {feature.icon}
-                </div>
-
-                <h3 className="text-xl font-bold text-[#0F172A] mb-3">
-                  {feature.title}
-                </h3>
-
-                <p className="text-gray-600">
-                  {feature.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Result Section */}
-      <section className="py-24 bg-[#0F172A] text-white">
+       {/* Result Section */}
+      <section className="py-24  text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
 
             <div>
-              <FaShieldAlt className="text-6xl text-orange-400 mb-6" />
+              <FaShieldAlt className="text-6xl text-[#FCB13A] mb-6" />
 
-              <h2 className="text-4xl font-bold mb-6">
+              <h2 className=" inter text-4xl font-bold mb-6 text-black">
                 The Result
               </h2>
 
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-black text-lg leading-relaxed">
                 Significant reduction in fuel costs, zero tolerance for fuel
                 theft, accurate operational reporting, and a complete digital
                 audit trail of every litre used across your fleet.
@@ -184,29 +129,29 @@ export default function Fuel() {
 
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white/10 p-6 rounded-3xl">
-                <h3 className="text-4xl font-bold text-orange-400">100%</h3>
-                <p className="mt-2 text-gray-300">
+                <h3 className="text-4xl font-bold text-[#FCB13A]">100%</h3>
+                <p className="mt-2 text-black">
                   Fuel Visibility
                 </p>
               </div>
 
               <div className="bg-white/10 p-6 rounded-3xl">
-                <h3 className="text-4xl font-bold text-orange-400">24/7</h3>
-                <p className="mt-2 text-gray-300">
+                <h3 className="text-4xl font-bold text-[#FCB13A]">24/7</h3>
+                <p className="mt-2 text-black">
                   Monitoring
                 </p>
               </div>
 
               <div className="bg-white/10 p-6 rounded-3xl">
-                <h3 className="text-4xl font-bold text-orange-400">Instant</h3>
-                <p className="mt-2 text-gray-300">
+                <h3 className="text-4xl font-bold text-[#FCB13A]">Instant</h3>
+                <p className="mt-2 text-black">
                   Theft Detection
                 </p>
               </div>
 
               <div className="bg-white/10 p-6 rounded-3xl">
-                <h3 className="text-4xl font-bold text-orange-400">Smart</h3>
-                <p className="mt-2 text-gray-300">
+                <h3 className="text-4xl font-bold text-[#FCB13A]">Smart</h3>
+                <p className="mt-2 text-black">
                   Cost Optimization
                 </p>
               </div>
@@ -216,21 +161,74 @@ export default function Fuel() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 bg-orange-500">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Eliminate Fuel Theft & Reduce Operating Costs
-          </h2>
+      <section className=" pb-24 pt-6">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          <p className="text-white/90 text-lg mb-8">
-            Gain complete control over fuel consumption and make data-driven
-            decisions with Latiyal GPS Fuel Management System.
-          </p>
+            {/* Left Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <img
+                src="/fleet_city_highway.png"
+                alt="School Bus Management"
+                className="w-full h-[300px] lg:h-[700px] mt-30 object-cover rounded-3xl shadow-2xl"
+              />
+            </motion.div>
 
-          <button className="bg-white text-orange-500 px-10 py-4 rounded-xl font-bold hover:scale-105 transition">
-            Schedule a Demo
-          </button>
+            {/* Right Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="inline-block px-4 py-2 bg-[#0F172A] text-white rounded-full text-sm font-semibold mb-4">
+                Key Features
+              </span>
+
+              <h2 className=" inter text-4xl font-bold text-[#0F172A] mb-6">
+                Powerful tools to eliminate fuel loss and improve fleet profitability.
+              </h2>
+
+              <p className="text-gray-600 mb-8">
+                Powerful tools designed to improve student safety,
+                streamline fleet operations, and provide complete
+                visibility for schools and parents.
+              </p>
+
+              <div className="space-y-5">
+                {features.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 p-5 rounded-2xl border border-gra-100 shadow-sm hover:shadow-xl  bg-black transition-all duration-300"
+                  >
+                    {/* Index Dot */}
+                    <div className="mt-6 w-2 h-2 hidden md:block rounded-full bg-white flex-shrink-0"></div>
+
+                    {/* Icon */}
+                    <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-orang-100 flex items-center justify-center text-[#FCB13A] text-2xl">
+                      {item.icon}
+                    </div>
+
+                    {/* Text */}
+                    <div>
+                      <h3 className=" inter text-lg font-semibold text-white mb-1">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-white text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </motion.div>
+
+          </div>
         </div>
       </section>
     </div>
