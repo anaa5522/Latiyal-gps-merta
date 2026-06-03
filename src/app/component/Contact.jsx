@@ -10,38 +10,56 @@ export default function Contact() {
     <div className="bg-[#F6F2EA] text-black min-h-screen">
 
       {/* ================= HERO SECTION ================= */}
-      <div
-        className="text-center select-none my-0 relative bg-cover bg-center bg-no-repeat py-20 md:py-40 px-4"
-        style={{
-          backgroundImage:
-            "url('/df95db051ac7c4228bcbaecdc24deb9b.jpg')",
-        }}
+      <motion.div
+        className="relative h-[520px] flex items-center justify-center overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <img
+          src="/df95db051ac7c4228bcbaecdc24deb9b.jpg"
+          className="absolute inset-0 w-full h-full object-cover scale-105"
+          alt="hero"
+        />
 
-        {/* Content */}
-        <div className="relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
+
+        <div className="relative z-10 text-center px-6">
+
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className=" inter text-4xl md:text-6xl font-bold text-[#FCB13B]"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="inline-block px-5 py-2 mb-4 rounded-full bg-white/10 backdrop-blur-md text-white text-sm tracking-widest"
           >
-            Contact Us
-          </motion.h2>
+            PREMIUM COLLECTION
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-7xl font-bold text-[#FCB13A]"
+          >
+            Contact 
+          </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className=" montserrat mt-4 text-white text-base md:text-xl max-w-2xl mx-auto"
+            viewport={{ once: true }}
+            className="mt-6 max-w-2xl mx-auto text-gray-200 text-lg md:text-xl"
           >
-            We are always ready to help you with GPS tracking solutions, support
-            and business inquiries.
+            Premium furniture crafted for comfort, elegance and modern lifestyle.
           </motion.p>
+
         </div>
-      </div>
+      </motion.div>
 
       {/* ================= CONTACT SECTION ================= */}
       <div className="p-6 md:p-16">

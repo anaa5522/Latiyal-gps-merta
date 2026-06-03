@@ -1,8 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Product from "./Product";
-
 
 export default function Productpage() {
   const products = [
@@ -17,107 +15,146 @@ export default function Productpage() {
   ];
 
   return (
-    <div className="bg-[#f5f5f5]  space-y-16">
+    <div className="bg-[#f4f4f6]">
 
-      {/* HERO */}
-      <div
-        className="text-center my-0 relative bg-cover bg-center bg-no-repeat py-20 md:py-40 px-4"
-        style={{
-          backgroundImage:
-            "url('/df95db051ac7c4228bcbaecdc24deb9b.jpg')",
-        }}
+      {/* ===== HERO ===== */}
+      <motion.div
+        className="relative h-[520px] flex items-center justify-center overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <img
+          src="/df95db051ac7c4228bcbaecdc24deb9b.jpg"
+          className="absolute inset-0 w-full h-full object-cover scale-105"
+          alt="hero"
+        />
 
-        {/* Content */}
-        <div className="relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
+
+        <div className="relative z-10 text-center px-6">
+
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className=" inter text-4xl md:text-6xl font-bold text-[#FCB13B]"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="inline-block px-5 py-2 mb-4 rounded-full bg-white/10 backdrop-blur-md text-white text-sm tracking-widest"
+          >
+            PREMIUM COLLECTION
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-7xl font-bold text-[#FCB13A]"
           >
             Products
-          </motion.h2>
+          </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="mt-4 text-white text-base md:text-xl max-w-2xl mx-auto"
+            viewport={{ once: true }}
+            className="mt-6 max-w-2xl mx-auto text-gray-200 text-lg md:text-xl"
           >
-            We are always ready to help you with GPS tracking solutions, support
-            and business inquiries.
+            Premium furniture crafted for comfort, elegance and modern lifestyle.
           </motion.p>
+
         </div>
-      </div>
+      </motion.div>
 
-      {/* PRODUCTS */}
-      <div>
-        
+      {/* ===== PRODUCTS ===== */}
+      <div className="max-w-7xl mx-auto px-6 py-24">
 
-        {/* Products Grid */}
-        <div className="grid p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {/* heading */}
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Featured Products
+          </h2>
+          <p className="text-gray-500 mt-3">
+            Clean design. Premium quality. Best comfort.
+          </p>
+        </div>
+
+        {/* grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
           {products.map((item, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -12 }}
-              transition={{ duration: 0.4 }}
-              className="relative bg-gradient-to-b from-white to-[#f9f9f9] rounded-3xl p-5 h-[360px] shadow-md hover:shadow-2xl transition-all duration-300 group flex flex-col justify-between overflow-hidden"
+              className="group bg-white rounded-[26px] overflow-hidden
+              border border-gray-100 shadow-sm hover:shadow-2xl
+              transition-all duration-500 hover:-translate-y-2"
             >
-              {/* TOP BADGE */}
-              <span className="absolute top-3 left-3 bg-white p-2 rounded-full">
-                <img
-                  src="/Latiyal Logo Final.png"
-                  alt="logo"
-                  className="w-10 h-10 object-contain"
-                />
-              </span>
 
-              {/* IMAGE */}
-              <div className="flex justify-center items-center h-[160px]">
+              {/* IMAGE SECTION */}
+              <div className="relative h-[260px] bg-gray-100 overflow-hidden">
+
                 <img
                   src={item.img}
-                  className="h-full object-contain group-hover:scale-110 transition duration-500"
+                  alt={item.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                 />
+
+                {/* LOGO TOP LEFT */}
+                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md p-2 rounded-full shadow">
+                  <img src="/logo.png" alt="logo" className="w-8 h-8" />
+                </div>
+
+                {/* hover overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition" />
+
               </div>
 
               {/* CONTENT */}
-              <div className="text-center">
-                <h3 className="font-semibold text-lg text-gray-800">
+              <div className="p-5">
+
+                <h3 className="text-lg font-semibold text-gray-900">
                   {item.name}
                 </h3>
-                <p className="text-gray-500 text-sm mt-1">Premium Quality</p>
-                <p className="font-bold text-xl mt-2 text-black">
-                  {item.price}
+
+                <p className="text-gray-500 text-sm mt-1">
+                  Luxury & Comfort Series
                 </p>
+
+                {/* PRICE + BUTTONS BOTTOM */}
+                <div className="mt-6 flex items-center justify-between">
+
+                  <p className="text-xl font-bold text-black">
+                    {item.price}
+                  </p>
+
+                  <div className="flex gap-2">
+                    <button className="bg-black text-white px-4 py-2 rounded-xl text-sm hover:bg-gray-800 transition">
+                      Add
+                    </button>
+
+                    <button className="border border-gray-300 px-4 py-2 rounded-xl text-sm hover:bg-gray-100 transition">
+                      Buy
+                    </button>
+                  </div>
+
+                </div>
+
               </div>
 
-              {/* BUTTONS */}
-              <div className="flex gap-2 mt-4">
-                <button className="flex-1 flex items-center justify-center gap-2 bg-[#FBB247] text-white py-2 rounded-full hover:bg-gray-900 transition">
-                  🛒 Add
-                </button>
-
-                <button className="flex-1 border border-black py-2 rounded-full hover:bg-black hover:text-white transition">
-                  Buy
-                </button>
-              </div>
-
-              {/* HOVER GLOW EFFECT */}
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition rounded-3xl"></div>
-            </motion.div>
+            </div>
           ))}
+
         </div>
       </div>
+
+      {/* EXTRA COMPONENT */}
       <div>
         <Product />
       </div>
+
     </div>
-
-
   );
 }

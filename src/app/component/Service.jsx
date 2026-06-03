@@ -80,40 +80,56 @@ export default function Service() {
     <div className="bg-[#F6F2EA] overflow-hidden">
     
           {/* ================= HERO SECTION =================  */}
-          <section
-            className="relative bg-cover bg-center bg-no-repeat py-24 md:py-40 px-4"
-            style={{
-              backgroundImage:
-                "url('/df95db051ac7c4228bcbaecdc24deb9b.jpg')",
-            }}
+          <motion.div
+        className="relative h-[520px] flex items-center justify-center overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <img
+          src="/df95db051ac7c4228bcbaecdc24deb9b.jpg"
+          className="absolute inset-0 w-full h-full object-cover scale-105"
+          alt="hero"
+        />
+
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
+
+        <div className="relative z-10 text-center px-6">
+
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="inline-block px-5 py-2 mb-4 rounded-full bg-white/10 backdrop-blur-md text-white text-sm tracking-widest"
           >
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50"></div>
-    
-            {/* Content */}
-            <div className="relative z-10 max-w-5xl mx-auto text-center">
-              <motion.h2
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className=" inter text-4xl sm:text-5xl md:text-6xl font-bold text-[#FCB13B]"
-              >
-                Our Service
-              </motion.h2>
-    
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="mt-5 text-sm sm:text-base md:text-xl text-white/90 leading-7 max-w-3xl mx-auto"
-              >
-                We are always ready to help you with GPS tracking
-                solutions, support and business inquiries.
-              </motion.p>
-            </div>
-          </section>
+            PREMIUM COLLECTION
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-7xl font-bold text-[#FCB13A]"
+          >
+            Service 
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-6 max-w-2xl mx-auto text-gray-200 text-lg md:text-xl"
+          >
+            Premium furniture crafted for comfort, elegance and modern lifestyle.
+          </motion.p>
+
+        </div>
+      </motion.div>
     
           <div className="max-w-7xl mx-auto px-4 py-20">
         {/* Heading */}
