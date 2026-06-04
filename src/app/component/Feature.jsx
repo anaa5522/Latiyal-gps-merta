@@ -17,7 +17,7 @@ export default function Feature() {
   };
 
   return (
-    <div className="w-full py-20 bg-[#F6F2EA] to-white overflow-hidden">
+    <div className="w-full py-20 bg-[#F6F2EA] to-white overflow-hidden select-none">
 
       <div className="max-w-6xl mx-auto space-y-20 px-4">
 

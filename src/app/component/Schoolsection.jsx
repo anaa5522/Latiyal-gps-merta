@@ -46,7 +46,7 @@ export default function Schoolsection() {
   ];
 
   return (
-    <div className="bg-[#F6F2EA] overflow-hidden">
+    <div className="bg-[#F6F2EA] overflow-hidden select-none">
       {/* Hero Section */}
       <section className="relative pt-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">

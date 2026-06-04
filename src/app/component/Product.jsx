@@ -15,7 +15,7 @@ export default function Product() {
   };
 
   return (
-    <section className="w-full bg-[#F6F2EA] py-14 md:py-20">
+    <section className="w-full bg-[#F6F2EA] py-14 md:py-20 select-none">
       <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-8 md:gap-10 items-center">
 
         {/* LEFT IMAGE */}

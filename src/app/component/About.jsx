@@ -17,7 +17,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function About() {
   return (
-    <div className="bg-[#F6F2EA] overflow-hidden">
+    <div className="bg-[#F6F2EA] overflow-hidden select-none">
 
       {/* ================= HERO SECTION =================  */}
       <motion.div

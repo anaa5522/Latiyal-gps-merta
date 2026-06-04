@@ -15,7 +15,7 @@ export default function Productpage() {
   ];
 
   return (
-    <div className="bg-[#f4f4f6]">
+    <div className="bg-[#f4f4f6] select-none">
 
       {/* ===== HERO ===== */}
       <motion.div

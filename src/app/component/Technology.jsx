@@ -7,7 +7,7 @@ import { FiCloud, FiBell, FiShield } from "react-icons/fi";
 
 export default function Technology() {
   return (
-    <section className="bg-[#F6F2EA] md:py-20 py-15">
+    <section className="bg-[#F6F2EA] md:py-20 py-15 select-none">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
 
         {/*LEFT CONTENT */}

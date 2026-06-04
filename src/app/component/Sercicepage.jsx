@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Servicespage() {
   return (
-    <section className="relative overflow-hidden bg-[#F6F2EA] py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-[#F6F2EA] py-24 lg:py-32 select-none">
 
       <section className="py-24] overflow-hidden">
   <div className="max-w-7xl mx-auto px-6 lg:px-12">

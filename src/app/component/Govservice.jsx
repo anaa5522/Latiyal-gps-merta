@@ -12,7 +12,7 @@ import {
 
 export default function Govservice() {
   return (
-    <div className="bg-[#F6F2EA] overflow-hidden">
+    <div className="bg-[#F6F2EA] overflow-hidden select-none">
 
       {/* HERO */}
       {/* HERO */}

@@ -17,7 +17,7 @@ export default function Choose() {
 
   return (
     <section
-      className="relative py-24 bg-white bg-fixed bg-cover bg-center"
+      className="relative py-24 bg-white bg-fixed bg-cover bg-center select-none"
       style={{
         backgroundImage: "url('/wp2351082.jpg')",
       }}

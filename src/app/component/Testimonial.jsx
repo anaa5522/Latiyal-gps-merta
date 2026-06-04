@@ -55,7 +55,7 @@ export default function Testimonial() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#F6F2EA] overflow-hidden">
+    <section className="py-16 md:py-24 bg-[#F6F2EA] overflow-hidden select-none">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Heading */}

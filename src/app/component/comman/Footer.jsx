@@ -12,12 +12,12 @@ export default function Footer() {
     {
       name: "Facebook",
       img: "/facebook.png",
-      link: "https://facebook.com",
+      link: "https://www.facebook.com/latiyalgps/",
     },
     {
       name: "Instagram",
       img: "/instagram (1).png",
-      link: "https://instagram.com",
+      link: "https://youtube.com/@latiyalgps?si=gXus6l5XESzGupHa",
     },
     {
       name: "LinkedIn",
@@ -27,16 +27,17 @@ export default function Footer() {
     {
       name: "Twitter",
       img: "/twitter.png",
-      link: "https://twitter.com",
+      link: "https://x.com/latiyalgps",
     },
+
   ];
 
   return (
-    <footer className="bg-[#000000] text-gray-300">
+    <footer className="bg-[#000000] text-gray-300 select-none">
       <div className="max-w-7xl mx-auto px-6 py-15 pt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
         {/* BRAND */}
-        <div>
+        <div >
           <img
             src="/Latiyal GPS logo 02.png"
             alt="Latiyal GPS"
@@ -50,15 +51,16 @@ export default function Footer() {
         </div>
 
         {/* QUICK LINKS */}
-        <div>
-          <h3 className=" inter font-montserrat  lg:text-center font-semibold text-[17px] leading-[21.3px] text-white mb-4">
+        <div className="lg:ml-20">
+          <h3 className="font-montserrat font-semibold text-[17px] leading-[21.3px] text-white mb-4">
             Quick Links
           </h3>
 
-          <ul className=" inter space-y-3 text-sm lg:text-center text-white">
+          <ul className="space-y-3 text-sm text-white">
             {[
               { name: "Home", link: "/" },
               { name: "About Us", link: "/aboutus" },
+              { name: "Services", link: "/servicepage" },
               { name: "Product", link: "/product" },
               { name: "Contact", link: "/contact" },
             ].map((item, i) => (
@@ -81,7 +83,7 @@ export default function Footer() {
           </h3>
 
           <ul className="space-y-3 text-sm text-white">
-            
+
 
             <li className="flex gap-3 items-center">
               <FaEnvelope className="text-white" />
@@ -93,7 +95,7 @@ export default function Footer() {
               <span>+91 7041296455</span>
             </li>
             <li className="font-montserrat font-light text-[13.3px] leading-[21.3px] flex  gap-3 items-start">
-              <FaMapMarkerAlt className="text-white  mx-1"size={40} />
+              <FaMapMarkerAlt className="text-white  mx-1" size={40} />
               <span >  PLOT No. SA-04, NARAYAN SAGAR-ABC, NEAR SAATHI TEXTILES, NARAYAN VIHAR, JAIPUR, Jaipur, Rajasthan, 302020</span>
             </li>
           </ul>
@@ -119,18 +121,18 @@ export default function Footer() {
                   alt={item.name}
                   className="w-10 h-10 object-contain"
                 />
-                
+
               </a>
-              
+
             ))}
-             
+
           </div>
           <div className="mt-10">© {new Date().getFullYear()} Latiyal GPS. All rights reserved.</div>
         </div>
 
       </div>
 
-      
+
     </footer>
   );
 }

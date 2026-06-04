@@ -16,35 +16,35 @@ const services = [
     id: "02",
     title: "Institute Vehicle Monitoring",
     desc: "Our institutional GPS tracking system with integrated video surveillance ensures maximum safety. Track buses in real-time and access live or recorded footage for enhanced monitoring and security.",
-    img: "/59d241ca-f401-4559-b0b9-a3248056a72c.png",
+    img: "/518bd6d2-7019-4cff-bd06-7308a4e2fbd3.png",
     link: "/institute",
   },
   {
     id: "03",
     title: "Fuel Monitoring System",
     desc: "Smart fuel sensor technology delivers real-time fuel level insights. Prevent fuel theft, monitor consumption, and reduce operational costs with accurate and efficient fuel management.",
-    img: "/Gemini_Generated_Image_c3y8tac3y8tac3y8.png",
+    img: "/aa2ab58f-5b80-48ca-af46-a18d213631f5.png",
     link: "/fuel",
   },
   {
     id: "04",
     title: "Weighbridge Automation System",
     desc: "Track mining fleets with precision. Improve operational efficiency, monitor routes, and ensure compliance with government regulations.",
-    img: "/sv0_e1c4CW5ppx6hm4QhCg0LU7PsSMOQkXzh7_njCCW-6eb4X5gtdm1iFVkD_LswXXehvGBzUrprcRsyU5DKvMUOnCIOw_AM3v_jea6nHwm5RIl0zzpMNWbfMmTNTWuc_RA6QMUF7F3GBJupSxZTc8A7aHv8PKR1D3XifYZdMus74Eusf928o0mY3XNirKxw.jpg",
+    img: "/864e2f8a-fff7-4e50-a79c-07ba26100199.png",
     link: "automation",
   },
   {
     id: "05",
     title: "AIS 140 GPS Tracking",
     desc: "Government-approved AIS 140 compliant GPS tracking solutions designed for commercial vehicles, passenger transport, and public fleets.",
-    img: "/ais.jpg",
+    img: "/475bb22c-b0af-49f9-8f56-1c06efed8b74.png",
     link: "/aistraking",
   },
   {
     id: "06",
     title: "Camera & IoT Solutions",
     desc: "Smart surveillance cameras and IoT-enabled monitoring systems for enhanced fleet safety, security, and operational control.",
-    img: "/highway_live_tracking.png",
+    img: "/ChatGPT Image Jun 3, 2026, 09_12_24 PM.png",
     link: "/camera",
   },
 ];
@@ -77,7 +77,7 @@ const item = {
 
 export default function Service() {
   return (
-    <div className="bg-[#F6F2EA] overflow-hidden">
+    <div className="bg-[#F6F2EA] overflow-hidden select-none">
     
           {/* ================= HERO SECTION =================  */}
           <motion.div
@@ -175,7 +175,7 @@ export default function Service() {
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  className="w-full h-full object-cover  transition duration-700"
                 />
               </div>
 

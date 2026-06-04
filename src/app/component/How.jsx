@@ -27,7 +27,7 @@ export default function How() {
 
   return (
     <section
-      className="relative py-24 bg-fixed bg-cover bg-center"
+      className="relative py-24 bg-fixed bg-cover bg-center select-none"
       style={{
         backgroundImage: "url('/IMG_20260404_164436.png')",
       }}

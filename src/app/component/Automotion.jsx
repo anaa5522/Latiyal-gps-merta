@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Automotion() {
   return (
-    <section className="relative overflow-hidden bg-[#F6F2EA] py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-[#F6F2EA] py-24 lg:py-32 select-none">
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

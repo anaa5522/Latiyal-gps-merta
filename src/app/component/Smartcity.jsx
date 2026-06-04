@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Smartcity() {
   return (
-    <section className="relative overflow-hidden bg-[#F6F2EA] py-24 lg:py-32">
+    <section className=" select-none relative overflow-hidden bg-[#F6F2EA] py-24 lg:py-32">
       {/* Background Effects */}
 
       {/* Hero Section */}
@@ -21,12 +21,12 @@ export default function Smartcity() {
             className="space-y-6"
           >
             {/* Label */}
-            <span className="inline-flex items-center px-5 py-2 rounded-full bg-black text-white font-medium text-sm shadow-lg">
+            <span className="inline-flex items-center px-5 py-2 rounded-full bg-black text-white font-medium text-sm shadow-lg select-none ">
               Camera & IoT Installation
             </span>
 
             {/* Headline */}
-            <h1 className=" inter text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-[#0F172A]">
+            <h1 className=" inter select-none text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-[#0F172A]">
               Delivering Government
               <br />
               Infrastructure Projects —
@@ -36,13 +36,13 @@ export default function Smartcity() {
             </h1>
 
             {/* Subheadline */}
-            <p className=" inter text-xl md:text-2xl text-gray-700 font-medium max-w-2xl">
+            <p className=" inter select-none text-xl md:text-2xl text-gray-700 font-medium max-w-2xl">
               Reliable supply and professional installation of cameras and IoT
               equipment for government-tendered projects.
             </p>
 
             {/* Description */}
-            <p className="text-gray-600 leading-relaxed text-lg max-w-3xl">
+            <p className="select-none text-gray-600 leading-relaxed text-lg max-w-3xl">
               Latiyal GPS brings its proven technical expertise and large-scale
               field experience to government infrastructure projects involving
               camera surveillance and IoT equipment deployment.
