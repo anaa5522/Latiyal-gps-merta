@@ -11,22 +11,32 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "Facebook",
-      img: "/facebook.png",
+      img: "/face.png",
       link: "https://www.facebook.com/latiyalgps/",
     },
     {
       name: "Instagram",
-      img: "/instagram (1).png",
-      link: "https://youtube.com/@latiyalgps?si=gXus6l5XESzGupHa",
+      img: "/insta.png",
+      link: "https://www.instagram.com/latiyal_gps?igsh=MXU3YTkxZDduMnI5Yg==",
     },
     {
       name: "LinkedIn",
-      img: "/whatsapp.png",
+      img: "/linkedin.png",
       link: "https://linkedin.com",
     },
     {
       name: "Twitter",
       img: "/twitter.png",
+      link: "https://x.com/latiyalgps",
+    },
+    {
+      name: "whatsapp",
+      img: "/wh.png",
+      link: "https://linkedin.com",
+    },
+    {
+      name: "Youtube",
+      img: "/youtube.png",
       link: "https://x.com/latiyalgps",
     },
 
@@ -114,12 +124,12 @@ export default function Footer() {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:scale-110 transition duration-300"
+                className="w-7 h-7 flex items-center justify-center rounded-full  hover:scale-110 transition duration-300"
               >
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-10 h-10 object-contain"
+                  className="w-7 h-7 object-contain"
                 />
 
               </a>

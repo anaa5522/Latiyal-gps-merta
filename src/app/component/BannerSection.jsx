@@ -29,11 +29,11 @@ export default function BannerSection() {
   <div className="w-full max-w-3xl mx-auto md:mx-0 text-center md:text-left pt-28 md:pt-0">
 
     <h1 className="inter select-none text-3xl mt-4 sm:text-4xl md:text-6xl font-bold text-white leading-tight">
-      Smart GPS Tracking
+      "Smart Fleet Tracking "
       <br />
 
       <span className="text-[#FCB13B] ">
-        For a Smarter World
+       for a Smarter Future
       </span>
     </h1>
 

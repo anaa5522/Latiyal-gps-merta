@@ -81,53 +81,43 @@ export default function Service() {
     
           {/* ================= HERO SECTION =================  */}
           <motion.div
-        className="relative h-[520px] flex items-center justify-center overflow-hidden"
+        className="relative h-[420px] sm:h-[500px] lg:h-[520px] flex items-center overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
         <img
-          src="/df95db051ac7c4228bcbaecdc24deb9b.jpg"
-          className="absolute inset-0 w-full h-full object-cover scale-105"
+          src="/5ba41ad3-0185-4daf-9c07-dac838137965.png"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           alt="hero"
         />
 
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-black/50" />
 
-        <div className="relative z-10 text-center px-6">
+        <div className="relative z-10 w-full px-6 lg:px-16">
+          <div className="max-w-2xl text-center lg:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.9, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white"
+            >
+              Services
+            </motion.h1>
 
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="inline-block px-5 py-2 mb-4 rounded-full bg-white/10 backdrop-blur-md text-white text-sm tracking-widest"
-          >
-            PREMIUM COLLECTION
-          </motion.span>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30, scale: 0.95 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-bold text-[#FCB13A]"
-          >
-            Service 
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="mt-6 max-w-2xl mx-auto text-gray-200 text-lg md:text-xl"
-          >
-            Premium furniture crafted for comfort, elegance and modern lifestyle.
-          </motion.p>
-
+            {/* <motion.p
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-4 lg:mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-200"
+            >
+              Get in touch with our team for GPS tracking,<br/> fleet
+              management and AIS 140 compliant solutions.
+            </motion.p> */}
+          </div>
         </div>
       </motion.div>
     
