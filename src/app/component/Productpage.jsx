@@ -1,24 +1,124 @@
 "use client";
-import { motion } from "framer-motion";
-import Product from "./Product";
 
-export default function Productpage() {
-  const products = [
-    { name: "Chair", price: "$80", img: "/DSC03450-600x600.jpg" },
-    { name: "Stool", price: "$50", img: "/imgi_87_DSC03470-2048x2048.jpg" },
-    { name: "Sofa", price: "$200", img: "/imgi_107_DSC03495-1536x1536.jpg" },
-    { name: "Shelf", price: "$150", img: "/imgi_59_1-2048x2048.jpg" },
-    { name: "Arm Chair", price: "$110", img: "/imgi_73_DSC03389-2048x2048.jpg" },
-    { name: "Side Table", price: "$70", img: "/imgi_45_DSC03550-2048x2048.jpg" },
-    { name: "Storage Rack", price: "$180", img: "/imgi_80_DSC06313-copy-2048x2048.jpg" },
-    { name: "Side Table", price: "$70", img: "/DSC03450-600x600.jpg" },
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+export default function ProductPage() {
+  const services = [
+    "GPS Tracker",
+    "AIS 140 GPS Tracking",
+    "Fuel Monitoring",
+    "Weighbridge",
+    "IoT Solutions",
   ];
 
-  return (
-    <div className="bg-[#f4f4f6] select-none">
+  const products = [
+    {
+      id: 1,
+      name: "AIS 140 GPS Tracker",
+      image: "/DSC08383.JPG",
+      category: "AIS 140 GPS Tracking",
+      price: "₹5,000",
+    },
+    {
+      id: 2,
+      name: "AIS 140 GPS Tracker",
+      image: "/DSC08389.JPG",
+      category: "AIS 140 GPS Tracking",
+      price: "₹5,000",
+    },
+    {
+      id: 3,
+      name: "AIS 140 GPS Tracker",
+      image: "/DSC08361.JPG",
+      category: "AIS 140 GPS Tracking",
+      price: "₹5,000",
+    },
+    {
+      id: 4,
+      name: "AIS 140 GPS Tracker",
+      image: "/DSC08363.JPG",
+      category: "AIS 140 GPS Tracking",
+      price: "₹5,000",
+    },
+    {
+      id: 5,
+      name: "AIS 140 GPS Tracker",
+      image: "/DSC08365.JPG",
+      category: "AIS 140 GPS Tracking",
+      price: "₹5,000",
+    },
+    {
+      id: 6,
+      name: "AIS 140 GPS Tracker",
+      image: "/DSC08369.JPG",
+      category: "AIS 140 GPS Tracking",
+      price: "₹5,000",
+    },
+    {
+      id: 1,
+      name: "GPS Tracker",
+      image: "/imgi_80_DSC06313-copy-2048x2048.jpg",
+      category: "GPS Tracker",
+      price: "₹5,000",
+    },{
+      id: 2,
+      name: "GPS Tracker",
+      image: "/imgi_87_DSC03470-2048x2048.jpg",
+      category: "GPS Tracker",
+      price: "₹5,000",
+    },
 
-      {/* ===== HERO ===== */}
-     <motion.div
+    {
+      id: 2,
+      name: "Fuel Sensor",
+      image: "/product2.jpg",
+      category: "Fuel Monitoring",
+      price: "₹5,000",
+    },
+    {
+      id: 3,
+      name: "Fleet GPS Device",
+      image: "/product3.jpg",
+      category: "Fleet Management",
+      price: "₹5,000",
+    },
+    {
+      id: 4,
+      name: "Vehicle Monitoring Unit",
+      image: "/product4.jpg",
+      category: "Vehicle Monitoring",
+      price: "₹5,000",
+    },
+    {
+      id: 5,
+      name: "Weighbridge Controller",
+      image: "/product5.jpg",
+      category: "Weighbridge Automation",
+      price: "₹5,000",
+    },
+    {
+      id: 6,
+      name: "IoT Tracking Device",
+      image: "/product6.jpg",
+      category: "IoT Solutions",
+      price: "₹5,000",
+    },
+  ];
+
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filteredProducts =
+    selectedCategory === "All"
+      ? products
+      : products.filter(
+          (product) => product.category === selectedCategory
+        );
+
+  return (
+    <section className=" mx-auto bg-[#F6F2EA] ">
+
+       <motion.div
         className="relative h-[420px] sm:h-[500px] lg:h-[520px] flex items-center overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -57,94 +157,83 @@ export default function Productpage() {
             </motion.p> */}
           </div>
         </div>
-      </motion.div>
+      </motion.div> 
 
-      {/* ===== PRODUCTS ===== */}
-      <div className="max-w-7xl mx-auto px-6 py-24">
-
-        {/* heading */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Featured Products
-          </h2>
-          <p className="text-gray-500 mt-3">
-            Clean design. Premium quality. Best comfort.
-          </p>
+              <div className="text-center font-semibold mt-5 lg:mt-20 text-4xl ">
+              Products
         </div>
 
-        {/* grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid lg:grid-cols-4 gap-8 max-w-7xl py-25 px-15 mx-auto ">
 
-          {products.map((item, i) => (
-            <div
-              key={i}
-              className="group bg-white rounded-[26px] overflow-hidden
-              border border-gray-100 shadow-sm hover:shadow-2xl
-              transition-all duration-500 hover:-translate-y-2"
+        
+        
+        {/* LEFT FILTER */}
+        <div className="lg:col-span-1   ">
+          <div className="bg-white shadow-xl border border-[#FCB13A]  rounded-xl p-6 sticky top-24">
+            <h2 className="text-2xl font-bold mb-6">
+              Services
+            </h2>
+
+            <button
+              onClick={() => setSelectedCategory("All")}
+              className={`w-full text-left px-4 py-3 rounded-lg mb-3 transition ${
+                selectedCategory === "All"
+                  ? "bg-yellow-500 text-white"
+                  : "bg-gray-100 hover:bg-gray-200"
+              }`}
             >
+              All Products
+            </button>
 
-              {/* IMAGE SECTION */}
-              <div className="relative h-[260px] bg-gray-100 overflow-hidden">
+            {services.map((service, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedCategory(service)}
+                className={`w-full text-left px-4 py-3 rounded-lg mb-3 transition ${
+                  selectedCategory === service
+                    ? "bg-yellow-500 text-white"
+                    : "bg-gray-100 hover:bg-gray-200"
+                }`}
+              >
+                {service}
+              </button>
+            ))}
+          </div>
+        </div>
 
+        {/* RIGHT PRODUCT GRID */}
+        <div className="lg:col-span-3">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProducts.map((product) => (
+              <div
+                key={product.id}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+              >
                 <img
-                  src={item.img}
-                  alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-60 object-cover object-contain object-center"
                 />
 
-                {/* LOGO TOP LEFT */}
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md p-2 rounded-full shadow">
-                  <img src="/logo.png" alt="logo" className="w-8 h-8" />
-                </div>
-
-                {/* hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition" />
-
-              </div>
-
-              {/* CONTENT */}
-              <div className="p-5">
-
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {item.name}
-                </h3>
-
-                <p className="text-gray-500 text-sm mt-1">
-                  Luxury & Comfort Series
-                </p>
-
-                {/* PRICE + BUTTONS BOTTOM */}
-                <div className="mt-6 flex items-center justify-between">
-
-                  <p className="text-xl font-bold text-black">
-                    {item.price}
+                <div className="p-5">
+                  <p className="text-sm text-yellow-500 font-medium mb-2">
+                    {product.category}
                   </p>
 
-                  <div className="flex gap-2">
-                    <button className="bg-black text-white px-4 py-2 rounded-xl text-sm hover:bg-gray-800 transition">
-                      Add
-                    </button>
+                  <h3 className="text-lg font-semibold">
+                    {product.price}
+                  </h3>
 
-                    <button className="border border-gray-300 px-4 py-2 rounded-xl text-sm hover:bg-gray-100 transition">
-                      Buy
-                    </button>
-                  </div>
-
+                  <button className="mt-4 w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600 transition">
+                    View Details
+                  </button>
                 </div>
-
               </div>
-
-            </div>
-          ))}
-
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* EXTRA COMPONENT */}
-      <div>
-        <Product />
       </div>
-
-    </div>
+    </section>
   );
 }
