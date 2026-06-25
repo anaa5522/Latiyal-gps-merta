@@ -60,3 +60,38 @@ body {
 .perspective {
   perspective: 1000px;
 }
+
+.custom-toast {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  border-left: 4px solid #fbbf24;
+}
+
+.custom-toast-body {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.Toastify__toast--success {
+  border-left: 5px solid #22c55e;
+}
+
+.Toastify__toast--error {
+  border-left: 5px solid #ef4444;
+}
+
+.Toastify__toast--warning {
+  border-left: 5px solid #f59e0b;
+}
+
+.custom-toast {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+}

@@ -1,239 +1,162 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import Link from "next/link";
+import { toast } from "react-toastify";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 
-export default function ProductPage() {
-  const services = [
-    "GPS Tracker",
-    "AIS 140 GPS Tracking",
-    "Fuel Monitoring",
-    "Weighbridge",
-    "IoT Solutions",
-  ];
+export default function ProductsPage() {
+  const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
 
-  const products = [
-    {
-      id: 1,
-      name: "AIS 140 GPS Tracker",
-      image: "/DSC08383.JPG",
-      category: "AIS 140 GPS Tracking",
-      price: "₹5,000",
-    },
-    {
-      id: 2,
-      name: "AIS 140 GPS Tracker",
-      image: "/DSC08389.JPG",
-      category: "AIS 140 GPS Tracking",
-      price: "₹5,000",
-    },
-    {
-      id: 3,
-      name: "AIS 140 GPS Tracker",
-      image: "/DSC08361.JPG",
-      category: "AIS 140 GPS Tracking",
-      price: "₹5,000",
-    },
-    {
-      id: 4,
-      name: "AIS 140 GPS Tracker",
-      image: "/DSC08363.JPG",
-      category: "AIS 140 GPS Tracking",
-      price: "₹5,000",
-    },
-    {
-      id: 5,
-      name: "AIS 140 GPS Tracker",
-      image: "/DSC08365.JPG",
-      category: "AIS 140 GPS Tracking",
-      price: "₹5,000",
-    },
-    {
-      id: 6,
-      name: "AIS 140 GPS Tracker",
-      image: "/DSC08369.JPG",
-      category: "AIS 140 GPS Tracking",
-      price: "₹5,000",
-    },
-    {
-      id: 1,
-      name: "GPS Tracker",
-      image: "/imgi_80_DSC06313-copy-2048x2048.jpg",
-      category: "GPS Tracker",
-      price: "₹5,000",
-    },{
-      id: 2,
-      name: "GPS Tracker",
-      image: "/imgi_87_DSC03470-2048x2048.jpg",
-      category: "GPS Tracker",
-      price: "₹5,000",
-    },
+  const router = useRouter();
 
-    {
-      id: 2,
-      name: "Fuel Sensor",
-      image: "/product2.jpg",
-      category: "Fuel Monitoring",
-      price: "₹5,000",
-    },
-    {
-      id: 3,
-      name: "Fleet GPS Device",
-      image: "/product3.jpg",
-      category: "Fleet Management",
-      price: "₹5,000",
-    },
-    {
-      id: 4,
-      name: "Vehicle Monitoring Unit",
-      image: "/product4.jpg",
-      category: "Vehicle Monitoring",
-      price: "₹5,000",
-    },
-    {
-      id: 5,
-      name: "Weighbridge Controller",
-      image: "/product5.jpg",
-      category: "Weighbridge Automation",
-      price: "₹5,000",
-    },
-    {
-      id: 6,
-      name: "IoT Tracking Device",
-      image: "/product6.jpg",
-      category: "IoT Solutions",
-      price: "₹5,000",
-    },
-  ];
+  const fetchProducts = async () => {
+    try {
+      const res = await fetch("http://localhost:7000/api/products");
+      const data = await res.json();
 
-  const [selectedCategory, setSelectedCategory] = useState("All");
+      const allProducts = Array.isArray(data)
+        ? data
+        : data.products || [];
 
-  const filteredProducts =
-    selectedCategory === "All"
-      ? products
-      : products.filter(
-          (product) => product.category === selectedCategory
-        );
+      setProducts(
+        allProducts.filter(
+          (p) => (p.status || "Active") === "Active"
+        )
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  // FILTER
+  const filtered = useMemo(() => {
+    return (products || [])
+      .filter((p) => (p.status || "Active") === "Active")
+      .filter((p) =>
+        p.name?.toLowerCase().includes(search.toLowerCase())
+      );
+  }, [products, search]);
+
+  // ADD TO CART
+  const addToCart = async (product) => {
+    try {
+      await fetch("http://localhost:7000/api/cart/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          productId: product._id,
+          name: product.name,
+          image: product.image,
+          price: product.discountPrice || product.price,
+        }),
+      });
+
+      toast.success("Added to cart successfully!");
+    } catch (err) {
+      toast.error("Failed to add to cart!");
+    }
+  };
 
   return (
-    <section className=" mx-auto bg-[#F6F2EA] ">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 mt-24">
 
-       <motion.div
-        className="relative h-[420px] sm:h-[500px] lg:h-[520px] flex items-center overflow-hidden"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <img
-          src="/4aa26272-1ccf-46ac-a0a8-55d003023ba2.png"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          alt="hero"
-        />
+      {/* HEADER */}
+      <div className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b px-4 py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
 
-        <div className="absolute inset-0 bg-black/50" />
+          <h1 className="text-2xl font-bold text-[#FCB13A]">
+            Products
+          </h1>
 
-        <div className="relative z-10 w-full px-6 lg:px-16">
-          <div className="max-w-2xl text-center lg:text-left">
-            <motion.h1
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white"
-            >
-              Products
-            </motion.h1>
-
-            {/* <motion.p
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="mt-4 lg:mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-200"
-            >
-              Get in touch with our team for GPS tracking,<br/> fleet
-              management and AIS 140 compliant solutions.
-            </motion.p> */}
-          </div>
+          {/* SEARCH (HIDDEN ON MOBILE) */}
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search products..."
+            className="hidden sm:block border px-4 py-2 rounded-xl w-80 focus:outline-none focus:ring-2 focus:ring-[#FCB13A]"
+          />
         </div>
-      </motion.div> 
+      </div>
 
-              <div className="text-center font-semibold mt-5 lg:mt-20 text-4xl ">
-              Products
-        </div>
+      {/* PRODUCTS */}
+      <div className="max-w-7xl mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-      <div className="grid lg:grid-cols-4 gap-8 max-w-7xl py-25 px-15 mx-auto ">
+        {filtered.map((p) => (
+          <div
+            key={p._id}
+            className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden group"
+          >
 
-        
-        
-        {/* LEFT FILTER */}
-        <div className="lg:col-span-1   ">
-          <div className="bg-white shadow-xl border border-[#FCB13A]  rounded-xl p-6 sticky top-24">
-            <h2 className="text-2xl font-bold mb-6">
-              Services
-            </h2>
+            {/* IMAGE */}
+            <div className="overflow-hidden">
+              <img
+                src={
+                  p.image?.startsWith("http")
+                    ? p.image
+                    : `http://localhost:7000${p.image}`
+                }
+                alt={p.name}
+                className="h-56 w-full object-cover object-contain group-hover:scale-105 transition duration-300"
+              />
+            </div>
 
-            <button
-              onClick={() => setSelectedCategory("All")}
-              className={`w-full text-left px-4 py-3 rounded-lg mb-3 transition ${
-                selectedCategory === "All"
-                  ? "bg-yellow-500 text-white"
-                  : "bg-gray-100 hover:bg-gray-200"
-              }`}
-            >
-              All Products
-            </button>
+            {/* CONTENT */}
+            <div className="p-4">
 
-            {services.map((service, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedCategory(service)}
-                className={`w-full text-left px-4 py-3 rounded-lg mb-3 transition ${
-                  selectedCategory === service
-                    ? "bg-yellow-500 text-white"
-                    : "bg-gray-100 hover:bg-gray-200"
-                }`}
-              >
-                {service}
-              </button>
-            ))}
-          </div>
-        </div>
+              <h2 className="font-semibold text-lg text-gray-800">
+                {p.name}
+              </h2>
 
-        {/* RIGHT PRODUCT GRID */}
-        <div className="lg:col-span-3">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-60 object-cover object-contain object-center"
-                />
+              <p className="text-gray-500 text-sm mt-1 line-clamp-2">
+                {p.description}
+              </p>
 
-                <div className="p-5">
-                  <p className="text-sm text-yellow-500 font-medium mb-2">
-                    {product.category}
-                  </p>
+              <p className="font-bold text-lg mt-3 text-black">
+                ₹ {p.discountPrice || p.price}
+              </p>
 
-                  <h3 className="text-lg font-semibold">
-                    {product.price}
-                  </h3>
+              {/* BUTTONS */}
+              <div className="grid grid-cols-2 gap-3 mt-4">
 
-                  <button className="mt-4 w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600 transition">
-                    View Details
-                  </button>
-                </div>
+                <button
+                  onClick={() => addToCart(p)}
+                  className="bg-black hover:bg-gray-800 text-white py-2 rounded-lg text-sm transition"
+                >
+                  Add To Cart
+                </button>
+
+                <button
+                  onClick={() =>
+                    router.push(
+                      `/buy?product=${encodeURIComponent(JSON.stringify({
+                        _id: p._id,
+                        name: p.name,
+                        price: Number(p.discountPrice || p.price),
+                        image: p.image,
+                        qty: 1
+                      }))}`
+                    )
+                  }
+                  className="bg-[#FCB13A] hover:bg-yellow-500 text-black py-2 rounded-lg text-sm font-medium transition"
+                >
+                  Buy Now
+                </button>
+
               </div>
-            ))}
+
+            </div>
           </div>
-        </div>
+        ))}
 
       </div>
-    </section>
+    </div>
   );
 }
