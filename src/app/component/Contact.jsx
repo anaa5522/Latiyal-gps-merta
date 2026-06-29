@@ -65,29 +65,66 @@ export default function Contact() {
 
       {/* ================= HERO SECTION ================= */}
       <motion.div
-        className="relative h-[420px] sm:h-[500px] lg:h-[520px] flex items-center overflow-hidden"
+        className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[490px] flex items-center justify-center overflow-hidden"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
       >
+
+        {/* Background Image */}
         <img
-          src="/4654ff73-5607-44b2-99d9-8bbf026aeb69.png"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          src="/ChatGPT Image Jun 27, 2026, 12_30_48 PM.png"
           alt="hero"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-black/50" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/65" />
 
-        <div className="relative z-10 w-full px-6 lg:px-16">
-          <div className="max-w-2xl text-center lg:text-left">
+        {/* Content */}
+        <div className="relative z-10 w-full px-5 sm:px-8 lg:px-16 flex justify-center">
+          <div className="text-center max-w-4xl">
+
+            {/* Heading */}
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white"
+              initial={{ x: -250, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+              }}
+              className="text-3xl sm:text-xl md:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-white tracking-wide"
             >
-              Contact Us
+             <span className="text-[#FCB13B]">C</span>ontact us
             </motion.h1>
+
+            {/* Underline */}
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: "120px", opacity: 1 }}
+              transition={{ delay: 0.9, duration: 0.6 }}
+              className="h-1 bg-[#FCB13B] mx-auto rounded-full mt-4"
+            />
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ x: 250, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                delay: 0.5,
+                duration: 1,
+                ease: "easeOut",
+              }}
+              className="mt-6 text-sm sm:text-base md:text-base lg:text-lg text-gray-400 leading-8 max-w-2xl mx-auto"
+            >
+              Smart GPS Tracking Solutions for Cars, Trucks, Buses & Fleet Management.
+              Monitor your vehicles anytime, anywhere with real-time tracking and
+              advanced security features.
+            </motion.p>
+
           </div>
         </div>
+
       </motion.div>
 
       {/* ================= CONTACT SECTION ================= */}

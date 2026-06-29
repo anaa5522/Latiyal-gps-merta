@@ -117,12 +117,13 @@ export default function Header() {
             {/* SEARCH */}
 
 
-            <Link href="/account">
-              <FaUser className="text-white text-xl hover:text-[#FCB13B]" />
-            </Link>
+            
 
             <Link href="/cart">
               <FaShoppingCart className="text-white text-xl hover:text-[#FCB13B]" />
+            </Link>
+            <Link href="/account">
+              <FaUser className="text-white text-xl hover:text-[#FCB13B]" />
             </Link>
           </div>
 

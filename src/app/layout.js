@@ -2,8 +2,10 @@ import { Inter, Montserrat } from "next/font/google";
 import '../../public/css/style.css'
 import Header from "./component/comman/Header";
 import Footer from "./component/comman/Footer";
-import { ToastContainer } from "react-toastify";
+
 import Script from "next/script";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({
   subsets: ["latin"],

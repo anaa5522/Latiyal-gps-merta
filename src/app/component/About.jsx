@@ -12,249 +12,313 @@ import {
 
 import History from "./Histroy";
 import Chooserespon from "./Technology";
+import Link from "next/link";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function About() {
   return (
-    <div className="bg-[#F6F2EA] overflow-hidden select-none">
+    <div className="bg-[#F6F2EA] overflow-hidden select-none   ">
 
       {/* ================= HERO SECTION =================  */}
-       <motion.div
-        className="relative h-[420px] sm:h-[500px] lg:h-[520px] flex items-center overflow-hidden"
+      <motion.div
+        className="relative h-[400px] sm:h-[600px] md:h-[600px] lg:h-[490px] flex items-center justify-center overflow-hidden"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
       >
+
+        {/* Background Image */}
         <img
-          src="/7bd48679-01f1-4556-acbd-f5bf4ac56a45.png"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          src="/ChatGPT Image Jun 27, 2026, 12_00_23 PM.png"
           alt="hero"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-black/50" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/65" />
 
-        <div className="relative z-10 w-full px-6 lg:px-16">
-          <div className="max-w-2xl text-center lg:text-left">
+        {/* Content */}
+        <div className="relative z-10 w-full px-5 sm:px-8 lg:px-16 flex justify-center">
+          <div className="text-center max-w-4xl">
+
+            {/* Heading */}
             <motion.h1
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white"
+              initial={{ x: -250, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+              }}
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-4xl xl:text-6xl font-extrabold text-white tracking-wide"
             >
-              About Us
+              <span className="text-[#FCB13B]">A</span>bout us
             </motion.h1>
 
-            {/* <motion.p
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="mt-4 lg:mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-200"
+            {/* Underline */}
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: "120px", opacity: 1 }}
+              transition={{ delay: 0.9, duration: 0.6 }}
+              className="h-1 bg-[#FCB13B] mx-auto rounded-full mt-4"
+            />
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ x: 250, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                delay: 0.5,
+                duration: 1,
+                ease: "easeOut",
+              }}
+              className="mt-6 text-sm sm:text-base md:text-base lg:text-md text-gray-400 leading-8 max-w-2xl mx-auto"
             >
-              Get in touch with our team for GPS tracking,<br/> fleet
-              management and AIS 140 compliant solutions.
-            </motion.p> */}
+              Smart GPS Tracking Solutions for Cars, Trucks, Buses & Fleet Management.
+              Monitor your vehicles anytime, anywhere with real-time tracking and
+              advanced security features.
+            </motion.p>
+
           </div>
         </div>
+
       </motion.div>
-      {/* ================= WHO WE ARE ================= */}
-      <section className="w-full bg-[#F6F2EA] py-16 md:py-24 px-4 sm:px-6 lg:px-16">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      {/* ===================== WHO WE ARE SECTION ===================== */}
+      <section className="w-full bg-[#F6F2EA] pt-16 md:pt-24 px-4 sm:px-6 lg:px-t6 overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
           {/* LEFT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-[#1e1e1e]"
           >
+            <span className="inline-block px-4 py-2 rounded-full bg-[#FCB13B]/10 text-[#FCB13B] font-semibold text-sm tracking-wide mb-5">
+              ABOUT OUR COMPANY
+            </span>
 
-            <h2 className=" inter text-3xl md:text-5xl font-bold text-black mb-8">
-              Who We Are
+            <h2 className="inter text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight mb-8">
+              Who <span className="text-[#FCB13B]">We Are</span>
             </h2>
 
-            <ul className="space-y-5 text-sm sm:text-[15px] leading-7 sm:leading-8 text-gray-700">
+            <ul className="space-y-5 text-[15px] leading-8 text-gray-700">
 
               <li>
-                <span className="font-bold text-black">
-                  Welcome to Latiyal Gps vehicle tracking system Pvt. Ltd.
-                </span>
-                , a pioneering force in vehicle tracking and monitoring systems.
-                Based in the vibrant city of Jaipur, Rajasthan, we have been
-                steadfastly serving our clients since our inception in 2019.
+                <span className="font-bold text-[#FCB13B]">
+                  Welcome to Latiyal GPS Vehicle Tracking System Pvt. Ltd.
+                </span>{" "}
+                — a pioneering force in vehicle tracking and monitoring systems.
+                Based in Jaipur, Rajasthan, we have proudly served our customers
+                since 2019 with advanced GPS technology.
               </li>
 
               <li>
-                At Latiyal Gps vehicle tracking system, we specialize in
-                providing cutting-edge solutions for vehicle tracking and monitoring.
-                With a focus on securing public vehicles such as trucks, buses,
-                cars, and bikes, we empower our clients with the tools they need.
+                We specialize in providing cutting-edge GPS tracking and fleet
+                management solutions for trucks, buses, cars, bikes, and commercial
+                vehicles, ensuring maximum security and operational efficiency.
               </li>
 
               <li>
-                <span className="font-bold text-black">
+                <span className="font-bold text-[#FCB13B]">
                   Our Journey
                 </span>{" "}
-                began with a vision to revolutionize the way vehicles are tracked
-                and monitored, ensuring safety, efficiency, and peace of mind
-                for our clients.
+                started with a vision to transform vehicle security through
+                intelligent GPS technology, delivering peace of mind to every client.
               </li>
 
               <li>
-                <span className="font-bold text-black">
+                <span className="font-bold text-[#FCB13B]">
                   Our Mission
                 </span>{" "}
-                is clear: to deliver innovative, reliable, and cost-effective
-                solutions that exceed our clients' expectations.
+                is to provide innovative, reliable, and affordable vehicle tracking
+                solutions backed by exceptional customer support.
               </li>
 
               <li>
-                <span className="font-bold text-black">
+                <span className="font-bold text-[#FCB13B]">
                   Our Achievements
                 </span>{" "}
-                With a proud track record of over 300+ satisfied customers
-                and projects completed, we have earned a reputation for
-                excellence in the industry.
+                include 300+ satisfied customers and numerous successful GPS
+                installations across India.
               </li>
 
             </ul>
 
-            <h3 className=" inter mt-8 text-2xl font-bold text-black">
+            <h3 className="inter mt-10 text-2xl font-bold text-[#FCB13B]">
               Why Choose Us?
             </h3>
 
-            {/* SMALL BOXES */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
 
-              <div className="bg-white border border-[#FCB13B]/20 rounded-2xl p-5 shadow-md hover:shadow-xl transition duration-300">
-                <div className="flex items-center gap-3 mb-2">
-                  <FaShieldAlt className="text-[#FCB13B] text-xl" />
+              {/* Card 1 */}
+              <div
+                className="relative overflow-hidden rounded-3xl h-[340px] sm:h-[380px] lg:h-[420px] group "
+              >
 
-                  <h4 className="font-semibold text-black">
-                    Secure Tracking
-                  </h4>
+                {/* Background Image */}
+                <img
+                  src="/0fa3b14e079c55fca911bedc17f46e45.jpg"
+                  alt="Secure Tracking"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col justify-between h-full p-6 sm:p-8">
+
+                  {/* Top */}
+                  <div>
+                    <div className="w-14 h-14 rounded-2xl bg-[#FCB13B] flex items-center justify-center shadow-lg mb-5">
+                      <FaShieldAlt className="text-white text-2xl" />
+                    </div>
+
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                      Secure Tracking
+                    </h3>
+                  </div>
+
+                  {/* Bottom */}
+                  <div>
+                    <p className="text-gray-200 text-sm sm:text-base leading-7 max-w-sm">
+                      Real-time GPS tracking with instant alerts, route history and
+                      advanced vehicle security features for complete peace of mind.
+                    </p>
+
+                    <Link href={"/servicepage"}  className="mt-6 flex items-center gap-2 text-[#FCB13B] font-semibold group/button">
+                      Learn More
+                      <span className="transition-transform duration-300 group-hover/button:translate-x-2">
+                        →
+                      </span>
+                    </Link>
+                  </div>
+
                 </div>
 
-                <p className="text-gray-600 text-sm leading-6">
-                  Advanced GPS systems with real-time monitoring and safety alerts.
-                </p>
               </div>
 
-              <div className="bg-white border border-[#FCB13B]/20 rounded-2xl p-5 shadow-md hover:shadow-xl transition duration-300">
-                <div className="flex items-center gap-3 mb-2">
-                  <FaUsers className="text-[#FCB13B] text-xl" />
+              {/* Card 2 */}
+              <div className="relative overflow-hidden rounded-3xl h-[340px] sm:h-[380px] lg:h-[420px] group ">
 
-                  <h4 className="font-semibold text-black">
-                    Trusted Support
-                  </h4>
+                {/* Background Image */}
+                <img
+                  src="/205ef5e27daa2642ff80d059fc4df267.jpg"
+                  alt="Trusted Support"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col justify-between h-full p-6 sm:p-8">
+
+                  {/* Top */}
+                  <div>
+                    <div className="w-14 h-14 rounded-2xl bg-[#FCB13B] flex items-center justify-center shadow-lg mb-5">
+                      <FaUsers className="text-white text-2xl" />
+                    </div>
+
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                      Trusted Support
+                    </h3>
+                  </div>
+
+                  {/* Bottom */}
+                  <div>
+                    <p className="text-gray-200 text-sm sm:text-base leading-7 max-w-sm">
+                      Our dedicated support team is available to provide quick assistance,
+                      expert guidance, and reliable solutions whenever you need help.
+                    </p>
+
+                    <Link href={"/servicepage"}  className="mt-6 flex items-center gap-2 text-[#FCB13B] font-semibold group/button">
+                      Learn More
+                      <span className="transition-transform duration-300 group-hover/button:translate-x-2">
+                        →
+                      </span>
+                    </Link>
+                  </div>
+
                 </div>
 
-                <p className="text-gray-600 text-sm leading-6">
-                  Dedicated customer support team always ready to assist you.
-                </p>
               </div>
 
             </div>
           </motion.div>
 
-          {/* RIGHT IMAGE */}
+          {/* ================= IMAGE ================= */}
+
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="flex justify-center lg:justify-end"
           >
-
             <div className="relative">
 
-              <img
-                src="/about-us-vertical-600x1200.jpg"
-                alt="team"
-                className="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-md rounded-[30px] object-cover shadow-2xl border-4 border-white"
-              />
+              {/* Background Glow */}
+              <div className="absolute -inset-5 bg-gradient-to-br from-[#FCB13B]/20 to-orange-200/10 rounded-[40px] blur-3xl"></div>
 
+              {/* Main Card */}
+              <div className="relative bg-white p-4 rounded-[35px] shadow-[0_30px_70px_rgba(0,0,0,0.15)]">
+
+                <img
+                  src="/f8c44145967100afc68cb567847ff271.jpg"
+                  alt="Latiyal GPS Team"
+                  className="
+            w-full
+            max-w-[370px]
+            sm:max-w-[450px]
+            md:max-w-[520px]
+            lg:max-w-[560px]
+            xl:max-w-[620px]
+            rounded-[30px]
+            object-cover
+            transition-all
+            duration-500
+            hover:scale-105"
+                />
+
+                {/* Experience Card */}
+                <div className="absolute bottom-6 left-6   px-5 py-4   ">
+
+                  <h3 className="text-3xl font-bold  text-[#FCB13B]">
+                    7+
+                  </h3>
+
+                  <p className="text-sm text-gray-600">
+                    Years Experience
+                  </p>
+
+                </div>
+
+                {/* Happy Clients */}
+                <div className="absolute top-6 right-6 bg-[#FCB13B] text-white rounded-2xl px-5 py-4 shadow-xl">
+
+                  <h3 className="text-2xl font-bold">
+                    300+
+                  </h3>
+
+                  <p className="text-sm">
+                    Happy Clients
+                  </p>
+
+                </div>
+
+              </div>
 
             </div>
-
           </motion.div>
 
         </div>
       </section>
       {/* ================= HOW GPS WORKS ================= */}
-      <section className="bg-[#F6F2EA] py-20 md:py-24 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto text-center">
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className=" inter text-3xl md:text-4xl font-bold text-black mb-14"
-          >
-            How GPS Tracking Works
-          </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            {/* CARD 1 */}
-            <motion.div
-              whileHover={{ y: -8 }}
-              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 border border-[#FCB13B]/10"
-            >
-              <FaSatelliteDish className="text-5xl text-[#FCB13B] mx-auto mb-5" />
-
-              <h3 className="text-xl font-semibold text-black mb-3">
-                Satellite Connection
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                GPS devices connect with satellites to identify
-                accurate vehicle location.
-              </p>
-            </motion.div>
-
-            {/* CARD 2 */}
-            <motion.div
-              whileHover={{ y: -8 }}
-              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 border border-[#FCB13B]/10"
-            >
-              <FaMapMarkedAlt className="text-5xl text-[#FCB13B] mx-auto mb-5" />
-
-              <h3 className="text-xl font-semibold text-black mb-3">
-                Live Tracking
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                Real-time vehicle data is displayed instantly
-                on maps and dashboards.
-              </p>
-            </motion.div>
-
-            {/* CARD 3 */}
-            <motion.div
-              whileHover={{ y: -8 }}
-              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 border border-[#FCB13B]/10"
-            >
-              <FaMobileAlt className="text-5xl text-[#FCB13B] mx-auto mb-5" />
-
-              <h3 className="text-xl font-semibold text-black mb-3">
-                Mobile Monitoring
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                Track and manage your vehicles anytime from
-                your mobile phone.
-              </p>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
+      {/*  */}
 
 
 

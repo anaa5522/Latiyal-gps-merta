@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   FaBus,
   FaMapMarkedAlt,
@@ -81,13 +82,13 @@ export default function Schoolsection() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <button className="bg-black hover:bg-orange- text-white px-8 py-4 rounded-xl font-semibold transition">
+                <Link href={"contact"} className="bg-black hover:bg-orange- text-white px-8 py-4 rounded-xl font-semibold transition">
                   Request Demo
-                </button>
+                </Link>
 
-                <button className="border-2 border-[#0F172A] text-[#0F172A] px-8 py-4 rounded-xl font-semibold hover:bg-[#0F172A] hover:text-white transition">
+                <Link href={"servicepage"} className="border-2 border-[#0F172A] text-[#0F172A] px-8 py-4 rounded-xl font-semibold hover:bg-[#0F172A] hover:text-white transition">
                   Learn More
-                </button>
+                </Link>
               </div>
             </motion.div>
 
@@ -107,9 +108,12 @@ export default function Schoolsection() {
         </div>
       </section>
       {/* Features */}
-      <section className=" pb-24">
+      {/* Features */}
+      <section className="pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+          {/* Top */}
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
 
             {/* Left Image */}
             <motion.div
@@ -120,11 +124,11 @@ export default function Schoolsection() {
               <img
                 src="/fleet_city_highway.png"
                 alt="School Bus Management"
-                className="w-full h-[300px] lg:h-[700px] mt-30 object-cover rounded-3xl shadow-2xl"
+                className="w-full h-[300px] md:h-[420px] lg:h-[520px] object-cover rounded-3xl shadow-2xl"
               />
             </motion.div>
 
-            {/* Right Content */}
+            {/* Right Features (First 3) */}
             <motion.div
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -134,7 +138,7 @@ export default function Schoolsection() {
                 Key Features
               </span>
 
-              <h2 className=" inter text-4xl font-bold text-[#0F172A] mb-6">
+              <h2 className="inter text-4xl font-bold text-[#0F172A] mb-6">
                 Everything Needed For Smart School Transportation
               </h2>
 
@@ -145,36 +149,64 @@ export default function Schoolsection() {
               </p>
 
               <div className="space-y-5">
-                {features.map((item, index) => (
+                {features.slice(0, 3).map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-5 rounded-2xl border border-gra-100 shadow-sm hover:shadow-xl  bg-black transition-all duration-300"
+                    className="flex items-start gap-4 p-5 rounded-2xl bg-black shadow-lg hover:shadow-xl transition"
                   >
-                    {/* Index Dot */}
-                    <div className="mt-6 w-2 h-2 hidden md:block rounded-full bg-white flex-shrink-0"></div>
+                    <div className="mt-6 w-2 h-2 hidden md:block rounded-full bg-white"></div>
 
-                    {/* Icon */}
-                    <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-orang-100 flex items-center justify-center text-[#FCB13A] text-2xl">
+                    <div className="w-14 h-14 flex-shrink-0 rounded-xl flex items-center justify-center bg-white/10 text-[#FCB13A] text-2xl">
                       {item.icon}
                     </div>
 
-                    {/* Text */}
                     <div>
-                      <h3 className=" inter text-lg font-semibold text-white mb-1">
+                      <h3 className="inter text-lg font-semibold text-white mb-1">
                         {item.title}
                       </h3>
 
-                      <p className="text-white text-sm leading-relaxed">
+                      <p className="text-gray-300 text-sm leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
                   </div>
                 ))}
               </div>
-
             </motion.div>
 
           </div>
+
+          {/* Bottom Features */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10"
+          >
+            {features.slice(3).map((item, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 p-5 rounded-2xl bg-black shadow-lg hover:shadow-xl transition"
+              >
+                <div className="mt-6 w-2 h-2 hidden md:block rounded-full bg-white"></div>
+
+                <div className="w-14 h-14 flex-shrink-0 rounded-xl flex items-center justify-center bg-white/10 text-[#FCB13A] text-2xl">
+                  {item.icon}
+                </div>
+
+                <div>
+                  <h3 className="inter text-lg font-semibold text-white mb-1">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+
         </div>
       </section>
 

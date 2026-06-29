@@ -42,14 +42,14 @@ export default function CartPage() {
         prev.map((item) =>
           item._id === id
             ? {
-                ...item,
-                qty:
-                  type === "inc"
-                    ? item.qty + 1
-                    : item.qty > 1
+              ...item,
+              qty:
+                type === "inc"
+                  ? item.qty + 1
+                  : item.qty > 1
                     ? item.qty - 1
                     : 1,
-              }
+            }
             : item
         )
       );
@@ -125,25 +125,30 @@ export default function CartPage() {
                   >
 
                     {/* IMAGE */}
-                    <img
-                      src={
-                        item.image?.startsWith("http")
-                          ? item.image
-                          : `http://localhost:7000${item.image}`
-                      }
-                      className="w-full sm:w-28 h-40 sm:h-28 object-cover rounded-xl "
-                    />
+                    <div className="w-full sm:w-32 h-48 sm:h-32 flex items-center justify-center bg-white rounded-xl border border-gray-100 overflow-hidden">
+                      <img
+                        src={
+                          item.image?.startsWith("http")
+                            ? item.image
+                            : `http://localhost:7000${item.image}`
+                        }
+                        alt={item.name}
+                        className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
 
                     {/* DETAILS */}
-                    <div className="flex-1">
+                    <div className="flex-1 flex flex-col justify-between">
 
-                      <h2 className="font-semibold text-lg">
-                        {item.name}
-                      </h2>
+                      <div>
+                        <h2 className="font-semibold text-lg">
+                          {item.name}
+                        </h2>
 
-                      <p className="text-gray-500 mt-1">
-                        ₹ {item.price}
-                      </p>
+                        <p className="text-gray-500 mt-1">
+                          ₹ {item.price}
+                        </p>
+                      </div>
 
                       {/* QTY */}
                       <div className="flex items-center gap-3 mt-4">

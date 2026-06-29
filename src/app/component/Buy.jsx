@@ -152,7 +152,7 @@ export default function Buy() {
 
   return (
     
-<div className="min-h-screen bg-[#F6F2EA] py-24 px-4">
+<div className="min-h-screen bg-[#F6F2EA] py-12 sm:py-16 lg:py-24 px-4 sm:px-6 ">
 
   <Script src="https://checkout.razorpay.com/v1/checkout.js" />
 
@@ -160,52 +160,56 @@ export default function Buy() {
 
   <div className="max-w-7xl mx-auto">
 
-    <div className="mb-10 text-center">
-      <h1 className="text-4xl font-bold text-[#FCB13A]">
-        Secure Checkout
+    {/* Heading */}
+    <div className="mb-8 sm:mb-10 text-center">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FCB13A] pt-7">
+        Secure <span className="text-black"> Checkout</span> 
       </h1>
-      <p className="text-slate-500 mt-2">
+
+      <p className="text-sm sm:text-base text-slate-500 mt-2">
         Complete your order details and proceed to payment
       </p>
     </div>
 
-    <div className="grid lg:grid-cols-3 gap-8">
+    {/* Main Grid */}
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
 
       {/* LEFT SIDE */}
       <div className="lg:col-span-2">
 
-        <div className="bg-white border border-slate-200 rounded-3xl shadow-sm p-8">
+        {/* Customer Info */}
+        <div className="bg-white border border-slate-200 rounded-3xl shadow-sm p-5 sm:p-6 lg:p-8">
 
-          <h2 className="text-2xl font-bold text-[#FCB13A] mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#FCB13A] mb-6">
             Customer Information
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
             <input
-              className="w-full border border-slate-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full border border-slate-300 rounded-xl px-4 py-3 sm:py-4 outline-none focus:ring-2 focus:ring-yellow-500"
               placeholder="Full Name"
               onChange={(e) => setName(e.target.value)}
             />
 
             <input
-              className="w-full border border-slate-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full border border-slate-300 rounded-xl px-4 py-3 sm:py-4 outline-none focus:ring-2 focus:ring-yellow-500"
               placeholder="Email Address"
               onChange={(e) => setEmail(e.target.value)}
             />
 
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
 
             <input
-              className="w-full border border-slate-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full border border-slate-300 rounded-xl px-4 py-3 sm:py-4 outline-none focus:ring-2 focus:ring-yellow-500"
               placeholder="Phone Number"
               onChange={(e) => setPhone(e.target.value)}
             />
 
             <input
-              className="w-full border border-slate-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full border border-slate-300 rounded-xl px-4 py-3 sm:py-4 outline-none focus:ring-2 focus:ring-yellow-500"
               placeholder="City"
               onChange={(e) => setCity(e.target.value)}
             />
@@ -222,20 +226,20 @@ export default function Buy() {
         </div>
 
         {/* PAYMENT */}
-        <div className="bg-white border border-slate-200 rounded-3xl shadow-sm p-8 mt-6">
+        <div className="bg-white border border-slate-200 rounded-3xl shadow-sm p-5 sm:p-6 lg:p-8 mt-6">
 
-          <h2 className="text-2xl font-bold text-[#FCB13A] mb-5">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#FCB13A] mb-5">
             Payment Method
           </h2>
 
-          <label className="flex items-center justify-between border-2 border-green-500 bg-green-50 rounded-2xl p-5 cursor-pointer">
+          <label className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-2 border-green-500 bg-green-50 rounded-2xl p-5 cursor-pointer">
 
             <div>
-              <h3 className="font-semibold text-lg">
+              <h3 className="font-semibold text-base sm:text-lg">
                 UPI / Razorpay
               </h3>
 
-              <p className="text-sm text-slate-500">
+              <p className="text-sm text-slate-500 mt-1">
                 Pay securely using UPI, Cards, Net Banking & Wallets
               </p>
             </div>
@@ -244,7 +248,7 @@ export default function Buy() {
               type="radio"
               checked={payment === "UPI"}
               onChange={() => setPayment("UPI")}
-              className="w-5 h-5 "
+              className="w-5 h-5 self-start sm:self-center"
             />
 
           </label>
@@ -256,19 +260,20 @@ export default function Buy() {
       {/* RIGHT SIDE */}
       <div>
 
-        <div className="bg-white border border-slate-200 rounded-3xl shadow-sm p-8 sticky top-24">
+        <div className="bg-white border border-slate-200 rounded-3xl shadow-sm p-5 sm:p-6 lg:p-8 lg:sticky lg:top-24">
 
-          <h2 className="text-2xl font-bold text-[#FCB13A] mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#FCB13A] mb-6">
             Order Summary
           </h2>
 
-          <div className="flex justify-between text-slate-600 mb-3">
+          <div className="flex justify-between text-slate-600 mb-3 text-sm sm:text-base">
             <span>Subtotal</span>
             <span>₹{total}</span>
           </div>
 
-          <div className="flex justify-between text-slate-600 mb-3">
+          <div className="flex justify-between text-slate-600 mb-3 text-sm sm:text-base">
             <span>Shipping</span>
+
             <span className="text-green-600 font-medium">
               Free
             </span>
@@ -276,7 +281,7 @@ export default function Buy() {
 
           <div className="border-t pt-4 mt-4">
 
-            <div className="flex justify-between text-2xl font-bold">
+            <div className="flex justify-between text-xl sm:text-2xl font-bold">
               <span>Total</span>
               <span>₹{total}</span>
             </div>
@@ -285,12 +290,12 @@ export default function Buy() {
 
           <button
             onClick={handlePlaceOrder}
-            className="w-full mt-8 bg-[#FCB13A] hover:bg-black transition-all duration-300 text-white font-semibold py-4 rounded-2xl"
+            className="w-full mt-8 bg-[#FCB13A] hover:bg-black transition-all duration-300 text-white font-semibold py-3 sm:py-4 rounded-2xl"
           >
             Pay ₹{total}
           </button>
 
-          <p className="text-center text-sm text-slate-500 mt-4">
+          <p className="text-center text-xs sm:text-sm text-slate-500 mt-4">
             Secure payment powered by Razorpay
           </p>
 
