@@ -1,10 +1,12 @@
-import React from 'react'
-import Buy from '../component/Buy'
+"use client";
 
-export default function page() {
+import { Suspense } from "react";
+import Buy from "../component/Buy";
+
+export default function Page() {
   return (
-    <div>
+    <Suspense fallback={<div>Loading...</div>}>
       <Buy/>
-    </div>
-  )
+    </Suspense>
+  );
 }
